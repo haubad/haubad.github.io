@@ -9,7 +9,7 @@ var bio = {
 	},
 	welcomeMessage : "Code, code et code",
 	skills : ["java", "android", "C++", "C#", "js"],
-	pic : "images/fry.jpg"
+	pic : "images/hhh.jpg"
 };
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
