@@ -162,9 +162,6 @@ function inName(name) {
 	return s[0]+" "+(s[1][1]==='R' ? s[1][0]+s[1].slice(1).toLowerCase() : s[1].toUpperCase());
 }*/
 
-// Projects
-//$("#projects").append(HTMLprojectStart);
-
 // Education/formations = {schools, onlineCourses, display}
 var schools = [
 	{
@@ -231,6 +228,9 @@ education.display = function() {
 };
 education.display();
 
+// change black to white
+var grays = $(".gray p").css("color", "#1F1F1F");
+//console.log(grays);
 // Google maps
 $("#mapDiv").append(googleMap);
 
