@@ -230,7 +230,7 @@ education.display();
 
 // change black to white
 var grays = $(".gray p").css("color", "#1F1F1F");
-//console.log(grays);
+
 // Google maps
 $("#mapDiv").append(googleMap);
 
