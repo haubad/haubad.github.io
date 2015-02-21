@@ -1,6 +1,6 @@
 // Bio
 var bio = {
-	name : "Hau Tran",
+	name : "hau tran",
 	role : "Ingénieur d&#39études",
 	contacts : {
 		mobile : "06 11 46 03 56",
