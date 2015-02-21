@@ -32,21 +32,21 @@ var HTMLskillsStart = '<h3 id="skillsH3">Compétences fortes:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkEmployer = '<a href="#" target="_blank">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div><br>';
 var HTMLworkDescription = '<p>%data%</p><br>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolName = '<a href="#" target="_blank">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<p><em><br>Domaine: %data%</em></p><br>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineTitle = '<a href="#" target="_blank">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div></br>';
 var HTMLonlineURL = '<p><a href="#">%data%</a></p><br>';
@@ -57,6 +57,7 @@ var googleMap = '<div id="map"></div>';
 
 function formatLink(link, data, ref) {
     var formattedLink = link.replace("%data%", data);
+    if (ref==="#") return formattedLink.replace("_blank", "_self");
     return formattedLink.replace("#", ref);
 }
 

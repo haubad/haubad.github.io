@@ -126,7 +126,7 @@ var jobs = [
 		dates : "07/2012 - 10/2012",
 		gps : "", 
 		location : "Toulouse",
-		url : "",
+		url : "#",
 		description : "<i>Visionneuse de photos</i> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)<br><i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)<br><i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)"
 	},
 	{
@@ -150,10 +150,9 @@ work.display = function() {
 		var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
 		$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
 
-		if (job.employer!=="") {
-			$(workCat).append(HTMLworkDates.replace("%data%", job.dates))
-				.append(HTMLworkLocation.replace("%data%", job.location));
-		}
+		$(workCat).append(HTMLworkDates.replace("%data%", job.dates))
+			.append(HTMLworkLocation.replace("%data%", job.location));
+
 		$(workCat).append(HTMLworkDescription.replace("%data%", job.description));
 	});
 }
