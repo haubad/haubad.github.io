@@ -72,28 +72,6 @@ $(document).ready(function() {
 });*/
 
 /*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
-
-/*clickLocations = [];
-
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
-}
-
-$(document).click(function(loc) {
-  // your code goes here!
-});*/
-
-
-
-/*
 This is the fun part. Here's where we generate the custom Google Map for the website.
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference

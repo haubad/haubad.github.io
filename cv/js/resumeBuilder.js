@@ -44,7 +44,7 @@ var jobs = [
 		employer : "*",
 		title : "Concours de programmation <i>Codingame</i> (<b>Java</b>)",
 		dates : "2015",
-		gps : "CodinGame Montpellier",
+		gps : "",
 		location : "Montpellier",
 		url : "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391", 
 		description : "Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (52eSUP sur 1153) (<a class='a-no-style' href='http://www.dartlang.org/' target='_blank'>Dart</a>)"
@@ -54,7 +54,7 @@ var jobs = [
 		employer : "*",
 		title : "Concours de programmation <i>Codingame</i> (<b>Java</b>)",
 		dates : "2014",
-		gps : "CodinGame Montpellier",
+		gps : "",
 		location : "Montpellier",
 		url : "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391", 
 		description : "Challenge d&#39IA <i>Platinum Rift</i> (08/11/2014 – 26/11/2014)<br>Challenge <i>Battle Dev de RégionJob</i> (12/11/2014) (25eSUP sur 375; 9eSUP sur 91 développeurs Java)<br>Challenge d&#39IA <i>Poker Chip Race</i> (10/09/2014 – 24/09/2014) (20eSUP sur 449)<br>Challenge <i>Battle Dev de RégionJob</i> (10/06/2014)<br>Challenge <i>Skynet Finale</i> (06/05/2013)<br>Challenge d&#39IA <i>Game of Drones</i> (14/03/2014 – 28/03/2014)<br>Challenge d&#39IA <i>Tron Battle</i> (10/01/2014 – 28/02/2014) (3eSUP sur 672)"
@@ -74,7 +74,7 @@ var jobs = [
 		employer : "*",
 		title : "Concours de programmation <i>Codingame</i> (<b>Java</b>)",
 		dates : "2013",
-		gps : "CodinGame Montpellier",
+		gps : "",
 		location : "Montpellier",
 		url : "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391", 
 		description : "Challenge <i>Doctor Who</i> (23/11/2013) (131eSUP sur 1251)<br>Challenge <i>Battle Dev de SudOuestJob</i> (05/11/2013) (26eSUP sur 168)"
