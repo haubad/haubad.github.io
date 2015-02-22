@@ -47,7 +47,7 @@ var jobs = [
 		gps : "CodinGame Montpellier",
 		location : "Montpellier",
 		url : "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391", 
-		description : "Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (52eSUP sur 1153) (<a class='a-no-style' href='http://www.dartlang.org/'>Dart</a>)"
+		description : "Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (52eSUP sur 1153) (<a class='a-no-style' href='http://www.dartlang.org/' target='_blank'>Dart</a>)"
 	},
 	{
 		cat : "#work2014",
