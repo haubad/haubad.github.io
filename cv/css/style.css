@@ -17,8 +17,8 @@ body {
 }
 
 .education-entry, .work-entry, .project-entry {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 h1 {
@@ -61,8 +61,8 @@ h4 {
 
 h2, h3, h4, h5 {
   padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .date-text {
@@ -71,8 +71,8 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: left;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .location-text {
@@ -81,16 +81,16 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: right;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 p {
   font-size: 14px;
   color: #333333;
   line-height: 21px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 a {
@@ -162,8 +162,8 @@ a:hover  {
 
 .center-content {
   padding-top: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-bottom: 2.5%
 }
 
@@ -229,8 +229,8 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #mapDiv {
