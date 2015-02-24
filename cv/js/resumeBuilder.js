@@ -123,7 +123,7 @@ var jobs = [
 		cat : "#work2009-2010",
 		employer : "*",
 		title : "Développeur à titre personnel",
-		dates : "07/2012 - 10/2012",
+		dates : "2009 - 2010",
 		gps : "", 
 		location : "Toulouse",
 		url : "#",
