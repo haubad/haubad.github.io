@@ -94,7 +94,7 @@ var jobs = [
 		employer : "Netio",
 		title : "Ingénieur d&#39études C++/C#",
 		dates : "11/2012 - 01/2013",
-		gps : "Netio Toulouse",
+		gps : "",
 		location : "Toulouse",
 		url : "#", 
 		description : "Evolution du logiciel CEM (analyse des perturbations électromagnétiques entre appareils électroniques) (C++, C#, Windows)"

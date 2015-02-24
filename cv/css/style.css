@@ -30,6 +30,13 @@ h2 {
   padding: 10px;
 }
 
+.boxH2 {
+  background-color: #00A5F2;
+  color: white;
+  border-radius: 70%;
+  padding: 0px 20px 0px 20px;
+}
+
 h3 {
   font-style: italic;
   font-size: 20px;
@@ -49,7 +56,6 @@ h2, h3, h4, h5 {
   padding-left: 5%;
   padding-right: 5%;
 }
-
 
 .date-text {
   font-style: italic;
@@ -84,6 +90,10 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+}
+
+a:hover  {
+  text-decoration: underline;
 }
 
 .a-no-style {
