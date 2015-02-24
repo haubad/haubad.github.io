@@ -5,7 +5,7 @@
 }
 
 body {
-  border-top: 5px solid #0085FF;
+  border-top: 5px solid #0099FF;
 }
 
 .clearfix {
@@ -35,7 +35,7 @@ h2 {
 }
 
 .boxH2 {
-  background-color: #00A5F2;
+  background-color: #616161;
   color: white;
   border-radius: 5px;
   padding: 0px 20px 0px 20px; /* top right bottom left */
