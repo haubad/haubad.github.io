@@ -173,8 +173,8 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
-  width: 200px;
+  padding: 7px;
+  width: 170px;
   display: block;
 }
 
@@ -223,8 +223,9 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin-left: 7%;
-  margin-right: 7%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
 }
 
 @media only screen and (min-width: 750px) {
