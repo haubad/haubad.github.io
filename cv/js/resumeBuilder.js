@@ -41,7 +41,7 @@ if (bio.skills.length>0) {
 var jobs = [
 	{
 		cat : "#work2015",
-		employer : "*",
+		employer : "",
 		title : "Concours de programmation <i>Codingame</i> (<b>Java</b>)",
 		dates : "2015",
 		gps : "",
@@ -51,7 +51,7 @@ var jobs = [
 	},
 	{
 		cat : "#work2014",
-		employer : "*",
+		employer : "",
 		title : "Concours de programmation <i>Codingame</i> (<b>Java</b>)",
 		dates : "2014",
 		gps : "",
@@ -61,7 +61,7 @@ var jobs = [
 	},
 	{
 		cat : "#work2014",
-		employer : "*",
+		employer : "",
 		title : "Développeur à titre personnel (<b>Android</b>)",
 		dates : "2014",
 		gps : "",
@@ -71,7 +71,7 @@ var jobs = [
 	},
 	{
 		cat : "#work2013",
-		employer : "*",
+		employer : "",
 		title : "Concours de programmation <i>Codingame</i> (<b>Java</b>)",
 		dates : "2013",
 		gps : "",
@@ -81,7 +81,7 @@ var jobs = [
 	},
 	{
 		cat : "#work2013",
-		employer : "*",
+		employer : "",
 		title : "Développeur à titre personnel (<b>Android</b>)",
 		dates : "2013",
 		gps : "",
@@ -121,7 +121,7 @@ var jobs = [
 	},
 	{
 		cat : "#work2009-2010",
-		employer : "*",
+		employer : "",
 		title : "Développeur à titre personnel",
 		dates : "2009 - 2010",
 		gps : "", 
@@ -145,10 +145,14 @@ work.display = function() {
 	work.jobs.forEach(function(job) {
 		var workCat = job.cat;
 		$(workCat).append(HTMLworkStart);
-		var formattedWorkEmployer = formatLink(HTMLworkEmployer, job.employer, job.url);
 
+		var formattedWorkEmployer = formatLink(HTMLworkEmployer, job.employer, job.url);
 		var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
-		$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
+		if (job.employer!=="") {
+			$(".work-entry:last").append(formattedWorkEmployer + " - " + formattedWorkTitle);
+		} else {
+			$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
+		}
 
 		$(workCat).append(HTMLworkDates.replace("%data%", job.dates))
 			.append(HTMLworkLocation.replace("%data%", job.location));
