@@ -175,7 +175,7 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  display: block;
 }
 
 img {
@@ -217,14 +217,14 @@ span {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 
 #map {
   display: block;
   height: 100%;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 @media only screen and (min-width: 750px) {
