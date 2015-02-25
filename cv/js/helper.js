@@ -132,7 +132,7 @@ function initializeMap() {
   about a single location.
   */
   function createMapMarker(placeData) {
-    console.log(placeData);
+    //console.log(placeData);
     // The next lines save location data from the search result object to local variables
     var lat = placeData.geometry.location.lat();  // latitude from the place service
     var lon = placeData.geometry.location.lng();  // longitude from the place service
