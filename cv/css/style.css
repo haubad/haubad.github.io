@@ -41,7 +41,7 @@ h2 {
   background-color: #616161;
   color: white;
   border-radius: 5px;
-  padding: 0px 20px 0px 20px; /* top right bottom left */
+  padding: 0px 5px 0px 5px; /* top right bottom left */
 }
 
 h3 {
