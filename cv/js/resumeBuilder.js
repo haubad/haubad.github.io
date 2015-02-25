@@ -116,7 +116,7 @@ var jobs = [
 		dates : "03/2011 - 03/2012",
 		gps : "IRAP Toulouse",
 		location : "Toulouse",
-		url : "http://www.irap.omp.eu/",
+		url : "http://www.irap.omp.eu/observations/projets/projets/projets-tad/projet-cassis",
 		description : "Evolution du logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<br>Evolution d&#39un script existant pour générer automatiquement une version Cassis<br>Développement d’un éditeur pour composer, compiler et exécuter des scripts Python<br>Développement d&#39un module pour installer et mettre à jour le Cassis<br>Développement d&#39un module pour afficher des spectres en miniature ou écran fenêtré"
 	},
 	{
