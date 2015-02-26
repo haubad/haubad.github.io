@@ -20,7 +20,7 @@ var pics = [
 
 pics = getJSON("images/files.json");
 
-pics.display = function() {
+var display = function() {
 	pics.forEach(function(pic) {
 		$("#main").append(HTMLpicStart);
 
@@ -33,7 +33,7 @@ pics.display = function() {
 		$(".pic-entry:last").append(formattedPicImage + formattedPicDesc);
 	});
 };
-pics.display();
+display();
 
 /*$.ajax({
   type: "GET", 
