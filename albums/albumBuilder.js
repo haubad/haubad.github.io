@@ -18,7 +18,7 @@ var pics = [
 	}
 ];
 
-var json = getJSON("images/files.json");
+var json = getJSON("./images/files.json");
 console.log(json);
 
 var display = function() {
