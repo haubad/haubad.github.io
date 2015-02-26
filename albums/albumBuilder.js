@@ -18,10 +18,10 @@ var pics = [
 	}
 ];
 
-pics = getJSON("images/files.json");
+var json = getJSON("images/files.json");
 
 var display = function() {
-	pics.forEach(function(pic) {
+	json.pics.forEach(function(pic) {
 		$("#main").append(HTMLpicStart);
 
 		var formattedPicImage = HTMLpicImage.replace("%href%", "full.html?link=" + pic.url);
