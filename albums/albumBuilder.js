@@ -19,7 +19,7 @@ var pics = [
 ];
 
 var json = getJSONAjax("./images/files.json");
-console.log(json);
+console.log("json: " + json);
 
 var display = function() {
 	json["pics"].forEach(function(pic) {
