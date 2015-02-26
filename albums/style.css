@@ -1,0 +1,94 @@
+* {
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  border-top: 5px solid #0099FF;
+  border-bottom: 1px solid #0099FF;
+  background-color: rgb(69,69,69);
+}
+
+.title {
+	background-color: rgba(17, 17, 17, 0.3);
+	color: white;
+	padding: 12px;
+	font: bold 14px Verdana, sans-serif;
+}
+
+.white-text {
+	color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+#main {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.pic-entry {
+	border: 1px solid #0099ff;
+	margin: 10px;
+	width: auto;
+	height: auto;
+	float: left;
+}
+
+.pic-entry:hover {
+	border: 1px solid #ff0000;
+}
+
+.pic-entry a .img {
+	width: 200px;
+	//height: 200px;
+	margin: 10px;
+	transform: rotate(0deg);
+}
+
+.pic-entry a .img:hover {
+	transform: rotate(3deg);
+}
+
+div.desc {	
+	width: 200px;
+	margin: 10px;
+}
+
+.full-image {
+    /* This image will be displayed fullscreen */
+    background: no-repeat center center;
+
+    /* Ensure the html element always takes up the full height of the browser window */
+    min-height:100%;
+
+    /* The Magic */
+    background-size: contain;
+    border: 0px 0px 1px 0px solid #0099ff;
+}
+
+.prev {
+	background: url(./images/arrow-left.png) no-repeat center center;
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin-top: 5px;
+}
+
+.next {
+	background: url(./images/arrow-right.png) no-repeat center center;
+	width: 32px;
+	height: 32px;
+	float: right;
+	margin-top: 5px;
+}
+
+.home {
+	background: url(./images/home.png) no-repeat center center;
+	width: 24px;
+	height: 24px;
+	float: left;
+}

@@ -1,0 +1,32 @@
+* {
+	padding:0;
+	margin:0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+  	border-top: 5px solid #0099FF;
+  	background-color: rgb(69,69,69);
+}
+
+.full-image {
+    /* This image will be displayed fullscreen */
+    background: no-repeat center center;
+
+    /* Ensure the html element always takes up the full height of the browser window */
+    min-height:100%;
+
+    /* The Magic */
+    background-size: contain;
+}
+
+.title {
+	background-color: #FFFA00;
+	color: black;
+	padding: 10px;
+	font: bold 14px Verdana, sans-serif;
+}
+
+.center {
+	text-align: center;
+}
