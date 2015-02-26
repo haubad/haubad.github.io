@@ -18,7 +18,7 @@ var pics = [
 	}
 ];
 
-var json = getJSON("./images/files.json");
+var json = getJSONAjax("./images/files.json");
 console.log(json);
 
 var display = function() {
@@ -45,15 +45,16 @@ display();
 });
 */
 
-/*$.ajax({
-	url: "http://haubad.github.io/cv/images/files.json", 
+function getJSONAjax() {
+$.ajax({
+	url: "./images/files.json", 
 	type: "GET",
-	dataType: "jsonp"
-}).done(function(data) {
+	dataType: "json",
+	success: function(data) {
 		console.log(data);
+		return data;
 	}
-);
-*/
+})};
 
 function getJSON(url) {
 	var xmlhttp = new XMLHttpRequest();
