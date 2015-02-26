@@ -18,9 +18,7 @@ var pics = [
 	}
 ];
 
-var json = getJSONAjax("./images/files.json");
-console.log("json: " + json);
-
+var json;
 var display = function() {
 	json["pics"].forEach(function(pic) {
 		$("#main").append(HTMLpicStart);
@@ -34,7 +32,6 @@ var display = function() {
 		$(".pic-entry:last").append(formattedPicImage + formattedPicDesc);
 	});
 };
-display();
 
 /*$.ajax({
   type: "GET", 
@@ -45,16 +42,16 @@ display();
 });
 */
 
-function getJSONAjax() {
 $.ajax({
 	url: "./images/files.json", 
 	type: "GET",
 	dataType: "json",
 	success: function(data) {
 		console.log(data);
-		return data;
+		json=data;
+		display();
 	}
-})};
+});
 
 function getJSON(url) {
 	var xmlhttp = new XMLHttpRequest();
