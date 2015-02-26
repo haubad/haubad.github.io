@@ -18,6 +18,8 @@ var pics = [
 	}
 ];
 
+pics = getJSON("images/files.json");
+
 pics.display = function() {
 	pics.forEach(function(pic) {
 		$("#main").append(HTMLpicStart);
@@ -64,5 +66,3 @@ function getJSON(url) {
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
-
-console.log(getJSON("http://haubad.github.io/cv/images/files.json"));
