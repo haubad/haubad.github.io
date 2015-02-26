@@ -19,6 +19,7 @@ var pics = [
 ];
 
 var json = getJSON("images/files.json");
+console.log(json);
 
 var display = function() {
 	json["pics"].forEach(function(pic) {
