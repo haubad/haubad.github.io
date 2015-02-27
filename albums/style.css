@@ -26,8 +26,8 @@ body {
 }
 
 #main {
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 0%;
+	padding-right: 0%;
 }
 
 .pic-entry {
@@ -115,4 +115,12 @@ div.close {
 div.close a {
 	text-decoration: none;
 	color: white;
+}
+
+/* computer screen */
+@media only screen and (min-width: 750px) {
+	#main {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
 }
