@@ -39,7 +39,7 @@ function display() {
 		$("#main").append(HTMLpicStart);
 
 		var formattedPicImage = HTMLpicImage.replace("%href%", "full.html?link=" + indexOf(pic.url));
-		formattedPicImage = formattedPicImage.replace("%alt%", pic.desc);
+		//formattedPicImage = formattedPicImage.replace("%alt%", pic.desc);
 		formattedPicImage = formattedPicImage.replace("%data%", THUMBNAILS + pic.url);
 
 		var formattedPicDesc = HTMLpicDesc.replace("%data%", pic.desc);
