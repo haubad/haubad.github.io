@@ -1,3 +1,13 @@
+// set <div style="height: h">
+var IMAGES = "images/";
+var HTMLpic = '<div style="background-image: url(./%data%);" id="placeholder" class="full-image"></div>';
+var h = window.innerHeight - 41 /*title dim*/ - 6/*border-top*/ - 0 /*border pic*/;
+var pic = $("#pic");
+pic.attr("style", "height: " + h + "px");
+
+// get current link index
+var currentIdx = parseInt(getUrlParameter("link"));
+
 // getJSON
 var pics = [
 	{
@@ -22,19 +32,9 @@ $.ajax({
 	success: function(data) {
 		console.log(data);
 		json = data;
+		display(json["pics"][currentIdx].url);
 	},
 });
-
-// set <div style="height: h">
-var IMAGES = "images/";
-var HTMLpic = '<div style="background-image: url(./%data%);" id="placeholder" class="full-image"></div>';
-var h = window.innerHeight - 41 /*title dim*/ - 6/*border-top*/ - 0 /*border pic*/;
-var pic = $("#pic");
-pic.attr("style", "height: " + h + "px");
-
-// get current link index
-var currentIdx = parseInt(getUrlParameter("link"));
-display(json["pics"][currentIdx].url);
 
 function display(param) {
 	$("#title-id").text(param);
