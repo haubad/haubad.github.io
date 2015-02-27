@@ -73,7 +73,7 @@ div.desc {
 }
 
 .prev {
-	background: url(./images/arrow-left.png) no-repeat center center;
+	background: url(./icons/arrow-left.png) no-repeat center center;
     min-height:100%;
 	width: 32px;
 	float: left;
@@ -82,11 +82,11 @@ div.desc {
 }
 
 div.prev:hover {
-	background: url(./images/arrow-left-hover.png) no-repeat center center;
+	background: url(./icons/arrow-left-hover.png) no-repeat center center;
 }
 
 div.next {
-	background: url(./images/arrow-right.png) no-repeat center center;
+	background: url(./icons/arrow-right.png) no-repeat center center;
     min-height:100%;
 	width: 32px;
 	float: right;
@@ -95,7 +95,7 @@ div.next {
 }
 
 div.next:hover {
-	background: url(./images/arrow-right-hover.png) no-repeat center center;
+	background: url(./icons/arrow-right-hover.png) no-repeat center center;
 }
 
 div.close {
