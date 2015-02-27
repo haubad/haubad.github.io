@@ -1,3 +1,5 @@
+var local = window.location.href.indexOf("http") == 0 ? false : true;
+
 // set <div style="height: h">
 var IMAGES = "images/";
 var HTMLpic = '<div style="background-image: url(./%data%);" id="placeholder" class="full-image"></div>';
@@ -23,21 +25,27 @@ var pics = [
 		desc: "sdqdqs"
 	}
 ];
-var json = {pics: pics};
-$.ajax({
-	url: "./images/files.json", 
-	type: "GET",
-	dataType: "json",
-	crossDomain: false,
-	success: function(data) {
-		console.log("full.html " + data + " " + currentIdx);
-		json = data;
-		display(json["pics"][currentIdx].url);
-	},
-});
+var json = {pics: pics}, len = json["pics"].length;
+
+if (local) {
+	display(json["pics"][currentIdx].url);
+} else {
+	$.ajax({
+		url: "./images/files.json", 
+		type: "GET",
+		dataType: "json",
+		crossDomain: false,
+		success: function(data) {
+			console.log("full.html " + data + " " + currentIdx);
+			json = data;
+			len = json["pics"].length;
+			display(json["pics"][currentIdx].url);
+		},
+	});
+}
 
 function display(param) {
-	$("#title-id").text(param);
+	$("#title-id").text(param + " @" + (currentIdx+1) + "/" + len);
 	
 	var formattedPic = HTMLpic.replace("%data%", IMAGES + param);
 	pic.children("#placeholder").replaceWith(formattedPic);

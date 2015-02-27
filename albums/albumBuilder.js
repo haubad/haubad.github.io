@@ -1,3 +1,4 @@
+var local = window.location.href.indexOf("http") == 0 ? false : true;
 var HTMLpicStart = '<div class="pic-entry"></div>';
 var HTMLpicImage = '<a href="%href%" alt="%alt%" target="_parent"><img src="%data%" class="img"></a>';
 var HTMLpicDesc = '<div class="desc white-text center">%data%</div>';
@@ -19,20 +20,22 @@ var pics = [
 	}
 ];
 var json = {pics: pics};
-$.ajax({
-	url: "./images/files.json", 
-	type: "GET",
-	dataType: "json",
-	crossDomain: false,
-	success: function(data) {
-		console.log("index.html " + data);
-		json = data;
-		display();
-	},
-	error: function() {
-		//display();
-	}
-});
+
+if (local) {
+	display();
+} else {
+	$.ajax({
+		url: "./images/files.json", 
+		type: "GET",
+		dataType: "json",
+		crossDomain: false,
+		success: function(data) {
+			console.log("index.html " + data);
+			json = data;
+			display();
+		}
+	});
+}
 
 function display() {
 	json["pics"].forEach(function(pic) {
