@@ -48,17 +48,30 @@ function display(param) {
 	$("#title-id").text(param + " @" + (currentIdx+1) + "/" + len);
 	
 	var formattedPic = HTMLpic.replace("%data%", IMAGES + param);
-	pic.children("#placeholder").replaceWith(formattedPic);
+	var p = pic.children("#placeholder");
+	p.animate({
+		//width: [ "swing" ],
+    	//height: [ "toggle" ],
+    	opacity: "toggle"
+	}, 1000, "linear", function() {			
+		p.replaceWith(formattedPic);
+	});
 }
 
 $(".prev").click(function() {
+	var oldIdx = currentIdx;
 	currentIdx = getPrevPic();
-	display(json["pics"][currentIdx].url);
+	if (currentIdx !== oldIdx) {
+		display(json["pics"][currentIdx].url);
+	}
 });
 
 $(".next").click(function() {
+	var oldIdx = currentIdx;
 	currentIdx = getNextPic();
-	display(json["pics"][currentIdx].url);
+	if (currentIdx !== oldIdx) {
+		display(json["pics"][currentIdx].url);
+	}
 	//window.location.href = window.location.pathname + "?link=hhh.jpg"; // makes the page to be reloaded
 });
 
