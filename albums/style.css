@@ -36,7 +36,7 @@ body {
 	width: auto;
 	height: auto;
 	float: left;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .pic-entry:hover {
@@ -51,7 +51,8 @@ body {
 }
 
 .pic-entry a .img:hover {
-	transform: rotate(3deg);
+	transform: rotateY(180deg);
+	transition: 2s;
 }
 
 div.desc {	

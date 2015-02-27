@@ -19,7 +19,10 @@ var pics = [
 		desc: "sdqdqs"
 	}
 ];
-var json = {pics: pics};
+var json = {
+	folders: "",
+	pics: pics
+};
 
 if (local) {
 	display();
