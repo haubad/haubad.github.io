@@ -25,12 +25,12 @@ $.ajax({
 	dataType: "json",
 	crossDomain: false,
 	success: function(data) {
-		console.log(data);
+		console.log("index.html " + data);
 		json = data;
 		display();
 	},
 	error: function() {
-		display();
+		//display();
 	}
 });
 

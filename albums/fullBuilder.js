@@ -30,7 +30,7 @@ $.ajax({
 	dataType: "json",
 	crossDomain: false,
 	success: function(data) {
-		console.log(data);
+		console.log("full.html " + data + " " + currentIdx);
 		json = data;
 		display(json["pics"][currentIdx].url);
 	},
