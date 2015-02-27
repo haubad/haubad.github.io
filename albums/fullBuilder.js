@@ -28,7 +28,7 @@ var pics = [
 var json = {pics: pics}, len = json["pics"].length;
 
 if (local) {
-	display(json["pics"][currentIdx].url);
+	display(json["pics"][currentIdx].url, false);
 } else {
 	$.ajax({
 		url: "./images/files.json", 
@@ -39,30 +39,34 @@ if (local) {
 			console.log("full.html " + data + " " + currentIdx);
 			json = data;
 			len = json["pics"].length;
-			display(json["pics"][currentIdx].url);
+			display(json["pics"][currentIdx].url, false);
 		},
 	});
 }
 
-function display(param) {
+function display(param, anim) {
 	$("#title-id").text(param + " @" + (currentIdx+1) + "/" + len);
 	
 	var formattedPic = HTMLpic.replace("%data%", IMAGES + param);
 	var p = pic.children("#placeholder");
-	p.animate({
-		//width: [ "swing" ],
-    	//height: [ "toggle" ],
-    	opacity: "toggle"
-	}, 1000, "linear", function() {			
+	if (!anim) {
 		p.replaceWith(formattedPic);
-	});
+	} else {
+		p.animate({
+			//width: [ "swing" ],
+	    	//height: [ "toggle" ],
+	    	opacity: "toggle"
+		}, 1000, "linear", function() {			
+			p.replaceWith(formattedPic);
+		});
+	}
 }
 
 $(".prev").click(function() {
 	var oldIdx = currentIdx;
 	currentIdx = getPrevPic();
 	if (currentIdx !== oldIdx) {
-		display(json["pics"][currentIdx].url);
+		display(json["pics"][currentIdx].url, true);
 	}
 });
 
@@ -70,7 +74,7 @@ $(".next").click(function() {
 	var oldIdx = currentIdx;
 	currentIdx = getNextPic();
 	if (currentIdx !== oldIdx) {
-		display(json["pics"][currentIdx].url);
+		display(json["pics"][currentIdx].url, true);
 	}
 	//window.location.href = window.location.pathname + "?link=hhh.jpg"; // makes the page to be reloaded
 });
