@@ -1,8 +1,9 @@
 var HTMLpicStart = '<div class="pic-entry"></div>';
 var HTMLpicImage = '<a href="%href%" alt="%alt%" target="_parent"><img src="%data%" class="img"></a>';
 var HTMLpicDesc = '<div class="desc white-text center">%data%</div>';
-var IMAGES = "images/", THUMBNAILS = "images/thumbnails/";
+var THUMBNAILS = "images/thumbnails/";
 
+// getJSON from the server
 var pics = [
 	{
 		url: "fry.jpg",
@@ -17,13 +18,27 @@ var pics = [
 		desc: "sdqdqs"
 	}
 ];
+var json = {pics: pics};
+$.ajax({
+	url: "./images/files.json", 
+	type: "GET",
+	dataType: "json",
+	crossDomain: false,
+	success: function(data) {
+		console.log(data);
+		json = data;
+		display();
+	},
+	error: function() {
+		display();
+	}
+});
 
-var json;
-var display = function() {
+function display() {
 	json["pics"].forEach(function(pic) {
 		$("#main").append(HTMLpicStart);
 
-		var formattedPicImage = HTMLpicImage.replace("%href%", "full.html?link=" + pic.url);
+		var formattedPicImage = HTMLpicImage.replace("%href%", "full.html?link=" + indexOf(pic.url));
 		formattedPicImage = formattedPicImage.replace("%alt%", pic.desc);
 		formattedPicImage = formattedPicImage.replace("%data%", THUMBNAILS + pic.url);
 
@@ -33,35 +48,13 @@ var display = function() {
 	});
 };
 
-/*$.ajax({
-  type: "GET", 
-  url: "http://78.225.136.246:5900/ALBUM%20PHOTOS%202015/02-2015/VACANCES%20CAP%20D%27AGDE/slide/",
-  success: function(data){
-     console.log(data);
-  }
-});
-*/
-
-$.ajax({
-	url: "./images/files.json", 
-	type: "GET",
-	dataType: "json",
-	success: function(data) {
-		console.log(data);
-		json=data;
-		display();
+function indexOf(url) {
+	var pics = json["pics"]; 
+	var len = pics.length;
+	for (var i=0; i<len; i++) {
+		if (pics[i].url == url) {
+			return i;
+		}
 	}
-});
-
-function getJSON(url) {
-	var xmlhttp = new XMLHttpRequest();
-
-	xmlhttp.onreadystatechange = function() {
-	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-	    	return JSON.parse(xmlhttp.responseText);
-	    }
-	}
-
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
+	return 0;
 }
