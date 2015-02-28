@@ -5,10 +5,11 @@ var HTMLfolderImage = '<a href="%href%" target="_parent">[%data%] &#x21B5;</a>';
 
 var HTMLpicStart = '<figure class="pic-entry grow"></figure>';
 var HTMLpicImage = '<a href="%href%" target="_parent"><img src="%data%" alt="%alt%"></a>';
-var HTMLpicDesc = '<figcaption class="desc white-text center">%data%</figcaption>';
+var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
 
 var PATH = getUrlParameter("folder"), THUMBNAILS = PATH+"/thumbnails/";
 PATH = PATH==null ? "." : PATH;
+$(".header").text(PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(2) : PATH);
 
 // getJSON from the server
 var pics = [

@@ -1,8 +1,9 @@
 var local = window.location.href.indexOf("http") == 0 ? false : true;
 
+var clientHeight = $(".header")[0].clientHeight;
 // set <div style="height: h">
 var HTMLpic = '<div style="background-image: url(./%data%);" id="placeholder" class="full-image"></div>';
-var h = window.innerHeight - 41 /*title dim*/ - 6/*border-top*/ - 0 /*border pic*/;
+var h = window.innerHeight - clientHeight /*title size*/ - 6/*border-top*/ - 0 /*border pic*/;
 var pic = $("#pic");
 pic.attr("style", "height: " + h + "px");
 
