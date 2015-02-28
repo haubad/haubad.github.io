@@ -11,7 +11,8 @@ var PATH = getUrlParameter("folder");
 var currentIdx = parseInt(getUrlParameter("link"));
 
 // set button href
-$(".close a").attr("href", "index.html?folder=" + PATH);
+//$(".close a").attr("href", "index.html?folder=" + PATH);
+$(".close a").attr("href", "javascript:history.back()");
 
 // getJSON
 var pics = [
