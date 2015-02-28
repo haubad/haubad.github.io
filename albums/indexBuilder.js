@@ -1,7 +1,7 @@
 var local = window.location.href.indexOf("http") == 0 ? false : true;
-var HTMLpicStart = '<div class="pic-entry"></div>';
-var HTMLpicImage = '<a href="%href%" alt="%alt%" target="_parent"><img src="%data%" class="img"></a>';
-var HTMLpicDesc = '<div class="desc white-text center">%data%</div>';
+var HTMLpicStart = '<figure class="pic-entry grow"></figure>';
+var HTMLpicImage = '<a href="%href%" alt="%alt%" target="_parent"><img src="%data%"></a>';
+var HTMLpicDesc = '<figcaption class="desc white-text center">%data%</figcaption>';
 var THUMBNAILS = "images/thumbnails/";
 
 // getJSON from the server
@@ -50,7 +50,7 @@ function display() {
 
 		var formattedPicDesc = HTMLpicDesc.replace("%data%", pic.desc);
 
-		$(".pic-entry:last").append(formattedPicImage + formattedPicDesc);
+		$(".pic-entry:last").append(formattedPicImage);
 	});
 };
 
