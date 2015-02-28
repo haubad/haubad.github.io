@@ -31,7 +31,7 @@ body {
 }
 
 #main {
-	padding-left: 0%;
+	padding-left: 2%;
 	padding-right: 0%;
 }
 
@@ -237,7 +237,7 @@ div.close a {
 /* computer screen */
 @media only screen and (min-width: 750px) {
 	#main {
-		padding-left: 2%;
+		padding-left: 4%;
 		padding-right: 2%;
 	}
 }
