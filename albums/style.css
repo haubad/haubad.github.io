@@ -192,7 +192,7 @@ body {
 
 .prev {
 	background: url(./icons/arrow-left.png) no-repeat center center;
-    min-height:100%;
+    min-height: 100%;
 	width: 32px;
 	float: left;
 	margin-top: auto;
@@ -205,7 +205,7 @@ div.prev:hover {
 
 div.next {
 	background: url(./icons/arrow-right.png) no-repeat center center;
-    min-height:100%;
+    min-height: 100%;
 	width: 32px;
 	float: right;
 	margin-top: auto;
