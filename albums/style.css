@@ -35,6 +35,31 @@ body {
 	padding-right: 0%;
 }
 
+.folder-entry {
+	border: 10px solid #0099ff;
+	margin: 20px;
+	width: 300px;
+	height: 200px;
+	float: left;
+	border-radius: 0px;
+	overflow: hidden;
+
+	-webkit-box-shadow: 5px 5px 5px #111;
+          	box-shadow: 5px 5px 5px #111;
+}
+
+.folder-entry:hover {
+	border: 10px solid #fffc56;
+}
+
+.folder-entry a {
+	text-decoration: none;
+	height: 200px;
+	display: block;
+	text-align: center;
+	color: white;
+}
+
 .pic-entry {
 	border: 10px solid #fff;//#0099ff;
 	margin: 20px;

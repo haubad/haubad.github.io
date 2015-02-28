@@ -1,14 +1,17 @@
 var local = window.location.href.indexOf("http") == 0 ? false : true;
 
 // set <div style="height: h">
-var IMAGES = "images/";
 var HTMLpic = '<div style="background-image: url(./%data%);" id="placeholder" class="full-image"></div>';
 var h = window.innerHeight - 41 /*title dim*/ - 6/*border-top*/ - 0 /*border pic*/;
 var pic = $("#pic");
 pic.attr("style", "height: " + h + "px");
 
 // get current link index
+var PATH = getUrlParameter("folder");
 var currentIdx = parseInt(getUrlParameter("link"));
+
+// set button href
+$(".close a").attr("href", "index.html?folder=" + PATH);
 
 // getJSON
 var pics = [
@@ -31,12 +34,11 @@ if (local) {
 	display(json["pics"][currentIdx].url, false);
 } else {
 	$.ajax({
-		url: "./images/files.json", 
+		url: PATH+"/files.json", 
 		type: "GET",
 		dataType: "json",
 		crossDomain: false,
 		success: function(data) {
-			console.log("full.html " + data + " " + currentIdx);
 			json = data;
 			len = json["pics"].length;
 			display(json["pics"][currentIdx].url, false);
@@ -47,14 +49,12 @@ if (local) {
 function display(param, anim) {
 	$("#title-id").text(param + " @" + (currentIdx+1) + "/" + len);
 	
-	var formattedPic = HTMLpic.replace("%data%", IMAGES + param);
+	var formattedPic = HTMLpic.replace("%data%", PATH + "/" + param);
 	var p = pic.children("#placeholder");
 	if (!anim) {
 		p.replaceWith(formattedPic);
 	} else {
 		p.animate({
-			//width: [ "swing" ],
-	    	//height: [ "toggle" ],
 	    	opacity: "toggle"
 		}, 1000, "linear", function() {			
 			p.replaceWith(formattedPic);
@@ -78,17 +78,6 @@ $(".next").click(function() {
 	}
 	//window.location.href = window.location.pathname + "?link=hhh.jpg"; // makes the page to be reloaded
 });
-
-function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i=0; i<sURLVariables.length; i++) {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) {
-            return sParameterName[1];
-        }
-    }
-}
 
 function getNextPic() {
 	var len = json["pics"].length;
