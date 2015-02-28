@@ -67,7 +67,7 @@ body {
 
 /* sidepan */
 .sidepan a img {
-	width: 200px;
+	width: 300px;
 	margin-left: 0px;
 	-webkit-transition: margin 1s ease;
 	 -moz-transition: margin 1s ease;
@@ -82,7 +82,7 @@ body {
 
 /* vertpan */
 .vertpan a img {
-	width: 200px;
+	width: 300px;
 	margin-top: 0px;
 	-webkit-transition: margin 1s ease;
 	 -moz-transition: margin 1s ease;
@@ -97,19 +97,20 @@ body {
 
 /* tilt */
 .tilt {
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+	width: 300px;
+	-webkit-transition: all 0.5s ease;
+	 -moz-transition: all 0.5s ease;
+	   -o-transition: all 0.5s ease;
+	  -ms-transition: all 0.5s ease;
+	      transition: all 0.5s ease;
 }
  
 .tilt:hover {
-  -webkit-transform: rotate(-10deg);
-     -moz-transform: rotate(-10deg);
-       -o-transform: rotate(-10deg);
-      -ms-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	 -moz-transform: rotate(-10deg);
+	   -o-transform: rotate(-10deg);
+	  -ms-transform: rotate(-10deg);
+	      transform: rotate(-10deg);
 }
 
 /* description */
