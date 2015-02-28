@@ -8,7 +8,7 @@ var HTMLpicImage = '<a href="%href%" target="_parent"><img src="%data%" alt="%al
 var HTMLpicDesc = '<figcaption class="desc white-text center">%data%</figcaption>';
 
 var PATH = getUrlParameter("folder"), THUMBNAILS = PATH+"/thumbnails/";
-PATH = PATH==null ? "" : PATH;
+PATH = PATH==null ? "." : PATH;
 
 // getJSON from the server
 var pics = [
