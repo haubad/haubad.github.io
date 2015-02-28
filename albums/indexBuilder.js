@@ -1,7 +1,7 @@
 var local = window.location.href.indexOf("http") == 0 ? false : true;
 
 var HTMLfolderStart = '<div class="folder-entry"></div>';
-var HTMLfolderImage = '<a href="%href%" target="_parent">[%data%]</a>';
+var HTMLfolderImage = '<a href="%href%" target="_parent">[%data%] &#x21B5;</a>';
 
 var HTMLpicStart = '<figure class="pic-entry grow"></figure>';
 var HTMLpicImage = '<a href="%href%" target="_parent"><img src="%data%" alt="%alt%"></a>';
