@@ -6,12 +6,12 @@ var h = window.innerHeight - 41 /*title dim*/ - 6/*border-top*/ - 0 /*border pic
 var pic = $("#pic");
 pic.attr("style", "height: " + h + "px");
 
-// get current link index
-var PATH = getUrlParameter("folder");
+// get link=
 var currentIdx = parseInt(getUrlParameter("link"));
+// get folder=
+var PATH = getUrlParameter("folder");
 
-// set button href
-//$(".close a").attr("href", "index.html?folder=" + PATH);
+// set the href of the close button
 $(".close a").attr("href", "javascript:history.back()");
 
 // getJSON
