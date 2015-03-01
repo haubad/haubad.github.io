@@ -1,4 +1,4 @@
-var local = window.location.href.indexOf("http") == 0 ? false : true;
+var local = window.location.href.indexOf("http") === 0 ? false : true;
 
 var clientHeight = $(".header")[0].clientHeight;
 // set <div style="height: h">
@@ -44,7 +44,7 @@ if (local) {
 			json = data;
 			len = json["pics"].length;
 			display(json["pics"][currentIdx].url, false);
-		},
+		}
 	});
 }
 

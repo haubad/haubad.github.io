@@ -1,4 +1,4 @@
-var local = window.location.href.indexOf("http") == 0 ? false : true;
+var local = window.location.href.indexOf("http") === 0 ? false : true;
 
 var HTMLfolderStart = '<div class="folder-entry"></div>';
 var HTMLfolderImage = '<a href="%href%" target="_parent">[%data%] &#x21B5;</a>';
@@ -8,7 +8,7 @@ var HTMLpicImage = '<a href="%href%" target="_parent"><img src="%data%" alt="%al
 var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
 
 var PATH = getUrlParameter("folder");
-PATH = PATH==null || PATH==="" || PATH==="/" || PATH==="./" ? "." : PATH;
+PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="./" ? "." : PATH);
 $("#title-id").text(PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(2) : PATH);
 var slash = PATH.lastIndexOf("/");
 if (slash>=0) {
@@ -81,8 +81,7 @@ function display() {
 };
 
 function indexOf(url) {
-	var pics = json["pics"]; 
-	var len = pics.length;
+	var pics = json["pics"], len = pics.length;
 	for (var i=0; i<len; i++) {
 		if (pics[i].url == url) {
 			return i;
