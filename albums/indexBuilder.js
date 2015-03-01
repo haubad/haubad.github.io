@@ -9,7 +9,9 @@ var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
 
 var PATH = getUrlParameter("folder");
 PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="./" ? "." : PATH);
-$("#title-id").text(PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(2) : PATH);
+var titleText = (PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(1) : PATH);
+titleText = titleText.replace(/\x2f/g, " &#x25ba; ");
+
 var slash = PATH.lastIndexOf("/");
 if (slash>=0) {
 	$(".close a").attr("href",  "index.html?folder="+PATH.slice(0, slash));
@@ -40,6 +42,7 @@ var folders = [
 	}
 ];
 var json = {
+    "album-desc": "",
 	folders: folders,
 	pics: pics
 };
@@ -48,7 +51,7 @@ if (local) {
 	display();
 } else {
 	$.ajax({
-		url: PATH+"/files.json", 
+		url: PATH + "/files.json", 
 		type: "GET",
 		dataType: "json",
 		crossDomain: false,
@@ -60,6 +63,12 @@ if (local) {
 }
 
 function display() {
+    var albumDesc = json["album-desc"];
+    if (albumDesc!=null && albumDesc!=="") {
+        titleText += " <span class='blue-text'>\"" + albumDesc + "\"</span>";
+    }
+    $("#title-id").html(titleText);
+
 	json["folders"].forEach(function(folder) {
 		$("#main").append(HTMLfolderStart);
 
@@ -78,7 +87,7 @@ function display() {
 		var formattedPicDesc = HTMLpicDesc.replace("%data%", pic.desc);
 		$(".pic-entry:last").append(formattedPicImage);
 	});
-};
+}
 
 function indexOf(url) {
 	var pics = json["pics"], len = pics.length;

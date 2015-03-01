@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-	background-color: rgba(17, 17, 17, 0.3);
+	background-color: rgba(11, 11, 11, 0.11);
 	color: white;
 	padding: 12px;
 	font: bold Verdana, sans-serif;
@@ -26,6 +26,10 @@ body {
 
 .white-text {
 	color: white;
+}
+
+.blue-text {
+    color: #0099FF;
 }
 
 #main {
@@ -249,9 +253,9 @@ div.next:hover {
 }
 
 div.close {
-	background-color: rgb(177, 78, 78);
+	background-color: #0099FF;
 	float: left;
-	border-radius: 4px;
+	border-radius: 3px;
 	padding: 5px;
 	position: relative;
 	top: -5px;

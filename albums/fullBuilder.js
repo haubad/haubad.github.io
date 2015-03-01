@@ -36,7 +36,7 @@ if (local) {
 	display(json["pics"][currentIdx].url, false);
 } else {
 	$.ajax({
-		url: PATH+"/files.json", 
+		url: PATH + "/files.json", 
 		type: "GET",
 		dataType: "json",
 		crossDomain: false,
@@ -49,7 +49,7 @@ if (local) {
 }
 
 function display(param, anim) {
-	$("#title-id").text(param + " @" + (currentIdx+1) + "/" + len);
+	$("#title-id").html("<span class='blue-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
 	
 	var formattedPic = HTMLpic.replace("%data%", PATH + "/" + param);
 	var p = pic.children("#placeholder");
@@ -57,8 +57,8 @@ function display(param, anim) {
 		p.replaceWith(formattedPic);
 	} else {
 		p.animate({
-	    	opacity: "toggle"
-		}, 1000, "linear", function() {			
+            opacity: "toggle"
+		}, 1000, "linear", function() {
 			p.replaceWith(formattedPic);
 		});
 	}
