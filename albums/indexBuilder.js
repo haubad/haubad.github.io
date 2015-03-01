@@ -7,10 +7,17 @@ var HTMLpicStart = '<figure class="pic-entry grow"></figure>';
 var HTMLpicImage = '<a href="%href%" target="_parent"><img src="%data%" alt="%alt%"></a>';
 var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
 
-var PATH = getUrlParameter("folder"), THUMBNAILS = PATH+"/thumbnails/";
-PATH = PATH==null ? "." : PATH;
-$(".header").text(PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(2) : PATH);
-
+var PATH = getUrlParameter("folder");
+PATH = PATH==null || PATH==="" || PATH==="/" || PATH==="./" ? "." : PATH;
+$("#title-id").text(PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(2) : PATH);
+var slash = PATH.lastIndexOf("/");
+if (slash>=0) {
+	$(".close a").attr("href",  "index.html?folder="+PATH.slice(0, slash));
+} else {
+	$(".close").attr("style", "display: none;");
+}
+var THUMBNAILS = PATH+"/thumbnails/";
+	
 // getJSON from the server
 var pics = [
 	{
