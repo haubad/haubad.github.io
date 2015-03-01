@@ -1,7 +1,6 @@
 {
     "folders": [{"url": "abc", "desc": " "}],
     "pics": [
-        {"url": "197x148.gif", "desc": " "},
         {"url": "DSC_1283.jpg", "desc": " "},
         {"url": "DSC_1284.jpg", "desc": " "},
         {"url": "DSC_1289.jpg", "desc": " "},
@@ -24,8 +23,6 @@
         {"url": "DSC_1421.jpg", "desc": " "},
         {"url": "DSC_1443.jpg", "desc": " "},
         {"url": "DSC_1446.jpg", "desc": " "},
-        {"url": "DSC_1463.jpg", "desc": " "},
-        {"url": "fry.jpg", "desc": " "},
-        {"url": "hhh.jpg", "desc": " "}
+        {"url": "DSC_1463.jpg", "desc": " "}
     ]
 }
