@@ -249,15 +249,11 @@ div.next:hover {
 
 div.close {
 	background-color: rgb(218, 64, 0);
-	float: right;
+	float: left;
 	border-radius: 3px;
 	padding: 5px;
 	position: relative;
 	top: -5px;
-}
-
-.title {
-	padding: 0px;	
 }
 
 div.close a {
