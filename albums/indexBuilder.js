@@ -64,7 +64,7 @@ if (local) {
 
 function display() {
     var albumDesc = json["album-desc"];
-    if (albumDesc!=null && albumDesc!=="") {
+    if (albumDesc!=null && albumDesc.trim()!=="") {
         titleText += " <span class='blue-text'>\"" + albumDesc + "\"</span>";
     }
     $("#title-id").html(titleText);

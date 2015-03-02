@@ -213,6 +213,7 @@ body {
 	margin: 5px;
 }
 
+/* full.html */
 .full-image {
     /* This image will be displayed fullscreen */
     background: no-repeat center center;
@@ -226,7 +227,7 @@ body {
     border: 0px 0px 1px 0px solid #0099ff;
 }
 
-.prev {
+div.prev {
 	background: url(./icons/arrow-left.png) no-repeat center center;
     min-height: 100%;
 	width: 32px;
@@ -250,6 +251,18 @@ div.next {
 
 div.next:hover {
 	background: url(./icons/arrow-right-hover.png) no-repeat center center;
+}
+
+#pic div.full-header {
+	background-color: rgba(11, 11, 11, 0.61);
+	color: white;
+	padding-top: 12px;
+    padding-left: 12px;
+	font: bold Verdana, sans-serif;
+	text-align: center;
+    position: fixed;
+    top: 4px;
+    width: 100%;
 }
 
 div.close {
