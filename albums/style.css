@@ -17,8 +17,8 @@ body {
 }
 
 .header {
-	background-color: rgba(11, 11, 11, 0.11);
-	color: white;
+	background-color: #303030;
+	color: #00aaff;
 	padding: 12px;
 	font: bold Verdana, sans-serif;
 	text-align: center;
@@ -30,6 +30,10 @@ body {
 
 .blue-text {
     color: #0099FF;
+}
+
+.yellow-text {
+    color: yellow;
 }
 
 #main {
@@ -246,7 +250,7 @@ div.next {
 	width: 32px;
 	float: right;
 	margin-top: auto;
-	margin-bottom: auto;
+	margin-bottom: auto;    
 }
 
 div.next:hover {
@@ -254,7 +258,7 @@ div.next:hover {
 }
 
 #pic div.full-header {
-	background-color: rgba(11, 11, 11, 0.61);
+	background-color: rgba(11, 11, 11, 0.6);
 	color: white;
 	padding-top: 12px;
     padding-left: 12px;
@@ -272,6 +276,7 @@ div.close {
 	padding: 5px;
 	position: relative;
 	top: -5px;
+    z-index: 1000;
 }
 
 div.close a {

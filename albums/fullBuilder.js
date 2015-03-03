@@ -4,7 +4,7 @@ var header = $(".full-header");
 var headerHeight = header[0].clientHeight;
 
 // set <div style="height: h">
-var HTMLpic = '<div style="background-image: url(./%data%);" id="placeholder" class="full-image"></div>';
+var HTMLpic = '<div style="background-image: url(%data%);" id="placeholder" class="full-image"></div>';
 var h = window.innerHeight - 0 /*header size*/ - 6/*border-top*/ - 0 /*border pic*/;
 var pic = $("#pic");
 pic.attr("style", "height: " + h + "px");
@@ -13,6 +13,7 @@ pic.attr("style", "height: " + h + "px");
 var currentIdx = parseInt(getUrlParameter("link"));
 // get folder=
 var PATH = getUrlParameter("folder");
+PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="./" ? "." : PATH);
 
 // set the href of the close button
 $(".close a").attr("href", "javascript:history.back()");
@@ -41,7 +42,7 @@ if (local) {
 		url: PATH + "/files.json", 
 		type: "GET",
 		dataType: "json",
-		crossDomain: false,
+		crossDomain: true,
 		success: function(data) {
 			json = data;
 			len = json["pics"].length;
@@ -54,16 +55,18 @@ function display(param, anim) {
 	$("#title-id").html("<span class='blue-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
 	
 	var formattedPic = HTMLpic.replace("%data%", PATH + "/" + param);
-	var p = pic.children("#placeholder");
+	pic.hide();
+    var p = pic.children("#placeholder");
 	if (!anim) {
 		p.replaceWith(formattedPic);
 	} else {
 		p.animate({
             opacity: "toggle"
-		}, 1000, "linear", function() {
+		}, 0, "linear", function() {
 			p.replaceWith(formattedPic);
 		});
 	}
+    pic.fadeIn();
 }
 
 $(".prev").click(function() {

@@ -10,15 +10,19 @@ var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
 var PATH = getUrlParameter("folder");
 PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="./" ? "." : PATH);
 var titleText = (PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(1) : PATH);
-titleText = titleText.replace(/\x2f/g, " &#x25ba; ");
+if (PATH.indexOf("http")===0) {
+    titleText = titleText.replace("http://", "").replace(/\x2f/g, " &#x25ba; ");
+} else {
+    titleText = titleText.replace(/\x2f/g, " &#x25ba; ");
+}
 
 var slash = PATH.lastIndexOf("/");
 if (slash>=0) {
-	$(".close a").attr("href",  "index.html?folder="+PATH.slice(0, slash));
+	$(".close a").attr("href",  "index.html?folder=" + PATH.slice(0, slash));
 } else {
 	$(".close").attr("style", "display: none;");
 }
-var THUMBNAILS = PATH+"/thumbnails/";
+var THUMBNAILS = PATH.indexOf("http")===0 ? PATH + "/" : PATH + "/thumbnails/";
 	
 // getJSON from the server
 var pics = [
@@ -54,7 +58,7 @@ if (local) {
 		url: PATH + "/files.json", 
 		type: "GET",
 		dataType: "json",
-		crossDomain: false,
+		crossDomain: true,
 		success: function(data) {
 			json = data;
 			display();
@@ -65,9 +69,9 @@ if (local) {
 function display() {
     var albumDesc = json["album-desc"];
     if (albumDesc!=null && albumDesc.trim()!=="") {
-        titleText += " <span class='blue-text'>\"" + albumDesc + "\"</span>";
+        titleText += " <span class='white-text'>\"" + albumDesc + "\"</span>";
     }
-    $("#title-id").html(titleText);
+    $("#title-id").html(decodeURIComponent(titleText));
 
 	json["folders"].forEach(function(folder) {
 		$("#main").append(HTMLfolderStart);
