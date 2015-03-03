@@ -1,10 +1,10 @@
 var local = window.location.href.indexOf("http") === 0 ? false : true;
 
 var HTMLfolderStart = '<div class="folder-entry"></div>';
-var HTMLfolderImage = '<a href="%href%" target="_parent">[%data%] &#x21B5;</a>';
+var HTMLfolderImage = '<a href="%href%">[%data%] &#x21B5;</a>';
 
 var HTMLpicStart = '<figure class="pic-entry grow"></figure>';
-var HTMLpicImage = '<a href="%href%" target="_parent"><img src="%data%" alt="%alt%"></a>';
+var HTMLpicImage = '<a href="%href%"><img src="%data%" alt="%alt%"></a>';
 var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
 
 var PATH = getUrlParameter("folder");
@@ -66,6 +66,9 @@ if (local) {
 	});
 }
 
+$("a").click(function(e){
+});
+
 function display() {
     var albumDesc = json["album-desc"];
     if (albumDesc!=null && albumDesc.trim()!=="") {
@@ -89,7 +92,16 @@ function display() {
 		formattedPicImage = formattedPicImage.replace("%data%", THUMBNAILS + pic.url);
 
 		var formattedPicDesc = HTMLpicDesc.replace("%data%", pic.desc);
-		$(".pic-entry:last").append(formattedPicImage);
+		var lastPic = $(".pic-entry:last");
+        lastPic.append(formattedPicImage);
+        
+        var img = new Image();
+        img.src = THUMBNAILS + pic.url;
+        img.onload = function() {
+            if (this.naturalWidth < this.naturalHeight) {
+                lastPic.attr("style", "width: 250px; height: 420px;");
+            }
+        }        
 	});
 }
 

@@ -11,14 +11,15 @@
 }
 
 body {
-  border-top: 5px solid #0099FF;
-  border-bottom: 1px solid #0099FF;
-  background-color: rgb(69,69,69);
+    border-top: 5px solid #0099FF;
+    border-bottom: 1px solid #0099FF;
+    background-color: rgb(69,69,69);
+    cursor: auto;
 }
 
 .header {
 	background-color: #303030;
-	color: #00aaff;
+	color: #a292ff;//#00aaff;
 	padding: 12px;
 	font: bold Verdana, sans-serif;
 	text-align: center;
@@ -36,14 +37,18 @@ body {
     color: yellow;
 }
 
+.violet-text {
+    color: #a292ff;
+}
+
 #main {
 	padding-left: 2%;
 	padding-right: 0%;
 }
 
 .folder-entry {
-	border: 10px solid rgb(255, 255, 255); //#0099ff;
-	margin: 20px;
+	border: 10px solid rgb(255, 255, 255);
+	margin: 10px;
 	width: 300px;
 	height: 200px;
 	float: left;
@@ -79,7 +84,7 @@ body {
 
 .pic-entry {
 	border: 10px solid #fff;//#0099ff;
-	margin: 20px;
+	margin: 10px;
 	width: 300px;
 	height: 200px;
 	float: left;
@@ -97,6 +102,7 @@ body {
 /* grow */
 .grow a img {
 	width: 300px;
+    border: 0px;
 
 	-webkit-transition: all 1s ease;
 	 -moz-transition: all 1s ease;
@@ -223,7 +229,7 @@ body {
     background: no-repeat center center;
 
     /* Ensure the html element always takes up the full height of the browser window */
-    min-height:100%;
+    min-height: 100%;
 
     /* The Magic */
     background-size: contain;

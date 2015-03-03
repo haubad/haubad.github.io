@@ -52,7 +52,7 @@ if (local) {
 }
 
 function display(param, anim) {
-	$("#title-id").html("<span class='blue-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
+	$("#title-id").html("<span class='violet-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
 	
 	var formattedPic = HTMLpic.replace("%data%", PATH + "/" + param);
 	pic.hide();
