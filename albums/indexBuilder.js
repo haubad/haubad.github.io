@@ -17,7 +17,7 @@ if (PATH.indexOf("http")===0) {
 }
 
 var slash = PATH.lastIndexOf("/");
-if (slash>=0) {
+if (slash>=0 && PATH.slice(slash, PATH.length).indexOf(":")===-1) {
 	$(".close a").attr("href",  "index.html?folder=" + PATH.slice(0, slash));
 } else {
 	$(".close").attr("style", "display: none;");
