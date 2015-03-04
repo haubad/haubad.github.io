@@ -99,7 +99,7 @@ function display() {
         img.src = THUMBNAILS + pic.url;
         img.onload = function() {
             if (this.naturalWidth < this.naturalHeight) {
-                lastPic.attr("style", "width: 250px; height: 420px;");
+                lastPic.attr("style", "width: 250px; height: 400px;");
             }
         }        
 	});

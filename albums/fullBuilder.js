@@ -70,21 +70,47 @@ function display(param, anim) {
 }
 
 $(".prev").click(function() {
+    clickPrev()
+});
+
+$(".next").click(function() {
+    clickNext()
+});
+
+$('#pic').on('mousewheel', function(e) {    
+    if (e.originalEvent.wheelDelta < 0) { // DOWN
+        clickNext();
+    } else { // UP
+        clickPrev();
+    }
+});
+
+$(document).keyup(function(e) {
+    if (e.keyCode===27) { // ESCAPE
+        //
+    } else if (e.keyCode===39) { // RIGHT
+        clickNext();
+    } else if (e.keyCode===37) { // LEFT
+        clickPrev();
+    }
+});
+
+function clickPrev() {
 	var oldIdx = currentIdx;
 	currentIdx = getPrevPic();
 	if (currentIdx !== oldIdx) {
 		display(json["pics"][currentIdx].url, true);
 	}
-});
+}
 
-$(".next").click(function() {
+function clickNext() {
 	var oldIdx = currentIdx;
 	currentIdx = getNextPic();
 	if (currentIdx !== oldIdx) {
 		display(json["pics"][currentIdx].url, true);
 	}
 	//window.location.href = window.location.pathname + "?link=hhh.jpg"; // makes the page to be reloaded
-});
+}
 
 function getNextPic() {
 	var len = json["pics"].length;
