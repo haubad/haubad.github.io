@@ -9,6 +9,7 @@
 </head>
 <body>
 	<div id="pic">
+        <img src="" usemap="#zones" class="fake-img">
 		<div class="prev"></div>
 		<div class="next"></div>
 		<div id="placeholder"></div>
@@ -16,6 +17,10 @@
             <div class="close"><a>&#x2612; Fermer</a></div>
             <div id="title-id">%data%</div>
         </div>
+        <map name="zones">
+            <area id="area-prev" shape="rect" coords="" alt="précédent"/>
+            <area id="area-next" shape="rect" coords="" alt="suivant"/>
+        </map>
 	</div>
   	<script src="fullBuilder.js"></script>
 </body>

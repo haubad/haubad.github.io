@@ -17,13 +17,17 @@ body {
     cursor: auto;
 }
 
-.header {
+header {
 	//background-color: #303030;
-    background: linear-gradient(90deg, #134e5e 10%, #74524e 90%);
+    background: linear-gradient(90deg, #134e5e 10%, #744e4e 90%);
 	color: #a292ff;//#00aaff;
 	padding: 24px;
 	font: bold Verdana, sans-serif;
 	text-align: center;
+}
+
+.title {
+    font-size: 20px;
 }
 
 .white-text {
@@ -225,7 +229,7 @@ body {
 }
 
 /* full.html */
-.full-image {
+#placeholder {
     /* This image will be displayed fullscreen */
     background: no-repeat center center;
 
@@ -245,10 +249,13 @@ div.prev {
 	float: left;
 	margin-top: auto;
 	margin-bottom: auto;
+    position: relative;
+    z-index: 100;
 }
 
 div.prev:hover {
 	background: url(./icons/arrow-left-hover.png) no-repeat center center;
+    cursor: pointer;
 }
 
 div.next {
@@ -257,14 +264,17 @@ div.next {
 	width: 32px;
 	float: right;
 	margin-top: auto;
-	margin-bottom: auto;    
+	margin-bottom: auto;
+    position: relative;
+    z-index: 100;
 }
 
 div.next:hover {
 	background: url(./icons/arrow-right-hover.png) no-repeat center center;
+    cursor: pointer;
 }
 
-#pic div.full-header {
+div.full-header {
 	background-color: rgba(11, 11, 11, 0.6);
 	color: white;
 	padding-top: 12px;
@@ -274,6 +284,7 @@ div.next:hover {
     position: fixed;
     top: 4px;
     width: 100%;
+    z-index: 1000; /*seuls élements positionnés (fixed, relative or absolute) peux avoir un z-index*/
 }
 
 div.close {
@@ -283,12 +294,14 @@ div.close {
 	padding: 5px;
 	position: relative;
 	top: -5px;
-    z-index: 1000;
 }
 
 div.close a {
 	text-decoration: none;
 	color: white;
+}
+
+div.fake-img {    
 }
 
 /* computer screen */

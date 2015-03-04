@@ -4,10 +4,25 @@ var header = $(".full-header");
 var headerHeight = header[0].clientHeight;
 
 // set <div style="height: h">
-var HTMLpic = '<div style="background-image: url(%data%);" id="placeholder" class="full-image"></div>';
-var h = window.innerHeight - 0 /*header size*/ - 6/*border-top*/ - 0 /*border pic*/;
+var HTMLpic = '<div style="background-image: url(%data%);" id="placeholder" usemap="#zones"></div>';
+var h = window.innerHeight - 0 /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
 var pic = $("#pic");
 pic.attr("style", "height: " + h + "px");
+
+// image map
+$('#pic img').attr("style", "height: " + h + "px; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;");
+var map = $('#area-prev');
+map.attr('coords', "0, " + (5+headerHeight) + ", " + (window.innerWidth/2) + ", " + (window.innerHeight));
+map.click(function() {
+    clickPrev();
+});
+
+map = $('#area-next');
+map.attr('coords', (window.innerWidth/2) + ", " + (5+headerHeight) + ", " + (window.innerWidth) + ", " + (window.innerHeight));
+map.click(function() {
+    clickNext();
+});
+
 
 // get link=
 var currentIdx = parseInt(getUrlParameter("link"));
