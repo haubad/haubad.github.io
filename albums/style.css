@@ -339,12 +339,12 @@ div.fake-img {
 	}
     
     .folder-entry {
-        width: 75px; //300/1920*480;
-        height: 50px; //200/1920*480;
+        width: 200px; //300/1920*480;
+        height: 150px; //200/1920*480;
     }
     
     .pic-entry {
-        width: 75px; //300/1920*480;
-        height: 50px; //200/1920*480;
+        width: 200px; //300/1920*480;
+        height: 150px; //200/1920*480;
     }
 }
