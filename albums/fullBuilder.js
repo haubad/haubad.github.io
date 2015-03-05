@@ -4,7 +4,7 @@ var header = $(".full-header");
 var headerHeight = header[0].clientHeight;
 
 // set <div style="height: h">
-var HTMLpic = '<div style="background-image: url(%data%);" id="placeholder"></div>';
+var HTMLpic = '<div style="background-image: url(\'%data%\');" id="placeholder"></div>';
 var h = window.innerHeight - 0 /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
 var pic = $("#pic");
 pic.attr("style", "height: " + h + "px");
@@ -30,7 +30,7 @@ map.click(function(e) {
 var currentIdx = parseInt(getUrlParameter("link"));
 // get folder=
 var PATH = getUrlParameter("folder");
-PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="./" ? "." : PATH);
+PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "" : PATH);
 
 // set the href of the close button
 $(".close a").attr("href", "javascript:history.back()");

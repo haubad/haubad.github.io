@@ -103,6 +103,10 @@ header {
 	border: 10px solid #fffc56;
 }
 
+.pic-vertical {
+    width: 250px; height: 400px;
+}
+
 /* grow */
 .grow a img {
 	width: 300px;
@@ -315,20 +319,8 @@ div.fake-img {
 	}
 }
 
-/* tablet */
-@media only screen and (max-width: 768px) {
-	#main {
-		padding-left: 2%;
-		padding-right: 2%;
-	}
-
-	* {
-	  font-size: 16px;
-	}
-}
-
 /* smartphone */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
 	#main {
 		padding-left: 1%;
 		padding-right: 1%;
@@ -339,12 +331,17 @@ div.fake-img {
 	}
     
     .folder-entry {
-        width: 200px; //300/1920*480;
-        height: 150px; //200/1920*480;
+        width: 200px;
+        height: 150px;
     }
     
     .pic-entry {
-        width: 200px; //300/1920*480;
-        height: 150px; //200/1920*480;
+        width: 250px;
+        height: 150px;
+    }
+    
+    .pic-vertical {
+        width: 200px;
+        height: 300px;
     }
 }
