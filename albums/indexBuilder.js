@@ -8,7 +8,7 @@ var HTMLpicImage = '<a href="%href%"><img src="%data%" alt="%alt%"></a>';
 var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
 
 var PATH = getUrlParameter("folder");
-PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="./" ? "." : PATH);
+PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "." : PATH);
 var titleText = (PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(1) : PATH);
 if (PATH.indexOf("http")===0) {
     titleText = titleText.replace("http://", "").replace(/\x2f/g, " &#x25ba; ");
@@ -66,9 +66,6 @@ if (local) {
 	});
 }
 
-$("a").click(function(e){
-});
-
 function display() {
     var albumDesc = json["album-desc"];
     if (albumDesc!=null && albumDesc.trim()!=="") {
@@ -76,8 +73,9 @@ function display() {
     }
     $("#title-id").html(decodeURIComponent(titleText));
 
-	json["folders"].forEach(function(folder) {
-		$("#main").append(HTMLfolderStart);
+	var main = $("#main");
+    json["folders"].forEach(function(folder) {
+		main.append(HTMLfolderStart);
 
 		var formattedFolderImage = HTMLfolderImage.replace("%href%", "index.html?folder=" + PATH+"/"+folder.url);
 		formattedFolderImage = formattedFolderImage.replace("%data%", folder.url);
@@ -85,7 +83,7 @@ function display() {
 	});
 
 	json["pics"].forEach(function(pic) {
-		$("#main").append(HTMLpicStart);
+		main.append(HTMLpicStart);
 
 		var formattedPicImage = HTMLpicImage.replace("%href%", "full.html?folder=" + PATH + "&link=" + indexOf(pic.url));
 		formattedPicImage = formattedPicImage.replace("%alt%", pic.desc);
