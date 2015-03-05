@@ -96,8 +96,9 @@ $(".next").click(function() {
     clickNext()
 });
 
-$('#pic').on('mousewheel', function(e) {    
-    if (e.originalEvent.wheelDelta < 0) { // DOWN
+$('#pic').on('wheel', function(e) {
+    console.log(e);
+    if (e.originalEvent.deltaY > 0 /*chrome, firefox*/ || e.originalEvent.wheelDelta < 0 /*IE*/) { // DOWN
         clickNext();
     } else { // UP
         clickPrev();
