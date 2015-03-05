@@ -337,4 +337,14 @@ div.fake-img {
 	* {
 	  font-size: 16px;
 	}
+    
+    .folder-entry {
+        width: 75px; //300/1920*480;
+        height: 50px; //200/1920*480;
+    }
+    
+    .pic-entry {
+        width: 75px; //300/1920*480;
+        height: 50px; //200/1920*480;
+    }
 }
