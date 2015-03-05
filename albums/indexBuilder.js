@@ -8,8 +8,8 @@ var HTMLpicImage = '<a href="%href%"><img src="%data%" alt="%alt%"></a>';
 var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
 
 var PATH = getUrlParameter("folder");
-PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "" : PATH);
-var titleText = (PATH==="" ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(1) : PATH);
+PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "." : PATH);
+var titleText = (PATH==="." ? "Mes Albums" : PATH.indexOf("./")===0 ? PATH.slice(1) : PATH);
 if (PATH.indexOf("http")===0) {
     titleText = titleText.replace("http://", "").replace(/\x2f/g, " &#x25ba; ");
 } else {

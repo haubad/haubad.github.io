@@ -30,7 +30,7 @@ map.click(function(e) {
 var currentIdx = parseInt(getUrlParameter("link"));
 // get folder=
 var PATH = getUrlParameter("folder");
-PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "" : PATH);
+PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "." : PATH);
 
 // set the href of the close button
 $(".close a").attr("href", "javascript:history.back()");
