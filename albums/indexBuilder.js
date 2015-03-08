@@ -5,7 +5,7 @@ var HTMLpicStart = '<figure class="pic-entry grow" style=""></figure>';
 //var HTMLpicImage = '<a href="%href%"><img src="%src%" alt=" " title="%title%"></a>';
 var HTMLpicImage = '<a href="%href%"></a>';
 var HTMLpicCap = '<figcaption class="caption">%caption%</figcaption>';
-var HTMLpicBkg = "background-image: url(\'%data%\')";
+var HTMLpicBkg = "background-image: url(\'%data%\'); width: %width%px; height: %height%px;";
 var HTMLclear = '<div class="clear"></div>';
 
 var PATH = getUrlParameter("folder");
@@ -26,20 +26,17 @@ if (slash>=0 && PATH.slice(slash, PATH.length).indexOf(":")===-1) {
 var THUMBNAILS = PATH.indexOf("http")===0 ? PATH + "/" : PATH + "/thumbnails/";
 
 var winWidth = $(window).width();
-//alert(winWidth + " "+window.screen.width+" " +window.screen.availWidth);
 function getMaxCols() {
     // device width
-    var dvWidth = $(window).width();
+    var dvWidth = $('html').width() - 20/*scroolbar*/;
     var ratio = 358 / 246;
-    //var picWidth = parseInt(358 / 1903 * dvWidth), picHeight = parseInt(picWidth / ratio);
-    var picWidth = 358, picHeight = 246;
+    var picWidth = parseInt(358 / 1903 * dvWidth), picHeight = parseInt(picWidth / ratio);
     var maxCols = parseInt(dvWidth / (picWidth + 2*10 /*margin*/ + 2*0/*padding*/ + 2*1/*border*/));
     var spaces = dvWidth - maxCols * (picWidth + 2*10 /*margin*/ + 2*0/*padding*/ + 2*1/*border*/);
     $('#main').attr("style", "padding-left: " + spaces/2 + "px; padding-right: " + spaces/2 + "px;");
-    log('getMaxCols: ' + maxCols);
-    log(dvWidth+" "+ratio+" "+picWidth+" "+picHeight+" "+spaces);
-    log("padding-left: " + spaces/2 + "px; padding-right: " + spaces/2 + "px;");
-    return maxCols;
+
+    return {width: picWidth, height: picHeight, maxCols: maxCols, spaces: spaces, dvWidth: dvWidth, 
+            dvAvailWidth : window.screen.availWidth};
 }
 
 // getJSON from the server
@@ -74,7 +71,8 @@ function display() {
 		$(".folder-entry:last").append(formattedFolderImage);
 	});
 
-	var cols = 0, maxCols = getMaxCols();
+	var cols = 0, info = getMaxCols(), maxCols = info.maxCols;
+    log(info);
     json["pics"].forEach(function(pic) {
         if (cols===0) {
             main.append(HTMLclear);
@@ -82,7 +80,10 @@ function display() {
         
 		main.append(HTMLpicStart);
 		var lastPic = $(".pic-entry:last");
-        lastPic.attr("style", HTMLpicBkg.replace("%data%", THUMBNAILS + pic.url));
+        var formattedPicBkg = HTMLpicBkg.replace("%data%", THUMBNAILS + pic.url);
+        formattedPicBkg = formattedPicBkg.replace("%width%", info.width);
+        formattedPicBkg = formattedPicBkg.replace("%height%", info.height);
+        lastPic.attr("style", formattedPicBkg);
 
 		var formattedPicImage = HTMLpicImage.replace("%href%", "full.html?folder=" + PATH + "&link=" + indexOf(pic.url));
 		//formattedPicImage = formattedPicImage.replace("%src%", THUMBNAILS + pic.url);
@@ -117,7 +118,6 @@ function display() {
             cols=0;
         }
 	});
-    getMaxCols();
 }
 
 function indexOf(url) {
@@ -143,5 +143,5 @@ $(window).on('resize', function() {
 });
 
 function log(msg) {
-    //console.log(msg);
+    console.log(msg);
 }
