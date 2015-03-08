@@ -29,7 +29,7 @@ var winWidth = $(window).width();
 
 function getMaxCols() {
     // device width
-    var dvWidth = $(window).width();
+    var dvWidth = window.screen.width;//$(window).width();
     var ratio = 358 / 246;
     //var picWidth = parseInt(358 / 1903 * dvWidth), picHeight = parseInt(picWidth / ratio);
     var picWidth = 358, picHeight = 246;
