@@ -32,6 +32,8 @@ function getMaxCols() {
     var media;
     if (dvWidth<=768) {
         media = {width: 360, height: 240, resolution: 768};
+    } else if (dvWidth<=1024) {
+        media = {width: 360, height: 240, resolution: 1024};
     } else {
         media = {width: 360, height: 240, resolution: 1920};
     }

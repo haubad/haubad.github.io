@@ -332,8 +332,8 @@ div.fake-img {
 	}
     
     .folder-entry {
-        width: 240px;
-        height: 160px;
+        //width: 240px;
+        //height: 160px;
     }
 
     .folder-entry a {
