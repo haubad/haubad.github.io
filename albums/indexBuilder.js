@@ -26,10 +26,10 @@ if (slash>=0 && PATH.slice(slash, PATH.length).indexOf(":")===-1) {
 var THUMBNAILS = PATH.indexOf("http")===0 ? PATH + "/" : PATH + "/thumbnails/";
 
 var winWidth = $(window).width();
-
+alert(winWidth + " "+window.screen.width+" " +window.screen.availWidth);
 function getMaxCols() {
     // device width
-    var dvWidth = window.screen.width;//$(window).width();
+    var dvWidth = window.screen.availWidth;//$(window).width();
     var ratio = 358 / 246;
     //var picWidth = parseInt(358 / 1903 * dvWidth), picHeight = parseInt(picWidth / ratio);
     var picWidth = 358, picHeight = 246;
