@@ -51,8 +51,8 @@ header {
 
 .folder-entry {
 	border: 10px solid rgb(255, 255, 255);
-	margin: 20px 20px;
-	width: 20%; //300px;
+	margin: 10px;
+	width: 300px;
 	height: 200px;
 	float: left;
 	border-radius: 0px;
@@ -70,6 +70,7 @@ header {
 .folder-entry a {
 	text-decoration: none;
 	display: block;
+    height: inherit;
 	text-align: center;
 	color: white;
 	padding-top: 80px;
@@ -332,6 +333,10 @@ div.fake-img {
     .folder-entry {
         width: 200px;
         height: 150px;
+    }
+
+    .folder-entry a {
+        padding-top: 55px;
     }
     
     .pic-entry {
