@@ -25,6 +25,8 @@ if (slash>=0 && PATH.slice(slash, PATH.length).indexOf(":")===-1) {
 }
 var THUMBNAILS = PATH.indexOf("http")===0 ? PATH + "/" : PATH + "/thumbnails/";
 
+var winWidth = $(window).width();
+
 function getMaxCols() {
     // device width
     var dvWidth = $('html').width();
@@ -128,9 +130,12 @@ function indexOf(url) {
 	return 0;
 }
 
-$(window).on('resize', function() {
+$(window).on('resize', function() {    
     log('resize');
-    display();
+    if ($(window).width() !== winWidth) {
+        winWidth = $(window).width();
+        display();
+    }
 });
 
 function log(msg) {
