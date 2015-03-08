@@ -63,16 +63,20 @@ function display() {
 
 	var main = $("#main");
     main.empty();
+	var cols = 0, info = getMaxCols(), maxCols = info.maxCols;
+    log(info);
     json["folders"].forEach(function(folder) {
+        if (cols===0) {
+            main.append(HTMLclear);
+        }
 		main.append(HTMLfolderStart);
 
 		var formattedFolderImage = HTMLfolderImage.replace("%href%", "index.html?folder=" + PATH+"/"+folder.url);
 		formattedFolderImage = formattedFolderImage.replace("%data%", folder.url);
 		$(".folder-entry:last").append(formattedFolderImage);
+        cols = (cols + 1) % maxCols;
 	});
 
-	var cols = 0, info = getMaxCols(), maxCols = info.maxCols;
-    log(info);
     json["pics"].forEach(function(pic) {
         if (cols===0) {
             main.append(HTMLclear);
@@ -112,11 +116,7 @@ function display() {
         }, function() {
             lastPic.children(".caption").attr("style", "visibility: hidden;");
         });
-        
-        cols++;
-        if (cols===maxCols) {
-            cols=0;
-        }
+        cols = (cols + 1) % maxCols;
 	});
 }
 
