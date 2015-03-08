@@ -59,6 +59,7 @@ header {
 	border-radius: 0px;
 	overflow: hidden;
     background: linear-gradient(-45deg, #0099FF, rgb(69,69,69));
+    padding-top: 100px;
 
 	-webkit-box-shadow: 5px 5px 5px #111;
           	box-shadow: 5px 5px 5px #111;
@@ -74,7 +75,6 @@ header {
     height: inherit;
 	text-align: center;
 	color: white;
-	padding-top: 100px;
 }
 
 .pic-entry {
@@ -332,12 +332,9 @@ div.fake-img {
 	}
     
     .folder-entry {
-        //width: 240px;
-        //height: 160px;
     }
 
     .folder-entry a {
-        padding-top: 55px;
     }
     
     .pic-entry {

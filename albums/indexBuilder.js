@@ -82,7 +82,7 @@ function display() {
 		var formattedFolderImage = HTMLfolderImage.replace("%href%", "index.html?folder=" + PATH+"/"+folder.url);
 		formattedFolderImage = formattedFolderImage.replace("%data%", folder.url);
 		var lastFolder = $(".folder-entry:last");
-        lastFolder.attr("style", "width: "+info.width+"px; height: "+info.height+"px;");
+        lastFolder.attr("style", "width: "+info.width+"px; height: "+info.height+"px; padding-top: "+(info.height/2-20)+"px;");
         lastFolder.append(formattedFolderImage);
         cols = (cols + 1) % maxCols;
 	});
