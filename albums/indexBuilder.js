@@ -31,7 +31,7 @@ function getMaxCols() {
     var dvWidth = $('html').width() - 20/*scroolbar*/;
     var media;
     if (dvWidth<=768) {
-        media = {width: 240, height: 160, resolution: 768};
+        media = {width: 360, height: 240, resolution: 768};
     } else {
         media = {width: 360, height: 240, resolution: 1920};
     }
@@ -80,7 +80,7 @@ function display() {
 		var formattedFolderImage = HTMLfolderImage.replace("%href%", "index.html?folder=" + PATH+"/"+folder.url);
 		formattedFolderImage = formattedFolderImage.replace("%data%", folder.url);
 		var lastFolder = $(".folder-entry:last");
-        //lastFolder.attr("style", "width: "+info.width+"px; height: "+info.height+"px;");
+        lastFolder.attr("style", "width: "+info.width+"px; height: "+info.height+"px;");
         lastFolder.append(formattedFolderImage);
         cols = (cols + 1) % maxCols;
 	});
