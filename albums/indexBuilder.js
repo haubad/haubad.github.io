@@ -31,7 +31,7 @@ function getMaxCols() {
     var dvWidth = $('html').width() - 20/*scroolbar*/;
     var media;
     if (dvWidth<=768) {
-        media = {width: 360, height: 240, resolution: 768};
+        media = {width: 360, height: 240, resolution: 960};
     } else if (dvWidth<=1024) {
         media = {width: 360, height: 240, resolution: 1024};
     } else {
@@ -111,14 +111,6 @@ function display() {
             if (this.naturalWidth < this.naturalHeight) {
                 lastPic.attr("class", "pic-entry pic-vertical grow");
             }
-        
-            var imgtag = lastPic.children().children();
-            var h2=parseInt(imgtag.height());
-            h2=h2%2===0 ? h2 : h2+1;
-            var w2=parseInt(imgtag.width());
-            w2=w2%2===0 ? w2 : w2+1;
-            //lastPic.height(h2);
-            //lastPic.width(w2);
         }
         
         lastPic.hover(function() {
