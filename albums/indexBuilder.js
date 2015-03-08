@@ -29,8 +29,8 @@ var winWidth = $(window).width();
 function getMaxCols() {
     // device width
     var dvWidth = $('html').width() - 20/*scroolbar*/;
-    var ratio = 358 / 246;
-    var picWidth = parseInt(358 / 1903 * dvWidth), picHeight = parseInt(picWidth / ratio);
+    var ratio = 360 / 240;
+    var picWidth = parseInt(360 / 1903 * dvWidth), picHeight = parseInt(picWidth / ratio);
     var maxCols = parseInt(dvWidth / (picWidth + 2*10 /*margin*/ + 2*0/*padding*/ + 2*1/*border*/));
     var spaces = dvWidth - maxCols * (picWidth + 2*10 /*margin*/ + 2*0/*padding*/ + 2*1/*border*/);
     $('#main').attr("style", "padding-left: " + spaces/2 + "px; padding-right: " + spaces/2 + "px;");
