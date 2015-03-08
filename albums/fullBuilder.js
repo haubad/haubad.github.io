@@ -1,5 +1,3 @@
-var local = window.location.href.indexOf("http") === 0 ? false : true;
-
 var header = $(".full-header");
 var headerHeight = header[0].clientHeight;
 
@@ -36,37 +34,18 @@ PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "
 $(".close a").attr("href", "javascript:history.back()");
 
 // getJSON
-var pics = [
-	{
-		url: "fry.jpg",
-		desc: "sdqdqs"
-	},
-	{
-		url: "197x148.gif",
-		desc: "sdqdqs"
-	},
-	{
-		url: "hhh.jpg",
-		desc: "sdqdqs"
-	}
-];
-var json = {pics: pics}, len = json["pics"].length;
-
-if (local) {
-	display(json["pics"][currentIdx].url, false);
-} else {
-	$.ajax({
-		url: PATH + "/files.json", 
-		type: "GET",
-		dataType: "json",
-		crossDomain: true,
-		success: function(data) {
-			json = data;
-			len = json["pics"].length;
-			display(json["pics"][currentIdx].url, false);
-		}
-	});
-}
+var json, len;
+$.ajax({
+    url: PATH + "/files.json", 
+    type: "GET",
+    dataType: "json",
+    crossDomain: true,
+    success: function(data) {
+        json = data;
+        len = json["pics"].length;
+        display(json["pics"][currentIdx].url, false);
+    }
+});
 
 function display(param, anim) {
 	$("#title-id").html("<span class='violet-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
@@ -97,7 +76,7 @@ $(".next").click(function() {
 });
 
 $('#pic').on('wheel', function(e) {
-    console.log(e);
+    //console.log(e);
     if (e.originalEvent.deltaY > 0 /*chrome, firefox*/ || e.originalEvent.wheelDelta < 0 /*IE*/) { // DOWN
         clickNext();
     } else { // UP

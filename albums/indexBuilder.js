@@ -1,11 +1,12 @@
-var local = window.location.href.indexOf("http") === 0 ? false : true;
-
 var HTMLfolderStart = '<div class="folder-entry"></div>';
 var HTMLfolderImage = '<a href="%href%">[%data%] &#x21B5;</a>';
 
-var HTMLpicStart = '<figure class="pic-entry grow"></figure>';
-var HTMLpicImage = '<a href="%href%"><img src="%data%" alt="%alt%"></a>';
-var HTMLpicDesc = '<figcaption class="desc white-text">%data%</figcaption>';
+var HTMLpicStart = '<figure class="pic-entry grow" style=""></figure>';
+//var HTMLpicImage = '<a href="%href%"><img src="%src%" alt=" " title="%title%"></a>';
+var HTMLpicImage = '<a href="%href%"></a>';
+var HTMLpicCap = '<figcaption class="caption">%caption%</figcaption>';
+var HTMLpicBkg = "background-image: url(\'%data%\')";
+var HTMLclear = '<div class="clear"></div>';
 
 var PATH = getUrlParameter("folder");
 PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "." : PATH);
@@ -23,57 +24,46 @@ if (slash>=0 && PATH.slice(slash, PATH.length).indexOf(":")===-1) {
 	$(".close").attr("style", "display: none;");
 }
 var THUMBNAILS = PATH.indexOf("http")===0 ? PATH + "/" : PATH + "/thumbnails/";
-	
-// getJSON from the server
-var pics = [
-	{
-		url: "fry.jpg",
-		desc: "sdqdqs"
-	},
-	{
-		url: "197x148.gif",
-		desc: "sdqdqs"
-	},
-	{
-		url: "hhh.jpg",
-		desc: "sdqdqs"
-	}
-];
-var folders = [
-	{
-		url: "abc",
-		desc: "dsqfdq"
-	}
-];
-var json = {
-    "album-desc": "",
-	folders: folders,
-	pics: pics
-};
 
-if (local) {
-	display();
-} else {
-	$.ajax({
-		url: PATH + "/files.json", 
-		type: "GET",
-		dataType: "json",
-		crossDomain: true,
-		success: function(data) {
-			json = data;
-			display();
-		}
-	});
+function getMaxCols() {
+    // device width
+    var dvWidth = $('html').width();
+    var ratio = 358 / 246;
+    //var picWidth = parseInt(358 / 1903 * dvWidth), picHeight = parseInt(picWidth / ratio);
+    var picWidth = 358, picHeight = 246;
+    var maxCols = parseInt(dvWidth / (picWidth + 2*10 /*margin*/ + 2*0/*padding*/ + 2*1/*border*/));
+    var spaces = dvWidth - maxCols * (picWidth + 2*10 /*margin*/ + 2*0/*padding*/ + 2*1/*border*/);
+    $('#main').attr("style", "padding-left: " + spaces/2 + "px; padding-right: " + spaces/2 + "px;");
+    log('getMaxCols: ' + maxCols);
+    log(dvWidth+" "+ratio+" "+picWidth+" "+picHeight+" "+spaces);
+    log("padding-left: " + spaces/2 + "px; padding-right: " + spaces/2 + "px;");
+    return maxCols;
 }
 
-function display() {
-    var albumDesc = json["album-desc"];
-    if (albumDesc!=null && albumDesc.trim()!=="") {
-        titleText += " <span class='white-text'>\"" + albumDesc + "\"</span>";
+// getJSON from the server
+var json=null;
+$.ajax({
+    url: PATH + "/files.json", 
+    type: "GET",
+    dataType: "json",
+    crossDomain: true,
+    success: function(data) {
+        json = data;
+        display();
     }
-    $("#title-id").html(decodeURIComponent(titleText));
+});
+
+function display() {
+    log('display');
+    if (json==null) return;
+    var albumDesc = json["album-desc"], titleDesc="";
+    if (albumDesc!=null && albumDesc.trim()!=="") {
+        titleDesc = " <span class='white-text'>\"" + albumDesc + "\"</span>";
+    }
+    $("#title-id").html(decodeURIComponent(titleText+titleDesc));
 
 	var main = $("#main");
+    main.empty();
     json["folders"].forEach(function(folder) {
 		main.append(HTMLfolderStart);
 
@@ -82,25 +72,50 @@ function display() {
 		$(".folder-entry:last").append(formattedFolderImage);
 	});
 
-	json["pics"].forEach(function(pic) {
+	var cols = 0, maxCols = getMaxCols();
+    json["pics"].forEach(function(pic) {
+        if (cols===0) {
+            main.append(HTMLclear);
+        }
+        
 		main.append(HTMLpicStart);
+		var lastPic = $(".pic-entry:last");
+        lastPic.attr("style", HTMLpicBkg.replace("%data%", THUMBNAILS + pic.url));
 
 		var formattedPicImage = HTMLpicImage.replace("%href%", "full.html?folder=" + PATH + "&link=" + indexOf(pic.url));
-		formattedPicImage = formattedPicImage.replace("%alt%", pic.desc);
-		formattedPicImage = formattedPicImage.replace("%data%", THUMBNAILS + pic.url);
-
-		var formattedPicDesc = HTMLpicDesc.replace("%data%", pic.desc);
-		var lastPic = $(".pic-entry:last");
-        lastPic.append(formattedPicImage);
+		//formattedPicImage = formattedPicImage.replace("%src%", THUMBNAILS + pic.url);
+		//formattedPicImage = formattedPicImage.replace("%title%", pic.url);
+        var formattedPicCap = HTMLpicCap.replace("%caption%", pic.url);
+        lastPic.append(formattedPicCap+formattedPicImage);
         
         var img = new Image();
         img.src = THUMBNAILS + pic.url;
         img.onload = function() {
             if (this.naturalWidth < this.naturalHeight) {
-                lastPic.attr("class", "pic-entry grow pic-vertical");
+                lastPic.attr("class", "pic-entry pic-vertical grow");
             }
-        }        
+        
+            var imgtag = lastPic.children().children();
+            var h2=parseInt(imgtag.height());
+            h2=h2%2===0 ? h2 : h2+1;
+            var w2=parseInt(imgtag.width());
+            w2=w2%2===0 ? w2 : w2+1;
+            //lastPic.height(h2);
+            //lastPic.width(w2);
+        }
+        
+        lastPic.hover(function() {
+            lastPic.children(".caption").attr("style", "visibility: inherit;");
+        }, function() {
+            lastPic.children(".caption").attr("style", "visibility: hidden;");
+        });
+        
+        cols++;
+        if (cols===maxCols) {
+            cols=0;
+        }
 	});
+    getMaxCols();
 }
 
 function indexOf(url) {
@@ -111,4 +126,13 @@ function indexOf(url) {
 		}
 	}
 	return 0;
+}
+
+$(window).on('resize', function() {
+    log('resize');
+    display();
+});
+
+function log(msg) {
+    //console.log(msg);
 }
