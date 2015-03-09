@@ -13,14 +13,14 @@ var map = $('#area-prev');
 map.attr('coords', "0, " + (5+headerHeight) + ", " + (window.innerWidth/2) + ", " + (window.innerHeight));
 map.click(function(e) {
     'use strict';
-    //clickPrev();
+    clickPrev();
 });
 
 map = $('#area-next');
 map.attr('coords', (window.innerWidth/2) + ", " + (5+headerHeight) + ", " + (window.innerWidth) + ", " + (window.innerHeight));
 map.click(function(e) {
     'use strict';
-    //clickNext();
+    clickNext();
 });
 
 
@@ -96,14 +96,15 @@ $(document).keyup(function(e) {
     }
 });
 
-$('#placeholder').bind('swipeleft', function() {
-    'use strict';
-    clickPrev();
-});
-
-$('#placeholder').bind('swiperight', function() {
-    'use strict';
-    clickNext();
+$('#placeholder').swipe(function() {
+    //Generic swipe handler for all directions
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+        if (direction==="left") {
+          clickNext();
+        } else if (direction==="right") {
+            clickPrev();
+        }
+    }
 });
 
 function clickPrev() {
