@@ -120,6 +120,8 @@ function display() {
         });
         cols = (cols + 1) % maxCols;
 	});
+    
+    displayFooter();
 }
 
 function indexOf(url) {
@@ -146,4 +148,14 @@ $(window).on('resize', function() {
 
 function log(msg) {
     console.log(msg);
+}
+
+function displayFooter() {
+    if ($('html').get(0).scrollHeight > $('html').get(0).clientHeight) {
+        log("scrollbar visible");
+        $('footer').attr("style", "position: relative;");
+    } else {
+        log("scrollbar invisible");
+        $('footer').attr("style", "position: fixed; bottom: 0;");
+    }
 }

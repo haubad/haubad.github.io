@@ -15,6 +15,7 @@ body {
     border-bottom: 0px solid #0099FF;
     background-color: rgb(69,69,69);
     cursor: auto;
+    min-height: 100%;
 }
 
 header {
@@ -22,7 +23,7 @@ header {
     background: linear-gradient(90deg, #134e5e 10%, #744e4e 90%);
 	color: #a292ff;//#00aaff;
 	padding: 24px;
-	font: bold Verdana, sans-serif;
+	font-weight: normal;
 	text-align: center;
 }
 
@@ -287,7 +288,7 @@ div.full-header {
 	color: white;
 	padding-top: 12px;
     padding-left: 12px;
-	font: bold Verdana, sans-serif;
+	font-weight: normal;
 	text-align: center;
     position: fixed;
     top: 4px;
@@ -346,14 +347,15 @@ div.fake-img {
 
 footer {
     clear: both;
+    width: 100%;
     text-align: center;
     background: linear-gradient(90deg, #134e5e 10%, #60744e 90%);
 	color: white;//#a292ff;//#00aaff;
-	padding: 5px;
-	font: bold Verdana, sans-serif;
+    margin-top: 20px;
+	padding: 10px;
+	font: 14px normal 'Roboto', sans-serif;
+    border-top: 1px solid rgb(50,50,50);
 	text-align: center;
     position: fixed;
     bottom: 0;
-    right: 0;
-    z-index: -1;
 }
