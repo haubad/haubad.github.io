@@ -96,15 +96,19 @@ $(document).keyup(function(e) {
     }
 });
 
-$('#placeholder').swipe(function() {
+$("#pic").swipe({
     //Generic swipe handler for all directions
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
         if (direction==="left") {
-          clickNext();
+            log("You swiped " + direction);
+            clickNext();
         } else if (direction==="right") {
+            log("You swiped " + direction);
             clickPrev();
         }
-    }
+    },
+    //Default is 75px, set to 0 for demo so any distance triggers swipe
+    threshold: 0
 });
 
 function clickPrev() {
