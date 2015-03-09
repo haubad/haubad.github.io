@@ -98,12 +98,12 @@ $(document).keyup(function(e) {
 
 $('#placeholder').bind('swipeleft', function() {
     'use strict';
-    //clickPrev();
+    clickPrev();
 });
 
 $('#placeholder').bind('swiperight', function() {
     'use strict';
-    //clickNext();
+    clickNext();
 });
 
 function clickPrev() {
