@@ -343,3 +343,17 @@ div.fake-img {
     .pic-vertical {
     }
 }
+
+footer {
+    clear: both;
+    text-align: center;
+    background: linear-gradient(90deg, #134e5e 10%, #60744e 90%);
+	color: white;//#a292ff;//#00aaff;
+	padding: 5px;
+	font: bold Verdana, sans-serif;
+	text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
