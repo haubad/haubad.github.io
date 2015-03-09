@@ -94,6 +94,14 @@ $(document).keyup(function(e) {
     }
 });
 
+$('#pic').bind('swipeleft', function() {
+    clickPrev();
+});
+
+$('#pic').bind('swiperight', function() {
+    clickNext();
+});
+
 function clickPrev() {
 	var oldIdx = currentIdx;
 	currentIdx = getPrevPic();
