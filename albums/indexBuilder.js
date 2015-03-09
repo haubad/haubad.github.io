@@ -114,7 +114,7 @@ function display() {
         }
         
         lastPic.hover(function() {
-            lastPic.children(".caption").attr("style", "visibility: inherit;");
+            lastPic.children(".caption").attr("style", "visibility: inherit; bottom: -"+(info.height-14/*font-size*/-4)+"px;");
         }, function() {
             lastPic.children(".caption").attr("style", "visibility: hidden;");
         });
