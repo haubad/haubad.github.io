@@ -97,18 +97,6 @@ $(document).keyup(function(e) {
 });
 
 
-var self=this;
-$("#pic").swipe({
-    //Generic swipe handler for all directions
-    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-        if (direction==="left") {
-            self.clickNext();
-        } else if (direction==="right") {
-            self.clickPrev();
-        }
-    }
-});
-
 function clickPrev() {
 	var oldIdx = currentIdx;
 	currentIdx = getPrevPic();

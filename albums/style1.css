@@ -11,15 +11,14 @@
 }
 
 body {
-    border-top: 5px solid #0099FF;
-    border-bottom: 0px solid #0099FF;
-    background-color: rgb(69,69,69);
+    border-top: 5px solid #fc0;
+    border-bottom: 0px solid #fc0;
+    background-color: rgb(69, 69, 69);
     cursor: auto;
     min-height: 100%;
 }
 
 header {
-	//background-color: #303030;
     background: linear-gradient(90deg, #134e5e 10%, #744e4e 90%);
 	color: #a292ff;//#00aaff;
 	padding: 24px;
@@ -52,7 +51,7 @@ header {
 }
 
 .folder-entry {
-	border: 1px solid #454545;//rgb(255, 255, 255);
+	border: 1px solid #454545;
 	margin: 10px;
 	width: 360px;
 	height: 240px;
@@ -350,11 +349,11 @@ footer {
     width: 100%;
     text-align: center;
     background: linear-gradient(90deg, #134e5e 10%, #60744e 90%);
-	color: white;//#a292ff;//#00aaff;
+	color: white;
     margin-top: 20px;
 	padding: 10px;
 	font: 14px normal 'Roboto', sans-serif;
-    border-top: 1px solid rgb(50,50,50);
+    border-top: 1px solid rgb(50, 50, 50);
 	text-align: center;
     position: fixed;
     bottom: 0;
