@@ -13,14 +13,14 @@ var map = $('#area-prev');
 map.attr('coords', "0, " + (5+headerHeight) + ", " + (window.innerWidth/2) + ", " + (window.innerHeight));
 map.click(function(e) {
     'use strict';
-    clickPrev();
+    //clickPrev();
 });
 
 map = $('#area-next');
 map.attr('coords', (window.innerWidth/2) + ", " + (5+headerHeight) + ", " + (window.innerWidth) + ", " + (window.innerHeight));
 map.click(function(e) {
     'use strict';
-    clickNext();
+    //clickNext();
 });
 
 
@@ -76,6 +76,7 @@ $(".next").click(function() {
 });
 
 $('#pic').on('wheel', function(e) {
+    'use strict';
     //console.log(e);
     if (e.originalEvent.deltaY > 0 /*chrome, firefox*/ || e.originalEvent.wheelDelta < 0 /*IE*/) { // DOWN
         clickNext();
@@ -85,6 +86,7 @@ $('#pic').on('wheel', function(e) {
 });
 
 $(document).keyup(function(e) {
+    'use strict';
     if (e.keyCode===27) { // ESCAPE
         //
     } else if (e.keyCode===39) { // RIGHT
@@ -94,12 +96,14 @@ $(document).keyup(function(e) {
     }
 });
 
-$('#pic').bind('swipeleft', function() {
-    clickPrev();
+$('#placeholder').bind('swipeleft', function() {
+    'use strict';
+    //clickPrev();
 });
 
-$('#pic').bind('swiperight', function() {
-    clickNext();
+$('#placeholder').bind('swiperight', function() {
+    'use strict';
+    //clickNext();
 });
 
 function clickPrev() {
