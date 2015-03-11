@@ -6,6 +6,7 @@ var HTMLpicStart = '<figure class="pic-entry grow" style=""></figure>';
 var HTMLpicImage = '<a href="%href%"></a>';
 var HTMLpicCap = '<figcaption class="caption">%caption%</figcaption>';
 var HTMLpicBkg = "background-image: url(\'%data%\'); width: %width%px; height: %height%px;";
+var HTMLpicCompl = '<div class="compl">&#x2191;</div>';
 var HTMLclear = '<div class="clear"></div>';
 
 var PATH = getUrlParameter("folder");
@@ -103,13 +104,14 @@ function display() {
 		//formattedPicImage = formattedPicImage.replace("%src%", THUMBNAILS + pic.url);
 		//formattedPicImage = formattedPicImage.replace("%title%", pic.url);
         var formattedPicCap = HTMLpicCap.replace("%caption%", pic.url);
-        lastPic.append(formattedPicCap+formattedPicImage);
+        lastPic.append(formattedPicCap + HTMLpicCompl + formattedPicImage);
         
         var img = new Image();
         img.src = THUMBNAILS + pic.url;
         img.onload = function() {
             if (this.naturalWidth < this.naturalHeight) {
                 lastPic.attr("class", "pic-entry pic-vertical grow");
+                lastPic.children(".compl").attr("style", "visibility: inherit;");
             }
         }
         

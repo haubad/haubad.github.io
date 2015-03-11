@@ -236,6 +236,18 @@ header {
     font-size: 14px;
 }
 
+/* compl */
+.compl {
+    position: relative;
+    top: -15px;
+    left: 1px;
+    visibility: hidden;
+    background-color: rgba(11, 11, 11, 0.7);
+    color: #a292ff;
+    font-size: 14px;
+    width: 8px;
+}
+
 /* full.html */
 #placeholder {
     /* This image will be displayed fullscreen */
