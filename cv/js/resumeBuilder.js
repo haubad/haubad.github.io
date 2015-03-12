@@ -127,7 +127,7 @@ var jobs = [
 		gps: "IRAP Toulouse",
 		location: "Toulouse",
 		url: "http://www.irap.omp.eu/observations/projets/projets/projets-tad/projet-cassis",
-		description: "<p>Faire évoluer le logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<p class='tab'>- un script pour générer automatiquement une version Cassis<p class='tab'>- un éditeur pour composer, compiler et exécuter des scripts Python<p class='tab'>- un module pour installer et mettre à jour le Cassis<p class='tab'>- un module pour afficher des spectres en miniature ou écran fenêtré"
+		description: "<p>Faire évoluer le logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<p class='tab'>&bull; un script pour générer automatiquement une version Cassis<p class='tab'>&bull; un éditeur pour composer, compiler et exécuter des scripts Python<p class='tab'>&bull; un module pour installer et mettre à jour le Cassis<p class='tab'>&bull; un module pour afficher des spectres en miniature ou écran fenêtré"
 	},
 	{
 		cat: "#work2009-2010",
