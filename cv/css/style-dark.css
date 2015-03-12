@@ -177,7 +177,7 @@ span {
 
 .desc p {
     color: #ddd;
-    line-height: 2em;
+    line-height: 1.2em;
 }
 .alternate .desc p {
     color: #fff;
@@ -185,6 +185,30 @@ span {
 
 .desc p i {
     font-style: italic;
+}
+
+.desc ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    line-height: 1.5em;
+}
+
+.desc ul li {
+    line-height: 1.5em;
+    color: #ddd;
+}
+
+.desc ul li i {
+    font-style: italic;
+}
+
+.alternate .work-entry .desc ul li {
+    color: #fff;
+}
+
+.tomato-text {
+    color: white;
+    font-weight: bold;
 }
 
 sup, sub {
