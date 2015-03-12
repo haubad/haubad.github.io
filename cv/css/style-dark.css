@@ -43,6 +43,7 @@ h2 {
     color: white;
     border-radius: 5px;
     padding: 0px 5px 0px 5px; /* top left bottom right */
+    font-size: 20px;
 }
 
 h3 {
