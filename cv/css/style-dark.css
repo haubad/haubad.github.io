@@ -274,42 +274,21 @@ a b {font-size: inherit;}
 }
 
 /* media */
-@media only screen and (max-width: 1024px) {
-    #letsConnect {
-        margin-top: 5%;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .biopic {
-        width: 175px;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    #letsConnect {
-        margin-top: 10%;
-    }
+/* smartphone */
+@media only screen and (max-width: 768px) {
     .biopic {
         width: 150px;
+    }
+    #skillsH3, .biopic {
+        display: block;
     }
     .welcome-message {
         display: none;
     }
-}
-
-/* computer screen */
-@media only screen and (min-width: 750px) {
-    #skillsH3, .biopic {
-        display: block;
-    }
-
-    h2, h3, h4, .education-entry, .work-entry, .project-entry, .center-content {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    #map {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
+	#main {
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+	}
 }
