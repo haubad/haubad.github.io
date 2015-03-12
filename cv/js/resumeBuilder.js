@@ -47,7 +47,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>haubad.github.io</a> : crée un site pour visualiser des photos (html5, css3, js, jquery)"
+		description: "<p><a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>haubad.github.io</a> : crée un site pour visualiser des photos (html5, css3, js, jquery)"
 	},
 	{
 		cat: "#work2015",
@@ -57,7 +57,7 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		description: "Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-none-style' href='http://www.dartlang.org/' target='_blank'>Dart</a>)"
+		description: "<p>Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-none-style' href='http://www.dartlang.org/' target='_blank'>Dart</a>)"
 	},
 	{
 		cat: "#work2014",
@@ -67,7 +67,7 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		description: "Challenge d&#39IA <i>Platinum Rift</i> (08/11/2014 – 26/11/2014)<br>Challenge <i>Battle Dev de RégionJob</i> (12/11/2014) (25eSUP sur 375; 9eSUP sur 91 développeurs Java)<br>Challenge d&#39IA <i>Poker Chip Race</i> (10/09/2014 – 24/09/2014) (20eSUP sur 449)<br>Challenge <i>Battle Dev de RégionJob</i> (10/06/2014)<br>Challenge <i>Skynet Finale</i> (06/05/2013)<br>Challenge d&#39IA <i>Game of Drones</i> (14/03/2014 – 28/03/2014)<br>Challenge d&#39IA <i>Tron Battle</i> (10/01/2014 – 28/02/2014) (3eSUP sur 672)"
+		description: "<p>Challenge d&#39IA <i>Platinum Rift</i> (08/11/2014 – 26/11/2014)<p>Challenge <i>Battle Dev de RégionJob</i> (12/11/2014) (25eSUP sur 375; 9eSUP sur 91 développeurs Java)<p>Challenge d&#39IA <i>Poker Chip Race</i> (10/09/2014 – 24/09/2014) (20eSUP sur 449)<p>Challenge <i>Battle Dev de RégionJob</i> (10/06/2014)<p>Challenge <i>Skynet Finale</i> (06/05/2013)<p>Challenge d&#39IA <i>Game of Drones</i> (14/03/2014 – 28/03/2014)<p>Challenge d&#39IA <i>Tron Battle</i> (10/01/2014 – 28/02/2014) (3eSUP sur 672)"
 	},
 	{
 		cat: "#work2014",
@@ -77,7 +77,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l&#39écran)<br><i>Météo</i> : visualise la météo à quatorze jours<br><i>Calculatrice d&#39exposition</i> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé<br><i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)"
+		description: "<p><i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l&#39écran)<p><i>Météo</i> : visualise la météo à quatorze jours<p><i>Calculatrice d&#39exposition</i> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé<p><i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)"
 	},
 	{
 		cat: "#work2013",
@@ -87,7 +87,7 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		description: "Challenge <i>Doctor Who</i> (23/11/2013) (131eSUP sur 1251)<br>Challenge <i>Battle Dev de SudOuestJob</i> (05/11/2013) (26eSUP sur 168)"
+		description: "<p>Challenge <i>Doctor Who</i> (23/11/2013) (131eSUP sur 1251)<p>Challenge <i>Battle Dev de SudOuestJob</i> (05/11/2013) (26eSUP sur 168)"
 	},
 	{
 		cat: "#work2013",
@@ -97,7 +97,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil"
+		description: "<p><i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil"
 	},
 	{
 		cat: "#work2012-2013",
@@ -107,7 +107,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "Faire évoluer le logiciel CEM (analyse des perturbations électromagnétiques entre appareils électroniques) (C++, C#, Windows)"
+		description: "<p>Faire évoluer le logiciel CEM (analyse des perturbations électromagnétiques entre appareils électroniques) (C++, C#, Windows)"
 	},
 	{
 		cat: "#work2012-2013",
@@ -117,7 +117,7 @@ var jobs = [
 		gps: "Infotel 31700 Blagnac",
 		location: "Toulouse",
 		url: "http://www.infotel.com/",
-		description: "Maintenir et développer le logiciel Arcsys (archivage électronique de documents) (C, openSUSE)"
+		description: "<p>Maintenir et développer le logiciel Arcsys (archivage électronique de documents) (C, openSUSE)"
 	},
 	{
 		cat: "#work2011-2012",
@@ -127,7 +127,7 @@ var jobs = [
 		gps: "IRAP Toulouse",
 		location: "Toulouse",
 		url: "http://www.irap.omp.eu/observations/projets/projets/projets-tad/projet-cassis",
-		description: "Faire évoluer le logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<p class='tab'>- un script pour générer automatiquement une version Cassis<p class='tab'>- un éditeur pour composer, compiler et exécuter des scripts Python<p class='tab'>- un module pour installer et mettre à jour le Cassis<p class='tab'>- un module pour afficher des spectres en miniature ou écran fenêtré"
+		description: "<p>Faire évoluer le logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<p class='tab'>- un script pour générer automatiquement une version Cassis<p class='tab'>- un éditeur pour composer, compiler et exécuter des scripts Python<p class='tab'>- un module pour installer et mettre à jour le Cassis<p class='tab'>- un module pour afficher des spectres en miniature ou écran fenêtré"
 	},
 	{
 		cat: "#work2009-2010",
@@ -137,7 +137,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<a class='a-none-style' href='../lpv/' target='_blank'>Visionneuse de photos</a> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)<br><i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)<br><i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)"
+		description: "<p><a class='a-none-style' href='../lpv/' target='_blank'>Visionneuse de photos</a> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)<p><i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)<p><i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)"
 	},
 	{
 		cat: "#work2008",
@@ -147,7 +147,7 @@ var jobs = [
 		gps: "IRIT Toulouse",
 		location: "Toulouse",
 		url: "http://www.univ-tlse3.fr/",
-		description: "Développer un algorithme d&#39approximation (C++, Windows)"
+		description: "<p>Développer un algorithme d&#39approximation (C++, Windows)"
 	}
 ];
 var work = {"jobs": jobs};
@@ -158,16 +158,15 @@ work.display = function () {
 
 		var formattedWorkEmployer = formatLink(HTMLworkEmployer, job.employer, job.url);
 		var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
+        var lastWork = $(".work-entry:last");
 		if (job.employer !== "") {
-			$(".work-entry:last").append(formattedWorkEmployer + " - " + formattedWorkTitle);
+			lastWork.append(formattedWorkEmployer + " - " + formattedWorkTitle)
+                    .append(HTMLworkDates.replace("%data%", job.dates))
+                    .append(HTMLworkLocation.replace("%data%", job.location));
 		} else {
-			$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
+			lastWork.append(formattedWorkEmployer + formattedWorkTitle);
 		}
-
-		$(workCat).append(HTMLworkDates.replace("%data%", job.dates))
-			.append(HTMLworkLocation.replace("%data%", job.location));
-
-		$(workCat).append(HTMLworkDescription.replace("%data%", job.description));
+		lastWork.append(HTMLworkDescription.replace("%data%", job.description));
 	});
 };
 work.display();
@@ -229,26 +228,21 @@ education.display = function () {
 	education.onlineCourses.forEach(function(course) {
 		$("#education").append(HTMLschoolStart);
 		var formattedOnlineTitle = formatLink(HTMLonlineTitle, course.title, course.url);
-
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
-		$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
-
-		$("#education").append(HTMLonlineDates.replace("%data%", course.dates));
-
 		var formattedOnlineUrl = formatLink(HTMLonlineURL, course.url, course.url);
-		//$("#education").append(formattedOnlineUrl);
-		$("#education").append(HTMLonlineDescription);
+		$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool)
+            .append(HTMLonlineDates.replace("%data%", course.dates))
+        	//.append(formattedOnlineUrl)
+            .append(HTMLonlineDescription);
 	});
 
 	education.schools.forEach(function(school) {
 		$("#education").append(HTMLschoolStart);
 		var formattedSchoolName = HTMLschoolName.replace("%data%", school["name"]);
 		formattedSchoolName = formattedSchoolName.replace("#", school["url"]);
-
 		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school["degree"]);
-		$(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
-
-		$("#education").append(HTMLschoolDates.replace("%data%", school["dates"]))
+		$(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree)
+            .append(HTMLschoolDates.replace("%data%", school["dates"]))
 			.append(HTMLschoolLocation.replace("%data%", school["location"]))
 			.append(HTMLschoolMajor.replace("%data%", school["major"]));
 	});

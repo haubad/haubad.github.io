@@ -36,7 +36,7 @@ var HTMLworkEmployer = '<a href="#" target="_blank">%data%';
 var HTMLworkTitle = '%data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div><br>';
-var HTMLworkDescription = '<p>%data%</p><br>';
+var HTMLworkDescription = '<div class="desc">%data%</div><br>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#" target="_blank">%data%';
