@@ -70,6 +70,8 @@ h2, h3, h4 {
 /* header */
 #header {
     background: linear-gradient(90deg, #134e5e 10%, #744e4e 90%);
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .white-text {
@@ -284,6 +286,10 @@ a b {font-size: inherit;}
     }
     .welcome-message {
         display: none;
+    }
+    #header {
+        padding-left: 1%;
+        padding-right: 1%;
     }
 	#main {
         margin-left: 0%;
