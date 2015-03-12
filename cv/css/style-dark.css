@@ -229,7 +229,6 @@ a {
 }
 
 .alternate .work-entry a {
-    color: #fc0;
 }
 
 a:hover  {
@@ -238,11 +237,17 @@ a:hover  {
 }
 
 .a-none-style {
-    //color: #fff;
-    //text-decoration: none;
     margin-top: 0px;
     display: inline;
-    font-size: 18px;
+    font-size: inherit;
+}
+
+.a-none-link {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 22px;
 }
 
 a i {font-size: inherit;}

@@ -47,7 +47,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<ul><li><a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : refait le site de l'application <span class='tomato-text'>Light Photo Viewer</span> (html5, css3)</li><li><a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>albums</a> : crée un site pour visualiser des photos (html5, css3, js, jquery)</li></ul>"
+		description: "<ul><li><a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée un nouveau site de l'application <span class='tomato-text'>Light Photo Viewer</span> (html5, css3)</li><li><a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, js, jquery)</li></ul>"
 	},
 	{
 		cat: "#work2015",
@@ -57,7 +57,7 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		description: "<ul><li>Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-none-style' href='http://www.dartlang.org/' target='_blank'>Dart</a>)</li></ul>"
+		description: "<ul><li>Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-none-style' href='http://www.dartlang.org/' target='_blank'>dart</a>)</li></ul>"
 	},
 	{
 		cat: "#work2014",
@@ -116,7 +116,7 @@ var jobs = [
 		dates: "07/2012 - 10/2012",
 		gps: "Infotel 31700 Blagnac",
 		location: "Toulouse",
-		url: "http://www.infotel.com/",
+		url: "http://www.infotel.com/logiciels/archivage/arcsys/",
 		description: "<p>Maintenir et développer le logiciel Arcsys (archivage électronique de documents) (C, openSUSE)"
 	},
 	{
@@ -163,9 +163,11 @@ work.display = function () {
 			lastWork.append(formattedWorkEmployer + " - " + formattedWorkTitle)
                     .append(HTMLworkDates.replace("%data%", job.dates))
                     .append(HTMLworkLocation.replace("%data%", job.location));
-		} else {
+		} else if (job.url !== "#") {
 			lastWork.append(formattedWorkEmployer + formattedWorkTitle);
-		}
+		} else {
+            lastWork.append(HTMLworkTitleProject.replace("%data%", job.title));
+        }
 		lastWork.append(HTMLworkDescription.replace("%data%", job.description));
 	});
 };
