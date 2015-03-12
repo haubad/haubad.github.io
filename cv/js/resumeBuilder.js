@@ -42,12 +42,22 @@ var jobs = [
 	{
 		cat: "#work2015",
 		employer: "",
+		title: "Projets personnels",
+		dates: "2015",
+		gps: "",
+		location: "Toulouse",
+		url: "#",
+		description: "<a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>haubad.github.io</a> : crée un site pour visualiser des photos (html5, css3, js, jquery)"
+	},
+	{
+		cat: "#work2015",
+		employer: "",
 		title: "Concours de programmation <i>Codingame</i>",
 		dates: "2015",
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		description: "Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-no-style' href='http://www.dartlang.org/' target='_blank'>Dart</a>)"
+		description: "Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-none-style' href='http://www.dartlang.org/' target='_blank'>Dart</a>)"
 	},
 	{
 		cat: "#work2014",
@@ -62,7 +72,7 @@ var jobs = [
 	{
 		cat: "#work2014",
 		employer: "",
-		title: "Développeur à titre personnel (<b>Android</b>)",
+		title: "Projets personnels (<b>Android</b>)",
 		dates: "2014",
 		gps: "",
 		location: "Toulouse",
@@ -82,7 +92,7 @@ var jobs = [
 	{
 		cat: "#work2013",
 		employer: "",
-		title: "Développeur à titre personnel (<b>Android</b>)",
+		title: "Projets personnels (<b>Android</b>)",
 		dates: "2013",
 		gps: "",
 		location: "Toulouse",
@@ -97,7 +107,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "Evolution du logiciel CEM (analyse des perturbations électromagnétiques entre appareils électroniques) (C++, C#, Windows)"
+		description: "Faire évoluer le logiciel CEM (analyse des perturbations électromagnétiques entre appareils électroniques) (C++, C#, Windows)"
 	},
 	{
 		cat: "#work2012-2013",
@@ -107,7 +117,7 @@ var jobs = [
 		gps: "Infotel 31700 Blagnac",
 		location: "Toulouse",
 		url: "http://www.infotel.com/",
-		description: "Maintenance et développement du logiciel Arcsys (archivage électronique de documents) (C, openSUSE)"
+		description: "Maintenir et développer le logiciel Arcsys (archivage électronique de documents) (C, openSUSE)"
 	},
 	{
 		cat: "#work2011-2012",
@@ -117,17 +127,17 @@ var jobs = [
 		gps: "IRAP Toulouse",
 		location: "Toulouse",
 		url: "http://www.irap.omp.eu/observations/projets/projets/projets-tad/projet-cassis",
-		description: "Evolution du logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<br>Evolution d&#39un script existant pour générer automatiquement une version Cassis<br>Développement d’un éditeur pour composer, compiler et exécuter des scripts Python<br>Développement d&#39un module pour installer et mettre à jour le Cassis<br>Développement d&#39un module pour afficher des spectres en miniature ou écran fenêtré"
+		description: "Faire évoluer le logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<p class='tab'>- un script pour générer automatiquement une version Cassis<p class='tab'>- un éditeur pour composer, compiler et exécuter des scripts Python<p class='tab'>- un module pour installer et mettre à jour le Cassis<p class='tab'>- un module pour afficher des spectres en miniature ou écran fenêtré"
 	},
 	{
 		cat: "#work2009-2010",
 		employer: "",
-		title: "Développeur à titre personnel",
+		title: "Projets personnels",
 		dates: "2009 - 2010",
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<i>Visionneuse de photos</i> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)<br><i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)<br><i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)"
+		description: "<a class='a-none-style' href='../lpv/' target='_blank'>Visionneuse de photos</a> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)<br><i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)<br><i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)"
 	},
 	{
 		cat: "#work2008",
@@ -137,7 +147,7 @@ var jobs = [
 		gps: "IRIT Toulouse",
 		location: "Toulouse",
 		url: "http://www.univ-tlse3.fr/",
-		description: "Conception et développement des algorithmes d&#39approximation (C++, Windows)"
+		description: "Développer un algorithme d&#39approximation (C++, Windows)"
 	}
 ];
 var work = {"jobs": jobs};
