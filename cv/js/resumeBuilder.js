@@ -101,7 +101,7 @@ var jobs = [
 	},
 	{
 		cat: "#work2012-2013",
-		employer: "Netio",
+		employer: "Nexiio",
 		title: "Ingénieur d&#39études C++/C#",
 		dates: "11/2012 - 01/2013",
 		gps: "",
