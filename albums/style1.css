@@ -259,7 +259,7 @@ header {
     /* The Magic */
     background-size: contain;
 
-    border: 0px 0px 0px 0px solid #0099ff;
+    border: 0px solid #0099ff;
 }
 
 div.prev {
@@ -305,6 +305,7 @@ div.full-header {
     top: 4px;
     width: 100%;
     z-index: 1000; /*seuls élements positionnés (fixed, relative or absolute) peux avoir un z-index*/
+    //visibility: hidden;
 }
 
 div.close {

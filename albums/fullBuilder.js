@@ -88,7 +88,7 @@ $('#pic').on('wheel', function(e) {
 $(document).keyup(function(e) {
     'use strict';
     if (e.keyCode===27) { // ESCAPE
-        //
+        history.back();
     } else if (e.keyCode===39) { // RIGHT
         clickNext();
     } else if (e.keyCode===37) { // LEFT
