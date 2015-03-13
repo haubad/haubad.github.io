@@ -305,7 +305,6 @@ div.full-header {
     top: 4px;
     width: 100%;
     z-index: 1000; /*seuls élements positionnés (fixed, relative or absolute) peux avoir un z-index*/
-    //visibility: hidden;
 }
 
 div.close {

@@ -1,11 +1,15 @@
 var header = $(".full-header");
 var headerHeight = header[0].clientHeight;
 
+// get overlay=
+var overlayStr = getUrlParameter("overlay");
+var overlay = overlayStr == null || overlayStr === "0" ? 0 : 1;
+
 // set <div style="height: h">
 var HTMLpic = '<div style="background-image: url(\'%data%\');" id="placeholder"></div>';
-var h = window.innerHeight - 0 /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
+var h = window.innerHeight - headerHeight*overlay /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
 var pic = $("#pic");
-pic.attr("style", "height: " + h + "px");
+pic.attr("style", "height: " + h + "px; top: " + (headerHeight*overlay) + "px;" + (overlay===0 ? "":" position: relative;"));
 
 // image maps
 $('#pic img').attr("style", "height: " + h + "px; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;");
