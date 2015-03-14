@@ -126,7 +126,7 @@ span {
 }
 
 .tab {
-    text-indent: 40px;
+    text-indent: 30px;
 }
 
 /* main */
@@ -179,7 +179,7 @@ span {
 
 .desc p {
     color: #ddd;
-    line-height: 1.2em;
+    line-height: 1.5em;
 }
 .alternate .desc p {
     color: #fff;
