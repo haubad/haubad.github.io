@@ -168,14 +168,17 @@ work.display = function () {
 		} else {
             lastWork.append(HTMLworkTitleProject.replace("%data%", job.title));
         }
-		lastWork.append(HTMLworkDescription.replace("%data%", job.description));
+		lastWork.append(HTMLworkDescription.replace("%data%", esup(job.description)));
 	});
 };
 work.display();
-var esub = $("li").each(function () {
+/*var esub = $("li").each(function () {
 	var content = $(this).html().replace(/eSUP/g, "<sup>e</sup>");
 	$(this).html(content);
-});
+});*/
+function esup(s) {
+    return s.replace(/eSUP/g, "<sup>e</sup>");
+}
 
 // FR/EN button
 /*$("#main").prepend(internationalizeButton);
@@ -227,18 +230,18 @@ var onlineCourses = [
 ];
 var education = {"schools" : schools, "onlineCourses" : onlineCourses};
 education.display = function () {
-	education.onlineCourses.forEach(function(course) {
+	education.onlineCourses.forEach(function (course) {
 		$("#education").append(HTMLschoolStart);
 		var formattedOnlineTitle = formatLink(HTMLonlineTitle, course.title, course.url);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
 		var formattedOnlineUrl = formatLink(HTMLonlineURL, course.url, course.url);
 		$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool)
             .append(HTMLonlineDates.replace("%data%", course.dates))
-        	//.append(formattedOnlineUrl)
+            //.append(formattedOnlineUrl)
             .append(HTMLonlineDescription);
 	});
 
-	education.schools.forEach(function(school) {
+	education.schools.forEach(function (school) {
 		$("#education").append(HTMLschoolStart);
 		var formattedSchoolName = HTMLschoolName.replace("%data%", school["name"]);
 		formattedSchoolName = formattedSchoolName.replace("#", school["url"]);
@@ -252,7 +255,7 @@ education.display = function () {
 education.display();
 
 // change black to white
-var grays = $(".gray p").css("color", "#1F1F1F");
+//var grays = $(".gray p").css("color", "#1F1F1F");
 
 // Google maps
 $("#mapDiv").append(googleMap);
