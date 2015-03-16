@@ -106,6 +106,7 @@ header {
 .grow a {
     display: block;
     height: inherit;
+    outline: 0;
 }
 
 /* grow: background-size */
