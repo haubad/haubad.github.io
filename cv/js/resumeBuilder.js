@@ -101,7 +101,7 @@ var jobs = [
 	},
 	{
 		cat: "#work2012-2013",
-		employer: "Nexiio",
+		employer: "Nex io",
 		title: "Ingénieur d&#39études C++/C#",
 		dates: "11/2012 - 01/2013",
 		gps: "",
@@ -160,8 +160,12 @@ work.display = function () {
 		var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
         var lastWork = $(".work-entry:last");
 		if (job.employer !== "") {
-			lastWork.append(formattedWorkEmployer + " - " + formattedWorkTitle)
-                    .append(HTMLworkDates.replace("%data%", job.dates))
+            if (job.url !== "#") {
+                lastWork.append(formattedWorkEmployer + " - " + formattedWorkTitle);
+            } else {
+                lastWork.append(HTMLworkTitleProject.replace("%data%", job.employer + " - " + job.title));
+            }
+            lastWork.append(HTMLworkDates.replace("%data%", job.dates))
                     .append(HTMLworkLocation.replace("%data%", job.location));
 		} else if (job.url !== "#") {
 			lastWork.append(formattedWorkEmployer + formattedWorkTitle);
