@@ -31,7 +31,10 @@ function init() {
     var h = window.innerHeight - headerHeight*overlay /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
     var pic = $("#pic");
     pic.attr("style", "height: " + h + "px; top: " + (headerHeight*overlay) + "px;" + (overlay===0 ? "":" position: relative;"));
+    
     $('#pic img').attr("style", "height: " + h + "px; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;");
+    $('#area-prev').attr('coords', "0, " + (5+headerHeight) + ", " + (window.innerWidth/2) + ", " + (window.innerHeight));
+    $('#area-next').attr('coords', (window.innerWidth/2) + ", " + (5+headerHeight) + ", " + (window.innerWidth) + ", " + (window.innerHeight));
 }
 
 // get link=
