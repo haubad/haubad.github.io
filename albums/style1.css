@@ -264,35 +264,57 @@ header {
 }
 
 div.prev {
-	background: url(./icons/arrow-left.png) no-repeat center center;
     min-height: 100%;
-	width: 32px;
 	float: left;
-	margin-top: auto;
-	margin-bottom: auto;
     position: relative;
     z-index: 100;
 }
 
-div.prev:hover {
+div.prev .prev-button {
+	background: url(./icons/arrow-left.png) no-repeat center center;
+    width: 48px;
+    height: 48px;
+    background-color: #111;
+    border-radius: 3px;
+    
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    margin-left: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div.prev .prev-button:hover {
 	background: url(./icons/arrow-left-hover.png) no-repeat center center;
     cursor: pointer;
+    background-color: #111;
 }
 
 div.next {
-	background: url(./icons/arrow-right.png) no-repeat center center;
     min-height: 100%;
-	width: 32px;
 	float: right;
-	margin-top: auto;
-	margin-bottom: auto;
     position: relative;
     z-index: 100;
 }
 
-div.next:hover {
+div.next .next-button {
+	background: url(./icons/arrow-right.png) no-repeat center center;
+    width: 48px;
+    height: 48px;
+    background-color: #111;
+    border-radius: 3px;
+
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+}
+
+div.next .next-button:hover {
 	background: url(./icons/arrow-right-hover.png) no-repeat center center;
     cursor: pointer;
+    background-color: #111;
 }
 
 div.full-header {
