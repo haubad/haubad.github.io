@@ -27,6 +27,12 @@ map.click(function(e) {
     clickNext();
 });
 
+function init() {
+    var h = window.innerHeight - headerHeight*overlay /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
+    var pic = $("#pic");
+    pic.attr("style", "height: " + h + "px; top: " + (headerHeight*overlay) + "px;" + (overlay===0 ? "":" position: relative;"));
+    $('#pic img').attr("style", "height: " + h + "px; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;");
+}
 
 // get link=
 var currentIdx = parseInt(getUrlParameter("link"));
@@ -52,7 +58,9 @@ $.ajax({
 });
 
 function display(param, anim) {
-	$("#title-id").html("<span class='violet-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
+    if (json == null) return;
+
+    $("#title-id").html("<span class='violet-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
 	
 	var formattedPic = HTMLpic.replace("%data%", PATH + "/" + param);
 	pic.hide();
@@ -100,7 +108,6 @@ $(document).keyup(function(e) {
     }
 });
 
-
 function clickPrev() {
 	var oldIdx = currentIdx;
 	currentIdx = getPrevPic();
@@ -132,3 +139,7 @@ function getPrevPic() {
 	}
 	return currentIdx;
 }
+
+$(window).on('resize', function() {
+    init();
+});

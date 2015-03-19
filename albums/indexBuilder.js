@@ -49,7 +49,7 @@ function getMaxCols() {
 }
 
 // getJSON from the server
-var json=null;
+var json = null;
 $.ajax({
     url: PATH + "/files.json", 
     type: "GET",
@@ -63,7 +63,8 @@ $.ajax({
 
 function display() {
     log('display');
-    if (json==null) return;
+    if (json == null) return;
+
     var albumDesc = json["album-desc"], titleDesc="";
     if (albumDesc!=null && albumDesc.trim()!=="") {
         titleDesc = " <span class='white-text'>\"" + albumDesc + "\"</span>";
