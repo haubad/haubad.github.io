@@ -352,6 +352,7 @@ div.close a {
 @media only screen and (max-width: 768px) {
     div.prev, div.next {
         z-index: -1;
+        visibility: hidden;
     }
 }
 
