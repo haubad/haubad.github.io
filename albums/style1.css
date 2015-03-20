@@ -339,6 +339,10 @@ div.close {
 	top: -5px;
 }
 
+div.round {
+    border-radius: 50%;
+}
+
 div.close a {
 	text-decoration: none;
 	color: white;
