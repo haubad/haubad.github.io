@@ -346,33 +346,12 @@ div.close a {
 
 /* computer screen */
 @media only screen and (min-width: 1024px) {
-	#main {
-	}
-
-	* {
-	  font-size: 16px;
-	}
 }
 
 /* smartphone */
 @media only screen and (max-width: 768px) {
-	#main {
-	}
-
-	* {
-	  font-size: 16px;
-	}
-    
-    .folder-entry {
-    }
-
-    .folder-entry a {
-    }
-    
-    .pic-entry {
-    }
-    
-    .pic-vertical {
+    div.prev, div.next {
+        z-index: -1;
     }
 }
 
