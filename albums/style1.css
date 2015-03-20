@@ -334,13 +334,14 @@ div.close {
 	background-color: #0099FF;
 	float: left;
 	border-radius: 3px;
-	padding: 5px;
+	padding: 6px;
 	position: relative;
 	top: -5px;
 }
 
 div.round {
     border-radius: 50%;
+    padding: 6px;
 }
 
 div.close a {
