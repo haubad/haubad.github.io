@@ -26,7 +26,7 @@ var HTMLlocation = '<li class="flex-item"><span class="blue-text fa fa-location-
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skillsH3"><span class="fa fa-code"/> Compétences fortes</h3><ul id="skills"></ul>';
+var HTMLskillsStart = '<h3 id="skillsH3"><span class="fa fa-code"/>Compétences fortes</h3><ul id="skills"></ul>';
 //var HTMLskillsStart = '<h3 id="skillsH3">Compétences fortes:</h3><ul id="skills" class="flex-box"></ul>';
 //var HTMLskillsStart = '<h3 id="skillsH3">Compétences fortes:</h3><h4 id="skillsH4"></h4>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
