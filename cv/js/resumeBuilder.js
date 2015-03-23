@@ -50,7 +50,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<ul><li><a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée un nouveau site de l'application <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5'/>html5, <span class='fa fa-css3'/>css3)</li><li><a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, javascript, jquery)</li></ul>"
+		description: "<ul><li><a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée le nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5'/>html5, <span class='fa fa-css3'/>css3)</li><li><a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, javascript, jquery)</li></ul>"
 	},
 	{
 		cat: "#work2015",
@@ -80,7 +80,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<ul><li><i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l&#39écran)</li><li><i>Météo</i> : visualise la météo à quatorze jours</li><li><i>Calculatrice d&#39exposition</i> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé</li><li><i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)</li></ul>"
+		description: "<ul><li><i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l&#39écran)</li><li><i>Météo</i> : visualise la météo à quatorze jours</li><li><a class='a-none-style' href='http://www.amazon.com/zunedev-Exposure-Calculator-ND-Filters/dp/B00V3G3XYK/ref=sr_1_fkmr0_1?ie=UTF8&qid=1427138565&sr=8-1-fkmr0&keywords=Exposure+Calculator+%28ND+Filters%29' target='_blank'>Calculatrice d&#39exposition</a> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé</li><li><i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)</li></ul>"
 	},
 	{
 		cat: "#work2013",
