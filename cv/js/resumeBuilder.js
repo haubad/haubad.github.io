@@ -8,7 +8,7 @@ var bio = {
 		location: "Toulouse"
 	},
 	welcomeMessage: "Code, code et code",
-	skills: ["java", "android", "C++", "C#", "dart", "js"],
+	skills: ["java", "android", "C++ C#", "dart javascript"],
 	pic: "images/hhh.jpg"
 };
 
@@ -47,7 +47,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<ul><li><a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée un nouveau site de l'application <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5'/>html5, <span class='fa fa-css3'/>css3)</li><li><a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, js, jquery)</li></ul>"
+		description: "<ul><li><a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée un nouveau site de l'application <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5'/>html5, <span class='fa fa-css3'/>css3)</li><li><a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, javascript, jquery)</li></ul>"
 	},
 	{
 		cat: "#work2015",
