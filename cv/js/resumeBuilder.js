@@ -5,6 +5,7 @@ var bio = {
 	contacts: {
 		mobile: "06 11 46 03 56",
 		email: "tthau2007 at gmail dot com",
+        github: "haubad.github.io",
 		location: "Toulouse"
 	},
 	welcomeMessage: "Code, code et code",
@@ -19,9 +20,11 @@ $("#header").prepend(formattedName);
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+var formattedGithub = HTMLemail.replace("%data%", bio.contacts.github);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedMobile)
 	.append(formattedEmail)
+    .append(formattedGithub)
 	.append(formattedLocation);
 
 var formattedPic = HTMLbioPic.replace("%data%", bio["pic"]);
@@ -267,4 +270,5 @@ $("#mapDiv").append(googleMap);
 // Footer
 $("#footerContacts").append(formattedMobile)
 	.append(formattedEmail)
+    .append(formattedGithub)
 	.append(formattedLocation);

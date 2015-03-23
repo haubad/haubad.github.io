@@ -279,6 +279,8 @@ a b {font-size: inherit;}
     text-align: center;
     background: linear-gradient(90deg, #134e5e 10%, #60744e 90%);
     border-top: 1px solid rgb(40, 40, 40);
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* media */
@@ -293,7 +295,7 @@ a b {font-size: inherit;}
     .welcome-message {
         display: none;
     }
-    #header {
+    #header, #letsConnect {
         padding-left: 1%;
         padding-right: 1%;
     }
