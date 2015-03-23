@@ -41,7 +41,7 @@ h2 {
 .boxH2 {
     background-color: #744e4e;//#616161;
     color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     padding: 0px 5px 0px 5px; /* top left bottom right */
     font-size: 20px;
 }
@@ -87,6 +87,7 @@ h2, h3, h4 {
     font-size: 20px;
     color: #F3F3F3;
     line-height: 28px;
+    display: none;
 }
 
 .flex-box {
@@ -255,7 +256,7 @@ a b {font-size: inherit;}
 
 #skillsH3 {
     color: #61B8FF;
-    display: none;
+    display: block;
 }
 
 #mapDiv {
