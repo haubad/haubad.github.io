@@ -50,7 +50,9 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<ul><li><a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée le nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5'/>html5, <span class='fa fa-css3'/>css3)</li><li><a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, javascript, jquery)</li></ul>"
+		desc: ["<a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée le nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5'/>html5, <span class='fa fa-css3'/>css3)", 
+               "<a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, javascript, jquery)"
+              ]
 	},
 	{
 		cat: "#work2015",
@@ -60,7 +62,8 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		description: "<ul><li>Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-none-style' href='http://www.dartlang.org/' target='_blank'>dart</a>)</li></ul>"
+		desc: ["Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-none-style' href='http://www.dartlang.org/' target='_blank'>dart</a>)"
+              ]
 	},
 	{
 		cat: "#work2014",
@@ -70,7 +73,14 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		description: "<ul><li>Challenge d&#39IA <i>Platinum Rift</i> (08/11/2014 – 26/11/2014)</li><li>Challenge <i>Battle Dev de RégionJob</i> (12/11/2014) (25eSUP sur 375; 9eSUP sur 91 développeurs Java)</li><li>Challenge d&#39IA <i>Poker Chip Race</i> (10/09/2014 – 24/09/2014) (20eSUP sur 449)</li><li>Challenge <i>Battle Dev de RégionJob</i> (10/06/2014)</li><li>Challenge <i>Skynet Finale</i> (06/05/2013)</li><li>Challenge d&#39IA <i>Game of Drones</i> (14/03/2014 – 28/03/2014)</li><li>Challenge d&#39IA <i>Tron Battle</i> (10/01/2014 – 28/02/2014) (3eSUP sur 672)</li></ul>"
+		desc: ["Challenge d&#39IA <i>Platinum Rift</i> (08/11/2014 – 26/11/2014)", 
+               "Challenge <i>Battle Dev de RégionJob</i> (12/11/2014) (25eSUP sur 375; 9eSUP sur 91 développeurs Java)", 
+               "Challenge d&#39IA <i>Poker Chip Race</i> (10/09/2014 – 24/09/2014) (20eSUP sur 449)", 
+               "Challenge <i>Battle Dev de RégionJob</i> (10/06/2014)", 
+               "Challenge <i>Skynet Finale</i> (06/05/2013)", 
+               "Challenge d&#39IA <i>Game of Drones</i> (14/03/2014 – 28/03/2014)", 
+               "Challenge d&#39IA <i>Tron Battle</i> (10/01/2014 – 28/02/2014) (3eSUP sur 672)"
+              ]
 	},
 	{
 		cat: "#work2014",
@@ -80,7 +90,11 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<ul><li><i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l&#39écran)</li><li><i>Météo</i> : visualise la météo à quatorze jours</li><li><a class='a-none-style' href='http://www.amazon.com/zunedev-Exposure-Calculator-ND-Filters/dp/B00V3G3XYK/ref=sr_1_fkmr0_1?ie=UTF8&qid=1427138565&sr=8-1-fkmr0&keywords=Exposure+Calculator+%28ND+Filters%29' target='_blank'>Calculatrice d&#39exposition</a> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé</li><li><i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)</li></ul>"
+		desc: ["<i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l&#39écran)", 
+               "<i>Météo</i> : visualise la météo à quatorze jours", 
+               "<a class='a-none-style' href='http://www.amazon.com/zunedev-Exposure-Calculator-ND-Filters/dp/B00V3G3XYK/ref=sr_1_fkmr0_1?ie=UTF8&qid=1427138565&sr=8-1-fkmr0&keywords=Exposure+Calculator+%28ND+Filters%29' target='_blank'>Calculatrice d&#39exposition</a> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé", 
+               "<i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)"
+              ]
 	},
 	{
 		cat: "#work2013",
@@ -90,7 +104,9 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		description: "<ul><li>Challenge <i>Doctor Who</i> (23/11/2013) (131eSUP sur 1251)</li><li>Challenge <i>Battle Dev de SudOuestJob</i> (05/11/2013) (26eSUP sur 168)</li></ul>"
+		desc: ["Challenge <i>Doctor Who</i> (23/11/2013) (131eSUP sur 1251)", 
+               "Challenge <i>Battle Dev de SudOuestJob</i> (05/11/2013) (26eSUP sur 168)"
+              ]
 	},
 	{
 		cat: "#work2013",
@@ -100,7 +116,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<ul><li><i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil</li></ul>"
+		desc: ["<i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil"]
 	},
 	{
 		cat: "#work2012-2013",
@@ -110,7 +126,8 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<p>Faire évoluer le logiciel CEM (analyse des perturbations électromagnétiques entre appareils électroniques) (C++, C#, Windows)"
+        list: "none",
+		desc: ["<p>Faire évoluer le logiciel CEM (analyse des perturbations électromagnétiques entre appareils électroniques) (C++, C#, Windows)"]
 	},
 	{
 		cat: "#work2012-2013",
@@ -120,7 +137,8 @@ var jobs = [
 		gps: "Infotel 31700 Blagnac",
 		location: "Toulouse",
 		url: "http://www.infotel.com/logiciels/archivage/arcsys/",
-		description: "<p>Maintenir et développer le logiciel Arcsys (archivage électronique de documents) (C, openSUSE)"
+        list: "none",
+		desc: ["<p>Maintenir et développer le logiciel Arcsys (archivage électronique de documents) (C, openSUSE)"]
 	},
 	{
 		cat: "#work2011-2012",
@@ -130,7 +148,8 @@ var jobs = [
 		gps: "IRAP Toulouse",
 		location: "Toulouse",
 		url: "http://www.irap.omp.eu/observations/projets/projets/projets-tad/projet-cassis",
-		description: "<p>Faire évoluer le logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<p class='tab'>&bull; un script pour générer automatiquement une version Cassis<p class='tab'>&bull; un éditeur pour composer, compiler et exécuter des scripts Python<p class='tab'>&bull; un module pour installer et mettre à jour le Cassis<p class='tab'>&bull; un module pour afficher des spectres en miniature ou écran fenêtré"
+        list: "none",
+		desc: ["<p>Faire évoluer le logiciel Cassis (traitement de spectres des télescopes) (Java, Swing, ANT, Ubuntu)<p class='tab'>&bull; un script pour générer automatiquement une version Cassis<p class='tab'>&bull; un éditeur pour composer, compiler et exécuter des scripts Python<p class='tab'>&bull; un module pour installer et mettre à jour le Cassis<p class='tab'>&bull; un module pour afficher des spectres en miniature ou écran fenêtré"]
 	},
 	{
 		cat: "#work2009-2010",
@@ -140,7 +159,9 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		description: "<ul><li><a class='a-none-style' href='../lpv/' target='_blank'>Visionneuse de photos</a> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)</li><li><i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)</li><li><i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)</li></ul>"
+		desc: ["<a class='a-none-style' href='../lpv/' target='_blank'>Visionneuse de photos</a> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)", 
+               "<i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)", 
+               "<i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)"]
 	},
 	{
 		cat: "#work2008",
@@ -150,7 +171,8 @@ var jobs = [
 		gps: "IRIT Toulouse",
 		location: "Toulouse",
 		url: "http://www.univ-tlse3.fr/",
-		description: "<p>Développer un algorithme d&#39approximation (C++, Windows)"
+        list: "none",
+		desc: ["<p>Développer un algorithme d&#39approximation (C++, Windows)"]
 	}
 ];
 var work = {"jobs": jobs};
@@ -175,7 +197,15 @@ work.display = function () {
 		} else {
             lastWork.append(HTMLworkTitleProject.replace("%data%", job.title));
         }
-		lastWork.append(HTMLworkDescription.replace("%data%", esup(job.description)));
+        
+		if (job.list !== "none") {
+            lastWork.append(HTMLworkDescStart);
+            job.desc.forEach(function (p) {
+                $('.desc-start:last').append(HTMLworkDesc.replace("%data%", esup(p)));
+            });
+        } else {
+            lastWork.append(HTMLworkDescSimple.replace("%data%", esup(job.desc[0])));
+        }
 	});
 };
 work.display();
@@ -260,9 +290,6 @@ education.display = function () {
 	});
 };
 education.display();
-
-// change black to white
-//var grays = $(".gray p").css("color", "#1F1F1F");
 
 // Google maps
 $("#mapDiv").append(googleMap);

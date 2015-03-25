@@ -27,8 +27,6 @@ var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skillsH3"><span class="fa fa-code"/>Compétences fortes</h3><ul id="skills"></ul>';
-//var HTMLskillsStart = '<h3 id="skillsH3">Compétences fortes:</h3><ul id="skills" class="flex-box"></ul>';
-//var HTMLskillsStart = '<h3 id="skillsH3">Compétences fortes:</h3><h4 id="skillsH4"></h4>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
@@ -37,7 +35,9 @@ var HTMLworkTitle = '%data%</a>';
 var HTMLworkTitleProject = '<div class="a-none-link">%data%</div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div><br>';
-var HTMLworkDescription = '<div class="desc">%data%</div><br>';
+var HTMLworkDescStart = '<div class="desc"><ul class="desc-start"></ul></div><br>';
+var HTMLworkDesc = '<li>%data%</li>';
+var HTMLworkDescSimple = '<div class="desc">%data%</div><br>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#" target="_blank">%data%';
