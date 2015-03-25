@@ -15,8 +15,9 @@ var bio = {
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+var header = $("header");
+header.prepend(formattedRole);
+header.prepend(formattedName);
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -30,11 +31,11 @@ $("#topContacts").append(formattedMobile)
 var formattedPic = HTMLbioPic.replace("%data%", bio["pic"]);
 var formattedMsg = HTMLWelcomeMsg.replace("%data%", bio["welcomeMessage"]);
 var formattedSkillsStart = HTMLskillsStart;
-$("#header").append(formattedPic);
-$("#header").append(formattedMsg);
+header.append(formattedPic);
+header.append(formattedMsg);
 
 if (bio.skills.length > 0) {
-	$("#header").append(formattedSkillsStart);
+	header.append(formattedSkillsStart);
 	bio.skills.forEach(function (skill) {
 		$("#skills").append(HTMLskills.replace("%data%", skill));
 	});
