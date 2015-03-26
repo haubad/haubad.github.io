@@ -15,8 +15,8 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="white-text">%data%</span>';
 var HTMLheaderOptions = 
-    '<div class="right">'+
-    '   <a class="right orange" data-toggle="dropdown" data-target="#demo"><span class="fa fa-bars"/></a>' +
+    '<div class="btn-group">'+
+    '   <a class="orange right" data-toggle="dropdown" data-target="#demo"><span class="fa fa-bars"/></a>' +
     '   <ul id="demo" class="dropdown-menu clear right">'+
     '       <li><a class="a-none-style cursor orange" onclick="switch_theme(0)">Dark theme</a></li>'+
     '       <li><a class="a-none-style cursor orange" onclick="switch_theme(1)">Light theme</a></li>'+

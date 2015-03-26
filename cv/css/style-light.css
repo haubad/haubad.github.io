@@ -10,7 +10,7 @@ body {
 header * {font-weight: 300;}
 .alternate * {font-weight: 300;}
 
-.default {background-color: #e5e5e5;}
+.default {background-color: #bfe2eb;}
 .alternate {background-color: #375879;}
 
 .desc p {color: #000;}
@@ -25,5 +25,5 @@ a {color: #2525ff;}
 a:hover {color: #f90;}
 .alternate .work-entry a:hover {color: #f90;}
 
-.a-none-link {color: #000;}
+.a-none-link {color: #333;}
 .alternate .a-none-link {color: #e5e5e5;}

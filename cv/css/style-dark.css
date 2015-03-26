@@ -101,11 +101,15 @@ span {padding: 5px;}
 .clear {clear: both;}
 .cursor {cursor: pointer;}
 .orange {color: #fc0;}
+.btn-group {
+    display: inline;
+    float: right;
+}
 
 .dropdown-menu {
     position: relative;
-    top: -10px;
-    right: 5px;
+    //top: -10px;
+    //right: 5px;
     padding: 10px;
     margin: 0px 0 0;
     background-color: rgba(51, 51, 51, 0.9);

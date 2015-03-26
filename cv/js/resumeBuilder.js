@@ -49,6 +49,15 @@ function switch_theme(s) {
     }
 }
 
+function initOptions() {
+    var options = $('.dropdown-menu');
+    options.attr('style', 'position: relative;');
+    options.attr('class', 'dropdown-menu clear right open');
+    options.attr('style', 'position: absolute; top: ' + options.offset().top + 'px; left: ' + options.offset().left + 'px;');
+    options.attr('class', 'dropdown-menu clear right');
+}
+initOptions();
+
 // Wok = {jobs, display}
 var jobs = [
 	{
@@ -308,3 +317,8 @@ $("#footerContacts").append(formattedMobile)
 	.append(formattedEmail)
     .append(formattedGithub)
 	.append(formattedLocation);
+
+$(window).on('resize', function() {
+    console.log('resize');
+    initOptions();
+});
