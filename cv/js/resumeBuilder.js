@@ -319,6 +319,5 @@ $("#footerContacts").append(formattedMobile)
 	.append(formattedLocation);
 
 $(window).on('resize', function() {
-    console.log('resize');
     initOptions();
 });
