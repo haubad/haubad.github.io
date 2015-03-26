@@ -4,12 +4,12 @@ var bio = {
 	role: "Ingénieur d&#39études",
 	contacts: {
 		mobile: "06 11 46 03 56",
-		email: "tthau2007 at gmail dot com",
+		email: "tthau2007 <i class='fa fa-at' /> gmail point com",
         github: "haubad.github.io",
 		location: "Toulouse"
 	},
 	welcomeMessage: "Code, code et code",
-	skills: ["java", "android", "C++ C#", "dart javascript"],
+	skills: ["Java", "Android", "C++ <span /> C#", "Dart <span /> JavaScript <span /> jQuery"],
 	pic: "images/hhh.jpg"
 };
 

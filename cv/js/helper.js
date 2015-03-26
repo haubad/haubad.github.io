@@ -26,7 +26,7 @@ var HTMLlocation = '<li><span class="blue-text fa fa-location-arrow"/><span clas
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3><span class="fa fa-code"/>Compétences fortes</h3><ul id="skills"></ul>';
+var HTMLskillsStart = '<h3><span class="fa fa-code"/>Compétences</h3><ul id="skills"></ul>';
 var HTMLskills = '<li><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
