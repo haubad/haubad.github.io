@@ -16,7 +16,7 @@ var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="white-text">%data%</span>';
 var HTMLheaderOptions = 
     '<div class="btn-group">'+
-    '   <a class="orange cursor right" data-toggle="dropdown" data-target="#demo"><span class="fa fa-bars"/></a>' +
+    '   <a class="cursor orange right" data-toggle="dropdown" data-target="#demo"><span class="fa fa-bars"/></a>' +
     '   <ul id="demo" class="dropdown-menu clear right">'+
     '       <li><a class="a-none-style cursor orange" onclick="switch_theme(0)">Dark theme</a></li>'+
     '       <li><a class="a-none-style cursor orange" onclick="switch_theme(1)">Light theme</a></li>'+
