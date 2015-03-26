@@ -1,0 +1,29 @@
+* {    
+    font: normal 18px 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #9197a3;
+    color: #333;
+}
+
+header * {font-weight: 300;}
+.alternate * {font-weight: 300;}
+
+.default {background-color: #e5e5e5;}
+.alternate {background-color: #375879;}
+
+.desc p {color: #000;}
+.alternate .desc p {color: #e5e5e5;}
+
+.desc ul li {color: #000;}
+.alternate .work-entry .desc ul li {color: #e5e5e5;}
+
+a {color: #2525ff;}
+.alternate .work-entry a {color: #fc0;}
+
+a:hover {color: #f90;}
+.alternate .work-entry a:hover {color: #f90;}
+
+.a-none-link {color: #000;}
+.alternate .a-none-link {color: #e5e5e5;}

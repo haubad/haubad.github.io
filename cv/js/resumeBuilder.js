@@ -9,15 +9,18 @@ var bio = {
 		location: "Toulouse"
 	},
 	welcomeMessage: "Code, code et code",
-	skills: ["Java", "Android", "C++ <span /> C#", "Dart <span /> JavaScript <span /> jQuery"],
+	skills: ["Java", "Android", "C++ <span /> C#", "Dart <span /> JavaScript"],
 	pic: "images/hhh.jpg"
 };
 
+var header = $("header");
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var header = $("header");
-header.prepend(formattedRole);
-header.prepend(formattedName);
+var formattedDiv  = HTMLheaderDiv.replace("%name%", formattedName)
+                                .replace("%role%", formattedRole)
+                                .replace("%options%", HTMLheaderOptions)
+                                .replace("%line%", HTMLheaderLine);
+header.prepend(formattedDiv);
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -28,17 +31,22 @@ $("#topContacts").append(formattedMobile)
     .append(formattedGithub)
 	.append(formattedLocation);
 
-var formattedPic = HTMLbioPic.replace("%data%", bio["pic"]);
-var formattedMsg = HTMLWelcomeMsg.replace("%data%", bio["welcomeMessage"]);
-var formattedSkillsStart = HTMLskillsStart;
-header.append(formattedPic);
-header.append(formattedMsg);
+header.append(HTMLbioPic.replace("%data%", bio["pic"]))
+    .append(HTMLWelcomeMsg.replace("%data%", bio["welcomeMessage"]));
 
 if (bio.skills.length > 0) {
-	header.append(formattedSkillsStart);
+	header.append(HTMLskillsStart);
 	bio.skills.forEach(function (skill) {
 		$("#skills").append(HTMLskills.replace("%data%", skill));
 	});
+}
+
+function switch_theme(s) {
+    if (s == 0) {
+        document.getElementById('theme').href = "css/style-dark.css";
+    } else if (s == 1) {
+        document.getElementById('theme').href = "css/style-light.css";
+    }
 }
 
 // Wok = {jobs, display}
