@@ -42,21 +42,37 @@ if (bio.skills.length > 0) {
 }
 
 function switch_theme(s) {
+    var options = $('.dropdown-menu');
     if (s == 0) {
+        document.cookie = 'theme=0;';
+        options.children().first().children().first().addClass('disabled');
+        options.children().first().next().children().first().removeClass('disabled');
         document.getElementById('theme').href = "css/style-dark.css";
     } else if (s == 1) {
+        document.cookie = 'theme=1;';
+        options.children().first().children().first().removeClass('disabled');
+        options.children().first().next().children().first().addClass('disabled');
         document.getElementById('theme').href = "css/style-light.css";
     }
 }
 
-function initOptions() {
+function initOptions(first) {
     var options = $('.dropdown-menu');
     options.attr('style', 'position: relative;');
     options.attr('class', 'dropdown-menu clear right open');
     options.attr('style', 'position: absolute; top: ' + (options.offset().top-7) + 'px; left: ' + options.offset().left + 'px;');
     options.attr('class', 'dropdown-menu clear right');
+    
+    console.log(first);
+    if (first == true) {
+        if (document.cookie.indexOf("theme=1") != -1) {
+            options.children().first().children().first().removeClass('disabled');
+            options.children().first().next().children().first().addClass('disabled');
+            document.getElementById('theme').href = "css/style-light.css";
+        }
+    }
 }
-initOptions();
+initOptions(true);
 
 // Wok = {jobs, display}
 var jobs = [
@@ -319,5 +335,5 @@ $("#footerContacts").append(formattedMobile)
 	.append(formattedLocation);
 
 $(window).on('resize', function() {
-    initOptions();
+    initOptions(false);
 });

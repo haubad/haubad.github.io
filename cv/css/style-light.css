@@ -7,8 +7,7 @@ body {
     color: #333;
 }
 
-header * {font-weight: 300;}
-.alternate * {font-weight: 300;}
+header *, .alternate * , footer * {font-weight: 300;}
 
 .default {background-color: #bfe2eb;}
 .alternate {background-color: #375879;}
