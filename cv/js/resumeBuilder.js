@@ -53,6 +53,7 @@ function initOptions() {
     var options = $('.dropdown-menu');
     options.attr('style', 'position: relative;');
     options.attr('class', 'dropdown-menu clear right open');
+    options.attr('style', 'position: absolute; top: ' + (options.offset().top-7) + 'px; left: ' + options.offset().left + 'px;');
     options.attr('class', 'dropdown-menu clear right');
 }
 initOptions();
