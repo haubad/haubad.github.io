@@ -10,7 +10,7 @@ body {
     color: #ddd;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry {
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -24,33 +24,25 @@ h1 {
 }
 
 h2 {
+    margin: 0px 0% 0px 0%;
+    padding: 0px 5px 0px 5px; /* top right bottom left */
     font-weight: bold;
-    font-size: 22px;
-    color: #0066FF;
     line-height: 29px;
-}
-
-.boxH2 {
     background-color: #744e4e;
     color: white;
-    border-radius: 4px;
-    padding: 0px 5px 0px 5px; /* top right bottom left */
-    font-size: 20px;
+    border-radius: 0px;
+    font-size: 22px;
+    display: inline-block;
+    //width: 30%;
 }
 
 h3 {
+    padding: 10px 2% 0px 2%;
     font-style: italic;
     font-size: 20px;
     line-height: 22px;
     color: #61B8FF;
     display: block;
-}
-
-h2, h3 {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    padding-left: 2%;
-    padding-right: 2%;
 }
 
 /* header */
@@ -161,7 +153,7 @@ span {padding: 5px;}
 
 .date-text {
     font-style: italic;
-    color: #999999;
+    color: #999;
     line-height: 16px;
     float: left;
 }
@@ -169,7 +161,7 @@ span {padding: 5px;}
 
 .location-text {
     font-style: italic;
-    color: #999999;
+    color: #999;
     line-height: 16px;
     float: right;
 }
@@ -231,9 +223,8 @@ a:hover {
 }
 .alternate .a-none-link {}
 
-a i {font-size: inherit;}
-a b {font-size: inherit;}
-.a-none-link b {font-size: inherit;}
+a > i, b {font-size: inherit;}
+.a-none-link > b {font-size: inherit;}
 
 #mapDiv {
     height: 400px;  
