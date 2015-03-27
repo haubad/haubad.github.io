@@ -3,22 +3,25 @@ body {
     color: #333;
 }
 
-.default {background-color: #fff;}
+.default {background-color: #377962;}
 .alternate {background-color: #375879;}
 
-.default * {font-family: sans-serif;}
+.date-text, .location-text {color: #999;}
+.alternate .work-entry .date-text, .alternate .work-entry .location-text {color: #bbb;}
 
-.desc p {color: #000;}
+.desc p {color: #e5e5e5;}
 .alternate .desc p {color: #e5e5e5;}
 
-.desc ul li {color: #000;}
+.desc ul li {color: #e5e5e5;}
 .alternate .work-entry .desc ul li {color: #e5e5e5;}
 
-a {color: #6cb200;}
-.alternate .work-entry a {color: #85be2e;}
+a {color: #fc0;//#6cb200;
+}
+.alternate .work-entry a {color: #fc0;//#85be2e;
+}
 
 a:hover {color: #f90;}
 .alternate .work-entry a:hover {color: #f90;}
 
-.a-none-link {color: #000;}
+.a-none-link {color: #fff;}
 .alternate .a-none-link {color: #fff;}

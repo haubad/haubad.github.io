@@ -47,7 +47,7 @@ function switch_theme(s) {
         document.cookie = 'theme=0;';
         options.find('li:nth-child(1) a').addClass('disabled');
         options.find('li:nth-child(3) a').removeClass('disabled');
-        document.getElementById('theme').href = "css/style-dark.css";
+        document.getElementById('theme').href = "";
     } else if (s == 1) {
         document.cookie = 'theme=1;';
         options.find('li:nth-child(1) a').removeClass('disabled');
