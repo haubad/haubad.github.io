@@ -233,6 +233,7 @@ a:hover {
 
 a i {font-size: inherit;}
 a b {font-size: inherit;}
+.a-none-link b {font-size: inherit;}
 
 #mapDiv {
     height: 400px;  
