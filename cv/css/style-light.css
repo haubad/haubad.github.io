@@ -1,5 +1,5 @@
 * {    
-    font: normal 18px 'Roboto', sans-serif;
+    font: 300 21px Lato, Roboto, sans-serif;
 }
 
 body {
@@ -9,8 +9,10 @@ body {
 
 header *, .alternate * , footer * {font-weight: 300;}
 
-.default {background-color: #bfe2eb;}
+.default {background-color: #fff;}
 .alternate {background-color: #375879;}
+
+.default * {font-family: sans-serif;}
 
 .desc p {color: #000;}
 .alternate .desc p {color: #e5e5e5;}
@@ -18,11 +20,11 @@ header *, .alternate * , footer * {font-weight: 300;}
 .desc ul li {color: #000;}
 .alternate .work-entry .desc ul li {color: #e5e5e5;}
 
-a {color: #2525ff;}
-.alternate .work-entry a {color: #fc0;}
+a {color: #6cb200;}
+.alternate .work-entry a {color: #85be2e;}
 
 a:hover {color: #f90;}
 .alternate .work-entry a:hover {color: #f90;}
 
 .a-none-link {color: #333;}
-.alternate .a-none-link {color: #e5e5e5;}
+.alternate .a-none-link {color: #fff;}
