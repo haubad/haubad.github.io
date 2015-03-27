@@ -83,8 +83,8 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		desc: ["<a class='a-none-style' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée le nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5'/>html5, <span class='fa fa-css3'/>css3)", 
-               "<a class='a-none-style' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, javascript, jquery)"
+		desc: ["<a class='a-inline' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée le nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5'/>html5, <span class='fa fa-css3'/>css3)", 
+               "<a class='a-inline' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, javascript, jquery)"
               ]
 	},
 	{
@@ -95,7 +95,7 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		desc: ["Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-none-style' href='http://www.dartlang.org/' target='_blank'>dart</a>)"
+		desc: ["Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-inline' href='http://www.dartlang.org/' target='_blank'>dart</a>)"
               ]
 	},
 	{
@@ -125,7 +125,7 @@ var jobs = [
 		url: "#",
 		desc: ["<i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l&#39écran)", 
                "<i>Météo</i> : visualise la météo à quatorze jours", 
-               "<a class='a-none-style' href='http://www.amazon.com/zunedev-Exposure-Calculator-ND-Filters/dp/B00V3G3XYK/ref=sr_1_fkmr0_1?ie=UTF8&qid=1427138565&sr=8-1-fkmr0&keywords=Exposure+Calculator+%28ND+Filters%29' target='_blank'>Calculatrice d&#39exposition</a> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé", 
+               "<a class='a-inline' href='http://www.amazon.com/zunedev-Exposure-Calculator-ND-Filters/dp/B00V3G3XYK/ref=sr_1_fkmr0_1?ie=UTF8&qid=1427138565&sr=8-1-fkmr0&keywords=Exposure+Calculator+%28ND+Filters%29' target='_blank'>Calculatrice d&#39exposition</a> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé", 
                "<i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)"
               ]
 	},
@@ -192,7 +192,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		desc: ["<a class='a-none-style' href='../lpv/' target='_blank'>Visionneuse de photos</a> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)", 
+		desc: ["<a class='a-inline' href='../lpv/' target='_blank'>Visionneuse de photos</a> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)", 
                "<i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)", 
                "<i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)"]
 	},
