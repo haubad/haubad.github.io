@@ -54,8 +54,8 @@ var HTMLworkDescSimple = '<div class="desc">%data%</div><br/>';
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#" target="_blank">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div><br/>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolLocation = '<div class="location-text">%data%</div><br/>';
 var HTMLschoolMajor = '<div class="desc"><p><em>Domaine: %data%</em></p></div><br/>';
 
 var HTMLonlineTitle = '<a href="#" target="_blank">%data%';
