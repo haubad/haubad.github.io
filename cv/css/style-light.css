@@ -1,5 +1,5 @@
 * {    
-    font: 300 21px Lato, Roboto, sans-serif;
+    font: 300 18px Lato, Roboto, sans-serif;
 }
 
 body {
@@ -7,12 +7,10 @@ body {
     color: #333;
 }
 
-header *, .alternate * , footer * {font-weight: 300;}
-
 .default {background-color: #fff;}
 .alternate {background-color: #375879;}
 
-.default * {font-family: sans-serif;}
+.default * {font-family: sans-serif; font-size: 19px;}
 
 .desc p {color: #000;}
 .alternate .desc p {color: #e5e5e5;}
