@@ -10,7 +10,7 @@ body {
 .default {background-color: #fff;}
 .alternate {background-color: #375879;}
 
-.default {font-family: sans-serif; font-size: 19px;}
+.default * {font-family: sans-serif;}
 
 .desc p {color: #000;}
 .alternate .desc p {color: #e5e5e5;}
