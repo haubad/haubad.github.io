@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font: 300 18px Lato, sans-serif;
+    font: 300 20px Lato, sans-serif;
 }
 
 body {
@@ -26,7 +26,7 @@ h1 {
 h2 {
     margin: 0px 0% 0px 0%;
     padding: 0px 5px 0px 5px; /* top right bottom left */
-    font-weight: bold;
+    font-weight: normal;
     line-height: 29px;
     background-color: #744e4e;
     color: white;
