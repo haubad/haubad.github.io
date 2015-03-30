@@ -86,15 +86,20 @@ ul {list-style-type: none;}
 }
 
 img {padding: 10px;}
-span {padding: 5px;}
+.fa-right {padding-right: 6px;}
+.fa-left {padding-left: 6px;}
+.margin-none {margin: 0px;}
 .tab {text-indent: 30px;}
 .right {float: right;}
 .clear {clear: both;}
 .cursor {cursor: pointer;}
 .orange {color: #fc0;}
-.btn-group {
+.btn-primary {
     display: inline;
     float: right;
+    background-color: #444;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 .disabled {
     pointer-events: none;

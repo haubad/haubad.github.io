@@ -15,8 +15,10 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="white-text">%data%</span>';
 var HTMLheaderOptions = 
-    '<div class="btn-group">'+
-    '   <a class="cursor orange right" data-toggle="dropdown" data-target="#demo"><span class="fa fa-bars"/></a>' +
+    '<div class="btn-primary">'+
+    '   <a class="cursor orange right margin-none" data-toggle="dropdown" data-target="#demo">'+
+    '       <span class="fa fa-bars fa-left fa-right"/>'+
+    '   </a>'+
     '   <ul id="demo" class="dropdown-menu clear right">'+
     '       <li><a class="a-options cursor orange disabled" onclick="switch_theme(0)">Thème Dark</a></li>'+
     '       <li class="divider" />'+
@@ -27,13 +29,12 @@ var HTMLheaderOptions =
 var HTMLheaderLine = '<div class="single-line" />';
 var HTMLheaderDiv  = '<div>%name% %role% %options% %line%</div>';
 
-var HTMLcontactGeneric = '<li><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li><span class="blue-text fa fa-phone"/><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li><span class="blue-text fa fa-envelope"/><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li><span class="blue-text fa fa-phone fa-right"/><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li><span class="blue-text fa fa-envelope fa-right"/><span class="white-text">%data%</span></li>';
 var HTMLtwitter = '<li><span class="blue-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li><span class="blue-text fa fa-github"/><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li><span class="blue-text fa fa-github fa-right"/><span class="white-text">%data%</span></li>';
 var HTMLblog = '<li><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li><span class="blue-text fa fa-location-arrow"/><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li><span class="blue-text fa fa-location-arrow fa-right"/><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
