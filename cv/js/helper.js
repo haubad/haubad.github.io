@@ -20,9 +20,9 @@ var HTMLheaderOptions =
     '       <span class="fa fa-bars fa-left fa-right"/>'+
     '   </a>'+
     '   <ul id="demo" class="dropdown-menu clear right">'+
-    '       <li><a class="a-options cursor orange disabled" onclick="switch_theme(0)">Thème Dark</a></li>'+
+    '       <li><a class="a-options cursor white-text disabled" onclick="switch_theme(0)">Thème Dark</a></li>'+
     '       <li class="divider" />'+
-    '       <li><a class="a-options cursor orange" onclick="switch_theme(1)">Thème Light</a></li>'+
+    '       <li><a class="a-options cursor white-text" onclick="switch_theme(1)">Thème Light</a></li>'+
     '       <li class="divider" />'+
     '   </ul>'+
     '</div>';
