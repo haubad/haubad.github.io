@@ -9,7 +9,7 @@ var bio = {
 		location: "Toulouse"
 	},
 	welcomeMessage: "Code, code et code",
-	skills: ["Java", "Android", "C++ <span /> C#", "Dart <span /> JavaScript"],
+	skills: ["Java", "Android", "C++ <span class='fa-right'/> C#", "Dart <span class='fa-right'/> JavaScript"],
 	pic: "images/hhh.jpg"
 };
 
