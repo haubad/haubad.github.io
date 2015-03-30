@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <!--
 This is an HTML document. It contains information about how elements in the website
 are arranged. In other words, it describes the layout of a website.
@@ -17,6 +17,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <head>
     <!-- This tells the browser how to read the document. -->
     <meta charset="utf-8">
+    <meta name="keywords" content="CV">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Tells the browser what the title of this page should be. -->
     <title>CV</title>
@@ -35,29 +37,20 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     you can't accomplish with vanilla (regular) JavaScript. -->
     <script src="js/jquery-2.1.3.min.js"></script>
 
-    <!-- Latest compiled and minified CSS + JavaScript
+    <!-- Latest compiled and minified Bootstrap CSS
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 
     <!-- Load the page styles. -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-
     <link href="css/style-dark.css" rel="stylesheet">
     <link href="" rel="stylesheet" id="theme">
     
-    <!-- Font awesome -->
+    <!-- Load the fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
     <!-- More on helper.js in the class -->
     <script src="js/helper.js"></script>
-
-    <!--
-    Uncomment the <script> tag below when you're ready to add an interactive
-    Google Map to your resume!
-    -->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-
-    <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
     <!--
@@ -117,11 +110,17 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     -->
 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
     <!--
     The next line tells the browser where to download the JavaScript file you'll be
     writing. In resumeBuilder.js, you'll be writing code that builds the resume
     dynamically when this website, index.html, is opened.
     -->
     <script src="js/resumeBuilder.js"></script>
+
+    <!-- An interactive Google Map to your resume! -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </body>
 </html>
