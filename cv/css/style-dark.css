@@ -94,6 +94,7 @@ img {padding: 10px;}
 .clear {clear: both;}
 .cursor {cursor: pointer;}
 .orange {color: #fc0;}
+.white {color: #fff;}
 .btn-primary {
     display: inline;
     float: right;
