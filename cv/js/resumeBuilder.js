@@ -83,8 +83,8 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		desc: ["<a class='a-inline' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée le nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5 fa-right'/>html5, <span class='fa fa-css3 fa-right'/>css3)", 
-               "<a class='a-inline' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : crée un site pour visualiser des photos sur le serveur (html5, css3, javascript, jquery)"
+		desc: ["<a class='a-inline' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée un nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5 fa-right'/>html5, <span class='fa fa-css3 fa-right'/>css3)", 
+               "<a class='a-inline' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : visualise mes photos sur le serveur (html5, css3, javascript, jquery)"
               ]
 	},
 	{
