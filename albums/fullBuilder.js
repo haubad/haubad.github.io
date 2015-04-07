@@ -1,18 +1,21 @@
+
 var header = $(".full-header");
-var headerHeight = header[0].clientHeight;
+var padding = 25;
+var headerHeight = header[0].clientHeight + 2*padding;
 
 // get overlay=
 var overlayStr = getUrlParameter("overlay");
-var overlay = overlayStr == null || overlayStr === "0" ? 0 : 1;
+var overlay = overlayStr == null || overlayStr === "0" ? 1 : 1;
 
 // set <div style="height: h">
-var HTMLpic = '<div style="background-image: url(\'%data%\');" id="placeholder"></div>';
+//var HTMLpic = '<figure style="background-image: url(\'%data%\');" id="placeholder"></figure>';
+var HTMLpic = '<img src="%data%" id="placeholder">';
 var h = window.innerHeight - headerHeight*overlay /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
 var pic = $("#pic");
-pic.attr("style", "height: " + h + "px; top: " + (headerHeight*overlay) + "px;" + (overlay===0 ? "":" position: relative;"));
+pic.attr("style", "height: " + h + "px; top: " + (headerHeight*overlay-padding-5) + "px;" + (overlay===0 ? "":" position: relative;"));
 
 // image maps
-$('#pic img').attr("style", "height: " + h + "px; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;");
+$('#zones').attr("style", "height: " + h + "px; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;");
 var map = $('#area-prev');
 map.attr('coords', "0, " + (5+headerHeight) + ", " + (window.innerWidth/2) + ", " + (window.innerHeight));
 map.click(function(e) {
@@ -28,13 +31,15 @@ map.click(function(e) {
 });
 
 function init() {
-    var h = window.innerHeight - headerHeight*overlay /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
+    h = window.innerHeight - headerHeight*overlay /*header size*/ - 5/*border-top*/ - 0 /*border pic*/;
     var pic = $("#pic");
-    pic.attr("style", "height: " + h + "px; top: " + (headerHeight*overlay) + "px;" + (overlay===0 ? "":" position: relative;"));
+    pic.attr("style", "height: " + h + "px; top: " + (headerHeight*overlay-padding-5) + "px;" + (overlay===0 ? "":" position: relative;"));
     
-    $('#pic img').attr("style", "height: " + h + "px; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;");
+    $('#zones').attr("style", "height: " + h + "px; width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;");
     $('#area-prev').attr('coords', "0, " + (5+headerHeight) + ", " + (window.innerWidth/2) + ", " + (window.innerHeight));
     $('#area-next').attr('coords', (window.innerWidth/2) + ", " + (5+headerHeight) + ", " + (window.innerWidth) + ", " + (window.innerHeight));
+    
+    display(json["pics"][currentIdx].url, true);
 }
 
 // get link=
@@ -44,7 +49,10 @@ var PATH = getUrlParameter("folder");
 PATH = (PATH == null || PATH==="" || PATH==="/" || PATH==="." || PATH==="./" ? "." : PATH);
 
 // set the href of the close button
-$(".close a").attr("href", "javascript:history.back()");
+//$(".btn-round a").attr("href", "javascript:history.back()");
+$(".btn-round").click(function() {
+    history.back();
+});
 
 // getJSON
 var json, len;
@@ -66,18 +74,12 @@ function display(param, anim) {
     $("#title-id").html("<span class='violet-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
 	
 	var formattedPic = HTMLpic.replace("%data%", PATH + "/" + param);
-	pic.hide();
-    var p = pic.children("#placeholder");
-	if (!anim) {
-		p.replaceWith(formattedPic);
-	} else {
-		p.animate({
-            opacity: "toggle"
-		}, 0, "linear", function() {
-			p.replaceWith(formattedPic);
-		});
-	}
-    pic.fadeIn();
+    //pic.fadeOut();
+    //pic.hide();
+    var p = pic.find("#placeholder");    
+    p.attr("style", "height: " + h + "px;");
+    p.attr("src", PATH + "/" + param);
+	pic.fadeIn();
 }
 
 $(".prev").click(function() {

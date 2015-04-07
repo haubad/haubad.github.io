@@ -249,17 +249,26 @@ header {
 }
 
 /* full.html */
+.figure {
+    min-height: 100%;
+}
+
 #placeholder {
+    display: block;
+    margin: 0 auto;
+    
     /* This image will be displayed fullscreen */
-    background: no-repeat center center;
+    //background: no-repeat center center;
 
     /* Ensure the html element always takes up the full height of the browser window */
-    min-height: 100%;
+    //min-height: 100%;
 
     /* The Magic */
-    background-size: contain;
+    //background-size: contain;
 
-    border: 0px solid #0099ff;
+    border: 1px solid #666;
+	-webkit-box-shadow: 5px 5px 5px #111;
+          	box-shadow: 5px 5px 5px #111;
 }
 
 div.prev {
@@ -329,21 +338,37 @@ div.full-header {
     z-index: 1000; /*seuls élements positionnés (fixed, relative or absolute) peux avoir un z-index*/
 }
 
-div.close {
-	background-color: #0099FF;
+div.btn-round {
+	background-color: transparent;
 	float: left;
-	border-radius: 3px;
+	border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    border: 2px solid #0099FF;
 	padding: 5px;
 	position: relative;
 	top: -5px;
+    cursor: pointer;
 }
 
-div.round {
+div.btn-round:hover {
+    background-color: #0099FF;
 }
 
-div.close a {
+div.btn-lg {
+    width: 40px;
+    height: 40px;
+}
+
+div.btn-round a {
 	text-decoration: none;
 	color: white;
+    display: block;
+}
+
+div.right {
+    float: right;
+    right: 10px;
 }
 
 /* computer screen */
