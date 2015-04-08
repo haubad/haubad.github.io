@@ -147,3 +147,8 @@ function getPrevPic() {
 $(window).on('resize', function() {
     init();
 });
+
+function changeCursor() {
+    console.log("cursor");
+    $('body').css('cursor', 'default');
+}
