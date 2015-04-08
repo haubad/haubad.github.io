@@ -1,8 +1,8 @@
-var HTMLfolderStart = '<div class="folder-entry"></div>';
-var HTMLfolderImage = '<a href="%href%">[%data%] &#x21B5;</a>';
+
+var HTMLfolderImage = '<div class="folder-entry"><div class="folder-data">[%data%] &#x21B5;</div></div>';
+//var HTMLfolderImage = '<a href="%href%">[%data%] &#x21B5;</a>';
 
 var HTMLpicStart = '<figure class="pic-entry grow" style=""></figure>';
-//var HTMLpicImage = '<a href="%href%"><img src="%src%" alt=" " title="%title%"></a>';
 var HTMLpicImage = '<a href="%href%"></a>';
 var HTMLpicCap = '<figcaption class="caption">%caption%</figcaption>';
 var HTMLpicBkg = "background-image: url(\'%data%\'); width: %width%px; height: %height%px;";
@@ -79,16 +79,17 @@ function display() {
 	var cols = 0, info = getMaxCols(), maxCols = info.maxCols;
     log(info);
     json["folders"].forEach(function(folder) {
-        if (cols===0) {
+        if (cols === 0) {
             main.append(HTMLclear);
         }
-		main.append(HTMLfolderStart);
+		main.append(HTMLfolderImage.replace("%data%", folder.url));
 
-		var formattedFolderImage = HTMLfolderImage.replace("%href%", "index.html?folder=" + PATH+"/"+folder.url);
-		formattedFolderImage = formattedFolderImage.replace("%data%", folder.url);
 		var lastFolder = $(".folder-entry:last");
-        lastFolder.attr("style", "width: "+info.width+"px; height: "+info.height+"px; padding-top: "+(info.height/2-20)+"px;");
-        lastFolder.append(formattedFolderImage);
+        lastFolder.attr("style", "width: " + info.width + "px; height: " + info.height + "px;");
+        lastFolder.click(function() {
+            window.location.href = "index.html?folder=" + PATH + "/" + folder.url;
+        });
+
         cols = (cols + 1) % maxCols;
 	});
 
