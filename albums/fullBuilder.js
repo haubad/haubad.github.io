@@ -78,7 +78,6 @@ function display(param, anim) {
         p.attr("style", "width: 98%; display: none;");
     }
     p.attr("src", PATH + "/" + param);
-    p.fadeIn();
 }
 
 $(".prev-button").click(function() {
@@ -151,4 +150,5 @@ $(window).on('resize', function() {
 function changeCursor() {
     console.log("cursor");
     $('body').css('cursor', 'default');
+    pic.find("#placeholder").fadeIn();
 }
