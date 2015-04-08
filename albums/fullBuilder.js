@@ -78,6 +78,7 @@ function display(param, anim) {
         p.attr("style", "width: 98%; display: none;");
     }
     p.attr("src", PATH + "/" + param);
+    $("#downloading").removeClass("disabled");
 }
 
 $(".prev-button").click(function() {
@@ -150,6 +151,7 @@ $(window).on('resize', function() {
 function changeCursor() {
     window.setTimeout(function(){
     }, 0);
-    pic.find("#placeholder").fadeIn();
-    $("body").removeClass("progress-cursor"); 
+        $("#downloading").addClass("disabled");
+        pic.find("#placeholder").fadeIn();
+        $("body").removeClass("progress-cursor"); 
 }

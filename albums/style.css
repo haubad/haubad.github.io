@@ -394,3 +394,12 @@ footer {
 .progress-cursor {
     cursor: progress;
 }
+#downloading {
+    color: rgba(200, 200, 200, 0.2);
+    font-size: 2em;
+    position: relative;
+    top: -30px;
+}
+.disabled {
+    display: none;
+}
