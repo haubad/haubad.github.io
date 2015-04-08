@@ -249,14 +249,17 @@ header {
 }
 
 /* full.html */
+#pic {
+    display: table;
+    width: 100%;
+}
+
 .figure {
-    min-height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #placeholder {
-    display: block;
-    margin: 0 auto;
-    
     /* This image will be displayed fullscreen */
     //background: no-repeat center center;
 
@@ -271,55 +274,43 @@ header {
           	box-shadow: 5px 5px 5px #111;
 }
 
-div.prev {
-    min-height: 100%;
-	float: left;
-    position: relative;
-    z-index: 100;
-}
-
-div.prev .prev-button {
+.prev-button {
 	background: url(./icons/arrow-left.png) no-repeat center center;
     width: 48px;
     height: 48px;
     background-color: #111;
     border-radius: 3px;
     
-    position: absolute;
+    position: fixed;
     left: 0; top: 0; bottom: 0;
     margin-left: 5px;
     margin-top: auto;
     margin-bottom: auto;
+    z-index: 100;
 }
 
-div.prev .prev-button:hover {
+.prev-button:hover {
 	background: url(./icons/arrow-left-hover.png) no-repeat center center;
     cursor: pointer;
     background-color: #111;
 }
 
-div.next {
-    min-height: 100%;
-	float: right;
-    position: relative;
-    z-index: 100;
-}
-
-div.next .next-button {
+.next-button {
 	background: url(./icons/arrow-right.png) no-repeat center center;
     width: 48px;
     height: 48px;
     background-color: #111;
     border-radius: 3px;
 
-    position: absolute;
+    position: fixed;
     right: 0; top: 0; bottom: 0;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 5px;
+    z-index: 100;
 }
 
-div.next .next-button:hover {
+.next-button:hover {
 	background: url(./icons/arrow-right-hover.png) no-repeat center center;
     cursor: pointer;
     background-color: #111;
@@ -328,14 +319,11 @@ div.next .next-button:hover {
 div.full-header {
 	background-color: rgba(11, 11, 11, 0.6);
 	color: white;
-	padding-top: 12px;
-    padding-left: 12px;
+	padding: 12px;
 	font-weight: normal;
 	text-align: center;
-    position: fixed;
     top: 4px;
     width: 100%;
-    z-index: 1000; /*seuls élements positionnés (fixed, relative or absolute) peux avoir un z-index*/
 }
 
 div.btn-round {
@@ -377,7 +365,7 @@ div.right {
 
 /* smartphone */
 @media only screen and (max-width: 768px) {
-    div.prev, div.next {
+    .prev-button, .next-button {
         z-index: -1;
         visibility: hidden;
     }
@@ -396,4 +384,9 @@ footer {
 	text-align: center;
     position: fixed;
     bottom: 0;
+}
+
+.table {
+    display: table;
+    margin: 0 auto;
 }
