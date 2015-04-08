@@ -1,6 +1,6 @@
 
 var header = $(".full-header");
-var margin = 25;
+var margin = 20;
 var headerHeight = header[0].clientHeight;
 var topHeight = headerHeight /*header size*/ + 5/*border-top*/;
 
@@ -70,13 +70,15 @@ function display(param, anim) {
     $("#title-id").html("<span class='violet-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
 	
     var h = window.innerHeight - topHeight;
-    var p = pic.find("#placeholder");    
+    var p = pic.find("#placeholder");
+    p.hide();
     if (window.innerHeight < window.innerWidth) {
         p.attr("style", "height: " + (h - 2*margin - 5) + "px;");
     } else {
         p.attr("style", "width: 98%;");
     }
     p.attr("src", PATH + "/" + param);
+    p.fadeIn();
 }
 
 $(".prev").click(function() {
