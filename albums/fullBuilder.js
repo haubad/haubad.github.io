@@ -71,7 +71,7 @@ function display(param, anim) {
 	
     var h = window.innerHeight - topHeight;
     var p = pic.find("#placeholder");
-    $('body').css('cursor', 'progress'); 
+    $("body").addClass("progress-cursor"); 
     if (window.innerHeight < window.innerWidth) {
         p.attr("style", "height: " + (h - 2*margin - 5) + "px; display: none;");
     } else {
@@ -148,7 +148,8 @@ $(window).on('resize', function() {
 });
 
 function changeCursor() {
-    console.log("cursor");
-    $('body').css('cursor', 'default');
+    window.setTimeout(function(){
+    }, 0);
     pic.find("#placeholder").fadeIn();
+    $("body").removeClass("progress-cursor"); 
 }

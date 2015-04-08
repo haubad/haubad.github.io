@@ -390,3 +390,7 @@ footer {
     display: table;
     margin: 0 auto;
 }
+
+.progress-cursor {
+    cursor: progress;
+}
