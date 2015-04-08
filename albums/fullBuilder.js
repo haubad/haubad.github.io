@@ -71,7 +71,7 @@ function display(param, anim) {
 	
     var h = window.innerHeight - topHeight;
     var p = pic.find("#placeholder");
-    p.fadeOut();
+    p.hide();
     if (window.innerHeight < window.innerWidth) {
         p.attr("style", "height: " + (h - 2*margin - 5) + "px;");
     } else {
@@ -146,4 +146,10 @@ function getPrevPic() {
 
 $(window).on('resize', function() {
     init();
+});
+
+$('body').ajaxStart(function() {
+    $(this).css({'cursor' : 'wait'});
+}).ajaxStop(function() {
+    $(this).css({'cursor' : 'default'});
 });
