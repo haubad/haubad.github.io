@@ -71,7 +71,7 @@ function display(param, anim) {
 	
     var h = window.innerHeight - topHeight;
     var p = pic.find("#placeholder");
-    p.hide();
+    p.fadeOut();
     if (window.innerHeight < window.innerWidth) {
         p.attr("style", "height: " + (h - 2*margin - 5) + "px;");
     } else {
@@ -81,12 +81,12 @@ function display(param, anim) {
     p.fadeIn();
 }
 
-$(".prev").click(function() {
+$(".prev-button").click(function() {
     'use strict';
     clickPrev()
 });
 
-$(".next").click(function() {
+$(".next-button").click(function() {
     'use strict';
     clickNext()
 });
