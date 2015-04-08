@@ -1,3 +1,5 @@
+var body = $("body");
+var downloading = $("#downloading");
 
 var header = $(".full-header");
 var margin = 20;
@@ -8,6 +10,7 @@ var topHeight = headerHeight /*header size*/ + 5/*border-top*/;
 //var HTMLpic = '<figure style="background-image: url(\'%data%\');" id="placeholder"></figure>';
 var h = window.innerHeight - topHeight;
 var pic = $("#pic");
+var placeholder = $("#placeholder");
 pic.attr("style", "height: " + h + "px;");
 
 // image maps
@@ -35,7 +38,7 @@ function init() {
     $('#area-prev').attr('coords', "0, " + topHeight + ", " + (window.innerWidth/2) + ", " + window.innerHeight);
     $('#area-next').attr('coords', (window.innerWidth/2) + ", " + topHeight + ", " + window.innerWidth + ", " + window.innerHeight);
     
-    display(json["pics"][currentIdx].url, true);
+    display(json["pics"][currentIdx].url);
 }
 
 // get link=
@@ -59,26 +62,25 @@ $.ajax({
     success: function(data) {
         json = data;
         len = json["pics"].length;
-        display(json["pics"][currentIdx].url, false);
+        display(json["pics"][currentIdx].url);
     }
 });
 
-function display(param, anim) {
+function display(param) {
 
     if (json == null) return;
 
     $("#title-id").html("<span class='violet-text'>" + param + "</span> @" + (currentIdx + 1) + "/" + len);
 	
     var h = window.innerHeight - topHeight;
-    var p = pic.find("#placeholder");
-    $("body").addClass("progress-cursor"); 
+    body.addClass("progress-cursor"); 
+    downloading.removeClass("disabled");
     if (window.innerHeight < window.innerWidth) {
-        p.attr("style", "height: " + (h - 2*margin - 5) + "px; display: none;");
+        placeholder.attr("style", "height: " + (h - 2*margin - 5) + "px; display: none;");
     } else {
-        p.attr("style", "width: 98%; display: none;");
+        placeholder.attr("style", "width: 95%; display: none;");
     }
-    p.attr("src", PATH + "/" + param);
-    $("#downloading").removeClass("disabled");
+    placeholder.attr("src", PATH + "/" + param);
 }
 
 $(".prev-button").click(function() {
@@ -116,7 +118,7 @@ function clickPrev() {
 	var oldIdx = currentIdx;
 	currentIdx = getPrevPic();
 	if (currentIdx !== oldIdx) {
-		display(json["pics"][currentIdx].url, true);
+		display(json["pics"][currentIdx].url);
 	}
 }
 
@@ -124,7 +126,7 @@ function clickNext() {
 	var oldIdx = currentIdx;
 	currentIdx = getNextPic();
 	if (currentIdx !== oldIdx) {
-		display(json["pics"][currentIdx].url, true);
+		display(json["pics"][currentIdx].url);
 	}
 	//window.location.href = window.location.pathname + "?link=hhh.jpg"; // makes the page to be reloaded
 }
@@ -151,7 +153,7 @@ $(window).on('resize', function() {
 function changeCursor() {
     window.setTimeout(function(){
     }, 0);
-        $("#downloading").addClass("disabled");
-        pic.find("#placeholder").fadeIn();
-        $("body").removeClass("progress-cursor"); 
+        downloading.addClass("disabled");
+        placeholder.fadeIn();
+        body.removeClass("progress-cursor"); 
 }
