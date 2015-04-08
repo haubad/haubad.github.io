@@ -389,6 +389,7 @@ footer {
 .table {
     display: table;
     margin: 0 auto;
+    text-align: center;
 }
 
 .progress-cursor {
