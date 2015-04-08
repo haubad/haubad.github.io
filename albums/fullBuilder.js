@@ -38,7 +38,7 @@ function init() {
     $('#area-prev').attr('coords', "0, " + topHeight + ", " + (window.innerWidth/2) + ", " + window.innerHeight);
     $('#area-next').attr('coords', (window.innerWidth/2) + ", " + topHeight + ", " + window.innerWidth + ", " + window.innerHeight);
     
-    display(json["pics"][currentIdx].url);
+    display(json["pics"][currentIdx].url, true);
 }
 
 // get link=
@@ -66,7 +66,7 @@ $.ajax({
     }
 });
 
-function display(param) {
+function display(param, reload) {
 
     if (json == null) return;
 
@@ -81,6 +81,8 @@ function display(param) {
         placeholder.attr("style", "width: 95%; display: none;");
     }
     placeholder.attr("src", PATH + "/" + param);
+    
+    if (reload) changeCursor();
 }
 
 $(".prev-button").click(function() {
