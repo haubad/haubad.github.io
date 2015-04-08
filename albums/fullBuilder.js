@@ -71,11 +71,11 @@ function display(param, anim) {
 	
     var h = window.innerHeight - topHeight;
     var p = pic.find("#placeholder");
-    p.hide();
+    $('body').css('cursor', 'progress'); 
     if (window.innerHeight < window.innerWidth) {
-        p.attr("style", "height: " + (h - 2*margin - 5) + "px;");
+        p.attr("style", "height: " + (h - 2*margin - 5) + "px; display: none;");
     } else {
-        p.attr("style", "width: 98%;");
+        p.attr("style", "width: 98%; display: none;");
     }
     p.attr("src", PATH + "/" + param);
     p.fadeIn();
@@ -146,10 +146,4 @@ function getPrevPic() {
 
 $(window).on('resize', function() {
     init();
-});
-
-$('body').ajaxStart(function() {
-    $(this).css({'cursor' : 'wait'});
-}).ajaxStop(function() {
-    $(this).css({'cursor' : 'default'});
 });
