@@ -71,8 +71,21 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.flex-contacts {
     justify-content: space-between;
     padding: 10px;
+}
+
+.flex-skills {
+    justify-content: flex-start;
+    padding: 0px;
+}
+
+.flex-skills li {
+    width: 100px;
 }
 
 ul {list-style-type: none;}
@@ -86,8 +99,8 @@ ul {list-style-type: none;}
 }
 
 img {padding: 10px;}
-.fa-right {padding-right: 6px;}
 .fa-left {padding-left: 6px;}
+.fa-right {padding-right: 6px;}
 .margin-none {margin: 0px;}
 .tab {text-indent: 30px;}
 .right {float: right;}

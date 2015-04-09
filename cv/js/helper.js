@@ -39,8 +39,9 @@ var HTMLlocation = '<li><span class="blue-text fa fa-location-arrow fa-right"/><
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3><span class="fa fa-code"/>Compétences</h3><ul id="skills"></ul>';
-var HTMLskills = '<li><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<h3><span class="fa fa-code"/>Compétences</h3><div id="skills"></div>';
+//var HTMLskills = '<li><span class="white-text">%data%</span></li>';
+var HTMLskills = '<div class="flex-box flex-skills">%data%</div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#" target="_blank">%data%';
