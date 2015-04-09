@@ -86,6 +86,7 @@ header {
 
 .flex-skills li {
     width: 100px;
+    color: #ddd;
 }
 
 ul {list-style-type: none;}
