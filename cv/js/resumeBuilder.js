@@ -155,18 +155,7 @@ var jobs = [
 		desc: ["<i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil"]
 	},
 	{
-		cat: "#work2012-2013",
-		employer: "Nex io",
-		title: "Ingénieur d&#39études C++/C#",
-		dates: "11/2012 - 01/2013",
-		gps: "",
-		location: "Toulouse",
-		url: "#",
-        list: "none",
-		desc: ["<p>Faire évoluer le logiciel CEM (analyse des perturbations électromagnétiques entre appareils électroniques) (C++, C#, Windows)"]
-	},
-	{
-		cat: "#work2012-2013",
+		cat: "#work2011-2012",
 		employer: "Infotel/Qualifrance",
 		title: "Ingénieur d&#39études C",
 		dates: "07/2012 - 10/2012",
