@@ -47,8 +47,8 @@ h3 {
 /* header */
 header {
     background: linear-gradient(90deg, #134e5e 10%, #744e4e 90%);
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     overflow: auto;
@@ -153,8 +153,8 @@ img {padding: 10px;}
 /* main */
 #main {
     border: 0px solid white;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 30px;
     margin-bottom: 30px;
 
@@ -243,7 +243,7 @@ a:hover {
 }
 .alternate .a-none-link {}
 
-a > i, b {font-size: inherit;}
+a > i, a > b {font-size: inherit;}
 .a-none-link > b {font-size: inherit;}
 
 #mapDiv {
@@ -267,8 +267,8 @@ footer {
     text-align: center;
     background: linear-gradient(90deg, #134e5e 10%, #60744e 90%);
     border-top: 1px solid rgb(40, 40, 40);
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 /* media */
@@ -276,9 +276,6 @@ footer {
 @media only screen and (max-width: 768px) {
     .biopic {
         width: 150px;
-    }
-    .welcome-message {
-        display: none;
     }
     header, footer {
         padding-left: 2%;
@@ -291,3 +288,7 @@ footer {
         margin-bottom: 0px;
 	}
 }
+
+.tomato {color: #F36635;}
+.blue {color: #61B8FF;}
+.green {color: #97C024;}

@@ -1,7 +1,7 @@
 // Bio
 var bio = {
 	name: "hau tran",
-	role: "Ingénieur d&#39études",
+	role: "Ingénieur d'études",
 	contacts: {
 		mobile: "06 11 46 03 56",
 		email: "tthau2007 <i class='fa fa-at' /> gmail point com",
@@ -9,10 +9,10 @@ var bio = {
 		location: "Toulouse"
 	},
 	welcomeMessage: "Code, code et code",
-	skills: ["<li>Java</li><li><i class='fa fa-android'/> Android</li>",
+	skills: ["<li>Java</li><li><i class='fa fa-android green'/> Android</li>",
              "<li>C++</li><li>C#</li>",
              "<li>Dart</li><li>JavaScript</li>",
-             "<li><i class='fa fa-html5'/> HTML</li><li><i class='fa fa-css3'/> CSS</li>"],
+             "<li><i class='fa fa-html5 tomato'/> HTML5</li><li><i class='fa fa-css3 blue'/> CSS3</li>"],
 	pic: "images/hhh.jpg"
 };
 
@@ -86,7 +86,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		desc: ["<a class='a-inline' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée un nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5 fa-right'/>html5, <span class='fa fa-css3 fa-right'/>css3)", 
+		desc: ["<a class='a-inline' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée un nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5 fa-right tomato'/>html5, <span class='fa fa-css3 fa-right blue'/>css3)", 
                "<a class='a-inline' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : visualise mes photos sur le serveur (html5, css3, javascript, jquery)"
               ]
 	},
@@ -98,7 +98,7 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		desc: ["Challenge d&#39IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-inline' href='http://www.dartlang.org/' target='_blank'>dart</a>)"
+		desc: ["Challenge d'IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-inline' href='http://www.dartlang.org/' target='_blank'>dart</a>)"
               ]
 	},
 	{
@@ -109,26 +109,26 @@ var jobs = [
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		desc: ["Challenge d&#39IA <i>Platinum Rift</i> (08/11/2014 – 26/11/2014)", 
+		desc: ["Challenge d'IA <i>Platinum Rift</i> (08/11/2014 – 26/11/2014)", 
                "Challenge <i>Battle Dev de RégionJob</i> (12/11/2014) (25eSUP sur 375; 9eSUP sur 91 développeurs Java)", 
-               "Challenge d&#39IA <i>Poker Chip Race</i> (10/09/2014 – 24/09/2014) (20eSUP sur 449)", 
+               "Challenge d'IA <i>Poker Chip Race</i> (10/09/2014 – 24/09/2014) (20eSUP sur 449)", 
                "Challenge <i>Battle Dev de RégionJob</i> (10/06/2014)", 
                "Challenge <i>Skynet Finale</i> (06/05/2013)", 
-               "Challenge d&#39IA <i>Game of Drones</i> (14/03/2014 – 28/03/2014)", 
-               "Challenge d&#39IA <i>Tron Battle</i> (10/01/2014 – 28/02/2014) (3eSUP sur 672)"
+               "Challenge d'IA <i>Game of Drones</i> (14/03/2014 – 28/03/2014)", 
+               "Challenge d'IA <i>Tron Battle</i> (10/01/2014 – 28/02/2014) (3eSUP sur 672)"
               ]
 	},
 	{
 		cat: "#work2014",
 		employer: "",
-		title: "Projets personnels (<b>Android</b>)",
+		title: "Projets personnels (<b><i class='fa fa-android green'/> Android</b>)",
 		dates: "2014",
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		desc: ["<i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l&#39écran)", 
+		desc: ["<i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l'écran)", 
                "<i>Météo</i> : visualise la météo à quatorze jours", 
-               "<a class='a-inline' href='http://www.amazon.com/zunedev-Exposure-Calculator-ND-Filters/dp/B00V3G3XYK/ref=sr_1_fkmr0_1?ie=UTF8&qid=1427138565&sr=8-1-fkmr0&keywords=Exposure+Calculator+%28ND+Filters%29' target='_blank'>Calculatrice d&#39exposition</a> : calcule la durée d&#39exposition en fonction du filtre neutre utilisé", 
+               "<a class='a-inline' href='http://www.amazon.com/zunedev-Exposure-Calculator-ND-Filters/dp/B00V3G3XYK/ref=sr_1_fkmr0_1?ie=UTF8&qid=1427138565&sr=8-1-fkmr0&keywords=Exposure+Calculator+%28ND+Filters%29' target='_blank'>Calculatrice d'exposition</a> : calcule la durée d'exposition en fonction du filtre neutre utilisé", 
                "<i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)"
               ]
 	},
@@ -147,7 +147,7 @@ var jobs = [
 	{
 		cat: "#work2013",
 		employer: "",
-		title: "Projets personnels (<b>Android</b>)",
+		title: "Projets personnels (<b><i class='fa fa-android green'/> Android</b>)",
 		dates: "2013",
 		gps: "",
 		location: "Toulouse",
@@ -157,7 +157,7 @@ var jobs = [
 	{
 		cat: "#work2011-2012",
 		employer: "Infotel/Qualifrance",
-		title: "Ingénieur d&#39études C",
+		title: "Ingénieur d'études C",
 		dates: "07/2012 - 10/2012",
 		gps: "Infotel 31700 Blagnac",
 		location: "Toulouse",
@@ -186,7 +186,7 @@ var jobs = [
 		url: "#",
 		desc: ["<a class='a-inline' href='../lpv/' target='_blank'>Visionneuse de photos</a> (2010) : visionne des photos instantanément en plein écran, écran fenêtré ou miniature (C++, Direct2D, Windows)", 
                "<i>Copieur de fichiers</i> (2009) : facilite la tâche de sauvegarde, accélère la vitesse de copie des gros fichiers et effectue également des copies en ligne de commande (C++/CLI, Windows)", 
-               "<i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l&#39ordinateur (C++/CLI, Windows)"]
+               "<i>Lecteur de périphériques de stockage</i> (2009) : récupère des informations des périphériques de stockage (lecteurs, disques, USB) sur l'ordinateur (C++/CLI, Windows)"]
 	},
 	{
 		cat: "#work2008",
@@ -197,7 +197,7 @@ var jobs = [
 		location: "Toulouse",
 		url: "http://www.univ-tlse3.fr/",
         list: "none",
-		desc: ["<p>Développer un algorithme d&#39approximation (C++, Windows)"]
+		desc: ["<p>Développer un algorithme d'approximation (C++, Windows)"]
 	}
 ];
 var work = {"jobs": jobs};
@@ -273,7 +273,7 @@ var schools = [
 		gps: "Université Toulouse 3",
 		location: "Toulouse",
 		url: "http://www.univ-tlse3.fr/",
-		major: "Informatique de l&#39Image et du Langage"
+		major: "Informatique de l'Image et du Langage"
 	}
 ];
 var onlineCourses = [
