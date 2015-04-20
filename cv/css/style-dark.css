@@ -58,14 +58,6 @@ header {
 .white-text {color: #ddd;}
 .blue-text {color: #61B8FF;}
 
-.welcome-message {
-    font-style: italic;
-    font-size: 20px;
-    color: #F3F3F3;
-    line-height: 28px;
-    display: none;
-}
-
 .flex-box {
     display: -webkit-flex;
     display: flex;
@@ -97,6 +89,10 @@ ul {list-style-type: none;}
     width: 170px;
     display: block;
     margin-right: 5px;
+}
+
+#skills {
+    margin: 0 0 0 170px;
 }
 
 img {padding: 10px;}
@@ -276,6 +272,9 @@ footer {
 @media only screen and (max-width: 768px) {
     .biopic {
         width: 150px;
+    }
+    #skills {
+        margin: 0 0 0 150px;
     }
     header, footer {
         padding-left: 2%;

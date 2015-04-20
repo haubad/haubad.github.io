@@ -34,8 +34,7 @@ $("#topContacts").append(formattedMobile)
     .append(formattedGithub)
 	.append(formattedLocation);
 
-header.append(HTMLbioPic.replace("%data%", bio["pic"]))
-    .append(HTMLWelcomeMsg.replace("%data%", bio["welcomeMessage"]));
+header.append(HTMLbioPic.replace("%data%", bio["pic"]));
 
 if (bio.skills.length > 0) {
 	header.append(HTMLskillsStart);
@@ -234,10 +233,6 @@ work.display = function () {
 	});
 };
 work.display();
-/*var esub = $("li").each(function () {
-	var content = $(this).html().replace(/eSUP/g, "<sup>e</sup>");
-	$(this).html(content);
-});*/
 function esup(s) {
     return s.replace(/eSUP/g, "<sup>e</sup>");
 }
