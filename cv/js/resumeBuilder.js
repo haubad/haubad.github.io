@@ -330,7 +330,7 @@ $(window).on('resize', function() {
 });
 
 // Return
-$(".return").click(function() {
+$(".back-to-top").click(function() {
     console.log("return");
     window.scrollTo(0, 0);
 });
