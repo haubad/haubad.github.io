@@ -328,3 +328,9 @@ $("#footerContacts").append(formattedMobile)
 $(window).on('resize', function() {
     initOptions(false);
 });
+
+// Return
+$(".return").click(function() {
+    console.log("return");
+    window.scrollTo(0, 0);
+});
