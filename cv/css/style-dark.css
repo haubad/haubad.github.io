@@ -30,7 +30,7 @@ h2 {
     line-height: 29px;
     background-color: #744e4e;
     color: white;
-    border-radius: 0px;
+    border-radius: 0 0 10px 0;
     font-size: 22px;
     display: inline-block;
 }
