@@ -10,9 +10,9 @@ var bio = {
 	},
 	welcomeMessage: "Code, code et code",
 	skills: ["<li>Java</li><li><i class='fa fa-android green'/> Android</li>",
-             "<li>C++</li><li>C#</li>",
+             "<li>C++</li><li>C#</li><li>WPF</li>",
              "<li>Dart</li><li>JavaScript</li>",
-             "<li><i class='fa fa-html5 tomato'/> HTML5</li><li><i class='fa fa-css3 blue'/> CSS3</li>"],
+             "<li><i class='fa fa-html5 tomato'/> HTML5</li><li><i class='fa fa-css3 blue'/> CSS3</li><li>ASP.NET</li>"],
 	pic: "images/hhh.jpg"
 };
 
@@ -125,8 +125,7 @@ var jobs = [
 		gps: "",
 		location: "Toulouse",
 		url: "#",
-		desc: ["<i>Bookworm</i> (en cours) : développe un jeu de mots (constituer des mots à partir des lettres disséminées à l'écran)", 
-               "<i>Météo</i> : visualise la météo à quatorze jours", 
+		desc: ["<i>Météo</i> : visualise la météo à quatorze jours", 
                "<a class='a-inline' href='http://www.amazon.com/zunedev-Exposure-Calculator-ND-Filters/dp/B00V3G3XYK/ref=sr_1_fkmr0_1?ie=UTF8&qid=1427138565&sr=8-1-fkmr0&keywords=Exposure+Calculator+%28ND+Filters%29' target='_blank'>Calculatrice d'exposition</a> : calcule la durée d'exposition en fonction du filtre neutre utilisé", 
                "<i>Caméra IP</i> : transforme le smartphone en caméra de surveillance sans fil (via le protocole rtp)"
               ]
@@ -265,7 +264,7 @@ var schools = [
 		name: "IRIT/Université Paul Sabatier Toulouse 3",
 		degree: "Master 2",
 		dates: "10/2002 - 06/2003",
-		gps: "Université Toulouse 3",
+		gps: "Université Toulouse 3, Toulouse",
 		location: "Toulouse",
 		url: "http://www.univ-tlse3.fr/",
 		major: "Informatique de l'Image et du Langage"
@@ -273,16 +272,25 @@ var schools = [
 ];
 var onlineCourses = [
     {
+        title: "Formation <i>Microsoft Certified Solutions Developer</i> (C#, WPF, Web avec HTML5, CSS3, JS, ASP.NET, Azure, SharePoint)",
+        school: "Centre VAELIA",
+        dates: "Depuis 18/05/2015 (en cours) (5 mois)",
+        url: "http://www.cariforef-mp.asso.fr/1-14443-Fiche-formation.php?num=16970",
+        loc: "Toulouse"
+    },
+    {
         title: "Programmation des applications mobiles Android",
         school: "Université du Maryland",
         dates: "26/09/2014 – 21/11/2014",
-        url: "http://www.coursera.org/signature/certificate/ZMX7ZT8ABK"
+        url: "http://www.coursera.org/signature/certificate/ZMX7ZT8ABK",
+        loc: "Cours en ligne"
     },
     {
         title: "Programmation des services Cloud pour les applications Android",
         school: "Université Vanderbilt",
         dates: "21/07/2014 – 30/09/2014",
-        url: "http://www.coursera.org/signature/certificate/864QPVC9LR"
+        url: "http://www.coursera.org/signature/certificate/864QPVC9LR",
+        loc: "Cours en ligne"
     }
 ];
 var education = {"schools" : schools, "onlineCourses" : onlineCourses};
@@ -295,7 +303,7 @@ education.display = function () {
 		$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool)
             .append(HTMLonlineDates.replace("%data%", course.dates))
             //.append(formattedOnlineUrl)
-            .append(HTMLonlineDescription);
+            .append(HTMLonlineLocation.replace("%data%", course.loc));
 	});
 
 	education.schools.forEach(function (school) {
@@ -327,5 +335,11 @@ $(window).on('resize', function() {
 // Return
 $(".back-to-top").click(function() {
     console.log("return");
-    window.scrollTo(0, 0);
+    var timerId = setInterval(function() {
+        window.scrollBy(0, -5);
+        if (window.pageYOffset < 200) {
+            clearInterval(timerId);
+            window.scrollTo(0, 0);
+        }
+    }, 1);
 });

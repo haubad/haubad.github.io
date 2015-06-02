@@ -60,9 +60,10 @@ var HTMLschoolMajor = '<div class="desc"><p><em>Domaine: %data%</em></p></div><b
 
 var HTMLonlineTitle = '<a href="#" target="_blank">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div><br/>';
-var HTMLonlineURL = '<p><a href="#">%data%</a></p><br>';
-var HTMLonlineDescription = '<div class="desc"><p>Cours en ligne</p></div><br/>';
+var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineURL = '<p><a href="#">%data%</a></p><br/>';
+var HTMLonlineLocation = '<div class="location-text">%data%</div><br/><br/>';
+var HTMLonlineDescription = '<div class="desc"><p>%data%</p></div><br/>';
 
 var internationalizeButton = '<button id="internationalize">FR/EN</button>';
 var googleMap = '<div id="map"></div>';

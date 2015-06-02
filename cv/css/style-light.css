@@ -3,7 +3,8 @@ body {
     color: #333;
 }
 
-.default {background-color: #377962;}
+//.default {background-color: #377962;}
+.default {background-color: #5A5A5A;}
 .alternate {background-color: #375879;}
 
 .date-text, .location-text {color: #999;}

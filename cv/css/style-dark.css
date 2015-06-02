@@ -217,6 +217,7 @@ a {
     font-size: 22px;
     outline: 0;
 }
+a i {font-style: italic;}
 .alternate .work-entry a {}
 
 a:hover {
@@ -246,7 +247,7 @@ a > i, a > b {font-size: inherit;}
     height: 400px;  
     width: 100%;
     padding-bottom: 1%;
-    background-color: #4c7597;
+    //background-color: #4c7597;
 }
 
 #map {
