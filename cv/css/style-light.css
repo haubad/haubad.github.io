@@ -16,9 +16,9 @@ body {
 .desc ul li {color: #e5e5e5;}
 .alternate .work-entry .desc ul li {color: #e5e5e5;}
 
-a {color: #fc0;//#6cb200;
+a {color: #fc0;
 }
-.alternate .work-entry a {color: #fc0;//#85be2e;
+.alternate .work-entry a {color: #fc0;
 }
 
 a:hover {color: #f90;}
@@ -26,3 +26,11 @@ a:hover {color: #f90;}
 
 .a-none-link {color: #fff;}
 .alternate .a-none-link {color: #fff;}
+
+header {
+    background: linear-gradient(-90deg, #5A5A5A 10%, #375879 90%);
+}
+
+footer {
+    background: linear-gradient(-90deg, #5A5A5A 10%, #375879 90%);
+}

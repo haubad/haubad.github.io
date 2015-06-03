@@ -46,7 +46,8 @@ h3 {
 
 /* header */
 header {
-    background: linear-gradient(90deg, #134e5e 10%, #744e4e 90%);
+    //background: linear-gradient(90deg, #134e5e 10%, #744e4e 90%);
+    background: linear-gradient(90deg, #444 10%, #4E6174 90%);
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 2.5%;
@@ -160,7 +161,7 @@ img {padding: 10px;}
 
 .default {background-color: #444;}
 .alternate {
-    background-color: #60744e;
+    background-color: #4E6174;
     padding-bottom: 10px;
     clear: both;
     border-top: 0px solid rgb(50, 50, 50);
@@ -262,7 +263,8 @@ a > i, a > b {font-size: inherit;}
 /* footer */
 footer {
     text-align: center;
-    background: linear-gradient(90deg, #134e5e 10%, #60744e 90%);
+    //background: linear-gradient(90deg, #134e5e 10%, #60744e 90%);
+    background: linear-gradient(-90deg, #4E6174 10%, #444 90%);
     border-top: 1px solid rgb(40, 40, 40);
     padding-left: 15%;
     padding-right: 15%;
@@ -290,7 +292,8 @@ footer {
 .blue {color: #61B8FF;}
 .green {color: #97C024;}
 .back-to-top {
-    background-color: rgba(243, 102, 53, 0.85);
+    //background-color: rgba(243, 102, 53, 0.85);
+    background-color: rgba(116, 50, 50, 0.85);
     color: #fff;
     border-radius: 3px 3px 0px 0px;
     position: fixed;
