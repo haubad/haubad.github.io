@@ -276,21 +276,24 @@ var onlineCourses = [
         school: "Centre VAELIA",
         dates: "Depuis 18/05/2015 (en cours) (5 mois)",
         url: "http://www.cariforef-mp.asso.fr/1-14443-Fiche-formation.php?num=16970",
-        loc: "Toulouse"
+        loc: "Toulouse",
+        gps: "Centre VAELIA Toulouse"
     },
     {
         title: "Programmation des applications mobiles Android",
         school: "Université du Maryland",
         dates: "26/09/2014 – 21/11/2014",
         url: "http://www.coursera.org/signature/certificate/ZMX7ZT8ABK",
-        loc: "Cours en ligne"
+        loc: "Cours en ligne",
+        gps: ""
     },
     {
         title: "Programmation des services Cloud pour les applications Android",
         school: "Université Vanderbilt",
         dates: "21/07/2014 – 30/09/2014",
         url: "http://www.coursera.org/signature/certificate/864QPVC9LR",
-        loc: "Cours en ligne"
+        loc: "Cours en ligne",
+        gps: ""
     }
 ];
 var education = {"schools" : schools, "onlineCourses" : onlineCourses};

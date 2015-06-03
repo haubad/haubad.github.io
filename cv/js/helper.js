@@ -121,16 +121,21 @@ function initializeMap() {
         // adds the single location property from bio to the locations array
         locations.push(bio.contacts.location);
 
-        // iterates through school locations and appends each location to
+        // iterates through school/online-courses locations and appends each location to
         // the locations array
         for (var school in education.schools) {
             locations.push(education.schools[school].gps);
+        }
+        for (var school in education.onlineCourses) {
+            if (education.onlineCourses[school].gps !== "") {
+                locations.push(education.onlineCourses[school].gps);
+            }
         }
 
         // iterates through work locations and appends each location to
         // the locations array
         for (var job in work.jobs) {
-            if (work.jobs[job].gps!=="") {
+            if (work.jobs[job].gps !== "") {
                 locations.push(work.jobs[job].gps);
             }
         }
