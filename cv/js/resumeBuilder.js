@@ -296,7 +296,7 @@ var onlineCourses = [
         gps: ""
     }
 ];
-var education = {"schools" : schools, "onlineCourses" : onlineCourses};
+var education = {schools : schools, onlineCourses : onlineCourses};
 education.display = function () {
 	education.onlineCourses.forEach(function (course) {
 		$("#education").append(HTMLschoolStart);
