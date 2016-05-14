@@ -1,7 +1,7 @@
 // Bio
 var bio = {
 	name: "hau tran",
-	role: "Ingénieur d'études",
+	role: "Consultant.NET",
 	contacts: {
 		mobile: "06 11 46 03 56",
 		email: "tthau2007 <i class='fa fa-at' /> gmail point com",
@@ -12,7 +12,7 @@ var bio = {
 	skills: ["<li>Java</li><li><i class='fa fa-android green'/> Android</li>",
              "<li>C++</li><li>C#</li><li>WPF</li>",
              "<li>Dart</li><li>JavaScript</li>",
-             "<li><i class='fa fa-html5 tomato'/> HTML5</li><li><i class='fa fa-css3 blue'/> CSS3</li><li>ASP.NET</li>"],
+             "<li><i class='fa fa-html5 tomato'/> HTML5</li><li><i class='fa fa-css3 blue'/> CSS3</li><li>ASP.NET MVC</li>"],
 	pic: "images/hhh.jpg"
 };
 
@@ -77,7 +77,30 @@ initOptions(true);
 
 // Wok = {jobs, display}
 var jobs = [
+    {
+		cat: "#work2016",
+		employer: "",
+		title: "Concours de programmation <i>Codingame</i> (<b>Dart</b>)",
+		dates: "2016",
+		gps: "",
+		location: "Montpellier",
+		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
+		desc: [
+            "Challenge d'IA <i>Smash the Code</i> (30/04/2016 – 08/05/2016) (156eSUP sur 2493) (<a class='a-inline' href='http://www.dartlang.org/' target='_blank'>dart</a>)",
+              ]
+	},
 	{
+		cat: "#work2015",
+		employer: "Consultant.NET",
+		title: "",
+		dates: "Depuis 08/2015",
+		gps: "31130 Balma",
+		location: "Toulouse",
+		url: "",
+        list: "none",
+		desc: ["<p>Développer des applications web en utilisant les technos de Microsoft (ASP.NET MVC, Web API, Entity Framework, SQL Server, JavaScript, jQuery, AngularJS, Cordova, html5, css3)"]
+	},
+    {
 		cat: "#work2015",
 		employer: "",
 		title: "Projets personnels",
@@ -86,18 +109,20 @@ var jobs = [
 		location: "Toulouse",
 		url: "#",
 		desc: ["<a class='a-inline' href='http://haubad.github.io/lpv/' target='_blank'>Visionneuse de photos</a> : crée un nouveau look du site <span class='tomato-text'>Light Photo Viewer</span> (<span class='fa fa-html5 fa-right tomato'/>html5, <span class='fa fa-css3 fa-right blue'/>css3)", 
-               "<a class='a-inline' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : visualise mes photos sur le serveur (html5, css3, javascript, jquery)"
+               "<a class='a-inline' href='http://haubad.github.io/albums/' target='_blank'>Albums</a> : visualise mes photos sur le serveur (html5, css3,JavaScript, jQuery)"
               ]
 	},
 	{
 		cat: "#work2015",
 		employer: "",
-		title: "Concours de programmation <i>Codingame</i>",
+		title: "Concours de programmation <i>Codingame</i> (<b>Dart</b>)",
 		dates: "2015",
 		gps: "",
 		location: "Montpellier",
 		url: "http://www.codingame.com/profile/39052a18adfadaf0d5433339689daf80513391",
-		desc: ["Challenge d'IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153) (<a class='a-inline' href='http://www.dartlang.org/' target='_blank'>dart</a>)"
+		desc: [
+            "Challenge d'IA <i>Back to the Code</i> (26/09/2015 – 04/10/2015) (94eSUP sur 2017)",
+            "Challenge d'IA <i>The Great Escape</i> (06/02/2015 – 20/02/2015) (51eSUP sur 1153)"
               ]
 	},
 	{
@@ -274,7 +299,7 @@ var onlineCourses = [
     {
         title: "Formation <i>Microsoft Certified Solutions Developer</i> (C#, WPF, Web avec HTML5, CSS3, JS, ASP.NET, Azure, SharePoint)",
         school: "Centre VAELIA",
-        dates: "Depuis 18/05/2015 (en cours) (5 mois)",
+        dates: "18/05/2015 - 31/07/2015",
         url: "http://www.cariforef-mp.asso.fr/1-14443-Fiche-formation.php?num=16970",
         loc: "Toulouse",
         gps: "Centre VAELIA Toulouse"
