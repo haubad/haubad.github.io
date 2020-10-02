@@ -3,8 +3,8 @@ var bio = {
 	name: "hau tran",
 	role: "Consultant.NET",
 	contacts: {
-		mobile: "06 11 46 03 56",
-		email: "tthau2007 <i class='fa fa-at' /> gmail point com",
+		mobile: "06 xx xx xx xx",
+		email: "xxxxxxx <i class='fa fa-at' /> gmail point com",
         github: "haubad.github.io",
 		location: "Toulouse"
 	},
@@ -181,7 +181,7 @@ var jobs = [
 		cat: "#work2011-2012",
 		employer: "Infotel/Qualifrance",
 		title: "Ingénieur d'études C",
-		dates: "07/2012 - 10/2012",
+		dates: "",
 		gps: "Infotel 31700 Blagnac",
 		location: "Toulouse",
 		url: "http://www.infotel.com/logiciels/archivage/arcsys/",
