@@ -181,7 +181,7 @@ var jobs = [
 		cat: "#work2011-2012",
 		employer: "Infotel/Qualifrance",
 		title: "Ingénieur d'études C",
-		dates: "",
+		dates: "2012",
 		gps: "Infotel 31700 Blagnac",
 		location: "Toulouse",
 		url: "http://www.infotel.com/logiciels/archivage/arcsys/",
